@@ -1,0 +1,14 @@
+	void Start () {
+		...
+
+		InvokeRepeating ("Tick", 1, 0.1f);
+	}
+
+	void Tick()
+	{
+		// doing something...
+	}
+
+	// 取消调用
+	// this.CancelInvoke ();
+
