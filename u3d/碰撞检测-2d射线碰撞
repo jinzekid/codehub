@@ -1,0 +1,13 @@
+string IsCollider() {
+	Vector2 position = transform.position;//new Vector2(Screen.width/2, Screen.height/2);
+	Vector2 direction = Vector2.down;
+	float distance = 10.0f;
+//	Debug.DrawRay(position, direction, Color.green); 
+	RaycastHit2D hit = Physics2D.Raycast (position, direction, distance);
+//	RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
+	if (hit.collider != null) {
+		do_checkColliderWithObj (hit.collider.name);
+		return hit.collider.name;
+	}
+	return "";
+}
