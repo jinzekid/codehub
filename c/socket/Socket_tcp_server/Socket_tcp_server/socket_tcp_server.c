@@ -21,20 +21,21 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SERVER_PORT 5555
+#define SERVER_PORT 5556
 
 
 int main(){
     
+    int code;
     //调用socket函数返回的文件描述符
-    int serverSocket;
-    
+    int serverSocket = 0; // 服务器端
+    int clientSocket = 0; // 客户端
+
     //声明两个套接字sockaddr_in结构体变量，分别表示客户端和服务器
     struct sockaddr_in server_addr;
     struct sockaddr_in clientAddr;
     
     int addr_len = sizeof(clientAddr);
-    int client;
     char buffer[200];
     ssize_t iDataNum;
     
@@ -44,8 +45,8 @@ int main(){
     //第二个参数表示套接字类型：tcp：面向连接的稳定数据传输SOCK_STREAM
     //第三个参数设置为0
     if ((serverSocket = socket(AF_INET, SOCK_STREAM, 0)) < 0){
-        perror("socket init error.");
-        return 1;
+        code = 1;
+        goto ENDSOCKET;
     }
     
     bzero(&server_addr, sizeof(server_addr));
@@ -60,14 +61,14 @@ int main(){
     //bind三个参数：服务器端的套接字的文件描述符，
     //int	bind(int, const struct sockaddr *, socklen_t) __DARWIN_ALIAS(bind);
     if (bind(serverSocket, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0){
-        perror("connect error.");
-        return 1;
+        code = 2;
+        goto ENDSOCKET;
     }
     
     //设置服务器上的socket为监听状态
     if (listen(serverSocket, 5) < 0){
-        perror("listen error.");
-        return 1;
+        code = 3;
+        goto ENDSOCKET;
     }
     
     while (1) {
@@ -82,11 +83,16 @@ int main(){
         //传出的是客户端地址结构体的实际长度。
         //出错返回-1
         
-        client = accept(serverSocket, (struct sockaddr *)&clientAddr, (socklen_t *)&addr_len);
-        if (client < 0) {
-            perror("accept error.");
-            return 1;
+        clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddr, (socklen_t *)&addr_len);
+        if (clientSocket < 0) {
+            code = 4;
+            goto ENDSOCKET;
         }
+        
+        
+        //向客户端发送数据
+        //char str[] = "Hello World!";
+        //send(clientSocket, str, sizeof(str) , 0);
         
         printf("\nrecv client data...n");
         //inet_ntoa   ip地址转换函数，将网络字节序IP转换为点分十进制IP
@@ -94,22 +100,59 @@ int main(){
         printf("IP is %s\n", inet_ntoa(clientAddr.sin_addr));
         printf("Port is %d\n", htons(clientAddr.sin_port));
         
+        int isClose = 0;
+        //char sendbuf[200];
+
         while (1) {
             
-            iDataNum = recv(client, buffer, 1024, 0);
+            iDataNum = recv(clientSocket, buffer, 1024, 0);
             if (iDataNum < 0) {
                 perror("recv error.");
                 continue;
             }
-            
+            printf("buffer=%s,iDataNum=%d\n", buffer , iDataNum);
+
             buffer[iDataNum] = '\0';
+            printf("222 buffer=%s\n", buffer);
+
             if (strcmp(buffer, "quit") == 0) {
+                isClose = -1;
                 break;
             }
             
             printf("%ld recv data is %s\n", iDataNum, buffer);
-            send(client, buffer, iDataNum, 0);
+            
+            
+            
+            
+            send(clientSocket, buffer, iDataNum, 0);
+            
+            
+//            printf("Input your to client:>");
+//            scanf("%s", sendbuf);
+//            printf("\n");
+//            send(clientSocket, sendbuf, strlen(sendbuf), 0);
         }
     }
-    return 0;
+    
+    
+ENDSOCKET:
+    if (code == 1) {
+        perror("socket init error.");
+    }
+    else if (code == 2) {
+        perror("connect error.");
+    }
+    else if (code == 3) {
+        perror("listen error.");
+    }
+    else if (code == 4) {
+        perror("accept error.");
+    }
+
+    // 关闭套接字
+    close(serverSocket);
+    close(clientSocket);
+    
+    return code;
 }

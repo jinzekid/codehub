@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SERVER_PORT 5555
+#define SERVER_PORT 5556
 
 /*
  连接到服务器后，会不停循环，等待输入，
@@ -66,6 +66,7 @@ int main(){
         if(strcmp(sendbuf, "quit") == 0) {
             break;
         }
+        
         iDataNum = recv(clientSocket, recvbuf, 200, 0);
         recvbuf[iDataNum] = '\0';
         printf("recv data of my world is: %s \n", recvbuf);
