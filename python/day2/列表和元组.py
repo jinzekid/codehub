@@ -1,6 +1,15 @@
 # Author: Jason Lu
 
+
 print("====元组操作====")
+# 只读列表
+tuple_names = ('alex', 'jack')
+print(tuple_names.count('alex'))
+print(tuple_names.index('alex'))
+print("====end 列表操作====")
+
+
+print("====列表操作====")
 import sys
 import copy
 index = int(input("input index:"))
