@@ -21,6 +21,7 @@ list_products = {
                     'Bike': 800
                  }
 
+str_filename = "testFile"
 # r只读，w可写，a追加
 print("\n============判断文件是否存在============\n")
 # 读取文件，首先判断文件是否存在
@@ -124,7 +125,6 @@ f2.close()
 
 print("\n============我是分隔符============\n")
 
-
 '''
 print("--------我是分割线--------")
 # 一行一行读取，内存中只保存一行
@@ -177,18 +177,21 @@ f2.write("should be at the begining of the second line.")
 f2.close()
 '''
 
+'''
 # 以二进制文件读 比如视频
 # 使用场景:
 #   网络传输（socket）
 #   视频文件
-# f2 = open("yesterday2", "rb")
-# print(f2.readline())
-# print(f2.readline())
-# print(f2.readline())
-# f2.close()
+f2 = open("yesterday2", "rb")
+print(f2.readline())
+print(f2.readline())
+print(f2.readline())
+f2.close()
+'''
 
+'''
 # 以二进制文件写 比如视频
 f2 = open("yesterday2", "ab")
 f2.write(("hello binary\n").encode())
 f2.close()
-
+'''
