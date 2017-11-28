@@ -120,6 +120,7 @@ def func_test12(name, age= 18, *args, **kwargs):
 func_test12("alex", 1, 2, 3, sex="m", hobby="tesla")
 
 
-
-
+# 匿名函数
+calc = lambda x: x*3
+print(calc(3))
 
