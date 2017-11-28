@@ -22,6 +22,9 @@ print(type(x), type(y))
 #     f.write("end action")
 
 # 使用函数的好处
+# 可扩展
+# 一致性
+# 便易维护
 def logger():
     time_format = "%Y-%m-%d %X"
     time_current = time.strftime(time_format)
@@ -47,27 +50,28 @@ def func_test3():
 # func_test3()
 
 print("\n------------------我是分割符------------------\n")
-
+# 无参数
 def func_test4():
     print("func_test4 in action...")
     return 1, "hello", ["alex","wepeiqi"], {"name":"alex"}
 
 ret = func_test4()
-print(ret, type(ret))
+print(ret, type(ret)) # 返回元组
 
+# 固定位置参数
 def func_test5(x, y):
     print(x)
     print(y)
 
 func_test5(19, 20)
 
+def func_test6(x, y):
+    print(x)
+    print(y)
 
-def func_test6(*args):
-    for v in args:
-        print(v)
+func_test6(10, y = 20)
 
-func_test6()
-
+# 默认参数
 def func_test7(x=1, y=2):
     print(x)
     print(y)
@@ -75,10 +79,47 @@ def func_test7(x=1, y=2):
 func_test7()
 func_test7(10)
 
-def func_test8(x, y):
-    print(x)
-    print(y)
+# 不确定参数个数
+# args接受n个位置参数，转换成元组的形式
+def func_test8(*args):
+    for v in args:
+        print(v)
 
-func_test8(10)
+func_test8()
+
+# kwargs把n个关键字参数，转换成字典的方式
+def func_test9(**kwargs):
+    print(kwargs)
+
+    for k in kwargs.keys():
+        if k == "name":
+            print(kwargs[k])
+
+func_test9(name="alex", age=8, sex="F")
+func_test9(**{"name": "alex", "age": 8})
+
+def func_test10(name, **kwargs):
+    print(name)
+    print(kwargs)
+
+def func_test11(name, age = 18, **kwargs):
+    print(name)
+    print(age)
+    print(kwargs)
+
+func_test11("alex", sex="m", hobby="tesla", age=3)
+func_test11("alex", 20, sex="m", hobby="tesla")
+
+
+def func_test12(name, age= 18, *args, **kwargs):
+    print(name)
+    print(age)
+    print(args)
+    print(kwargs)
+
+func_test12("alex", 1, 2, 3, sex="m", hobby="tesla")
+
+
+
 
 

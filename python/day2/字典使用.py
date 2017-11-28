@@ -79,7 +79,10 @@ print("\n============字典循环============\n")
 
 # 更高效
 for i in info:
-    print(i, info[i])
+    print("tt:", i, info[i])
+
+print("\n========================\n")
+
 
 # 有个字典把列表的过程，效率低下
 for k, v in info.items():
