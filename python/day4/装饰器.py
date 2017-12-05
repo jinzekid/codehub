@@ -83,5 +83,22 @@ def f_test2():
     time.sleep(3)
     print("in the f_test2")
 
-f_test1()
-f_test2()
+# f_test1()
+# f_test2()
+
+# 带参数的装饰器
+def f_gaojie_test2(func):
+    def f_deco(*args, **kwargs):
+        start_time = time.time()
+        func(*args, **kwargs)
+        end_time = time.time()
+        print("the %s run time is %s", func, (end_time - start_time))
+
+    return f_deco
+
+@f_gaojie_test2
+def f_test3(name):
+    time.sleep(2)
+    print("in the f_test3: %s", name)
+
+f_test3("Jason")

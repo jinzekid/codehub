@@ -65,7 +65,7 @@ b = {
 av_catalog.update(b) #合并字典
 print(av_catalog)
 
-c = dict.fromkeys([6, 7, 8], "test") #初始化一个新的字典
+c = dict.fromkeys([6, 7, 8], "debug") #初始化一个新的字典
 print(c)
 
 # 注意类似浅拷贝的问题，其实{"name":"alex"}共享一个引用

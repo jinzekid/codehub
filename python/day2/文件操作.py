@@ -41,15 +41,15 @@ fsock.close()
 print("\n============覆盖文件内容============\n")
 # 直接打开一个文件，如果文件不存在则创建文件
 file_object = open(str_filename, 'w')
-file_object.write("test")
+file_object.write("debug")
 file_object.close()
 
 print("\n============追加文件内容============\n")
 fsock = open(str_filename, "a")
 fsock.write("""
-#Line 1 Just for test purpose
-#Line 2 Just for test purpose
-#Line 3 Just for test purpose""")
+#Line 1 Just for debug purpose
+#Line 2 Just for debug purpose
+#Line 3 Just for debug purpose""")
 fsock.close()
 
 print("\n============判断文件是否关闭============\n")
