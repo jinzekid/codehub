@@ -3,6 +3,7 @@ import os, time
 print(os.chdir("/Users/jasonlu/Desktop/")) # 切换成当前路径
 print(os.getcwd())
 print(os.pardir)
+# print(os.stat())
 # os.makedirs("/Users/jasonlu/Desktop/test") # 创建目录, 能够递归的建立目录
 # os.removedirs("/Users/jasonlu/Desktop/test") # 移除目录，递归的删除
 # os.mkdir("/Users/jasonlu/Desktop/test") # 创建目录，不递归
