@@ -26,7 +26,8 @@ void do_gotoxy(int x, int y) {
 
 int main(int argc, const char * argv[]) {
     
-    
+    int* p = 4;
+    printf("sizeof p: %d\n", sizeof(int *));
     
     system("pause");
 
