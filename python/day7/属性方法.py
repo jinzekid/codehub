@@ -34,6 +34,9 @@ class Dog(object):
 
 ######################################################
 d = Dog("dog")
+print(d.__doc__)
+
+
 d.eat
 d.eat = "bbcc" # 首先赋值
 d.eat # 然后调用
@@ -42,8 +45,10 @@ d.eat # 然后调用
 # del d.eat # 会报错
 
 # 如果需要删除属性方法，再写一个方法
-del d.eat
-d.eat
+# del d.eat
+# d.eat
+
+
 
 
 
