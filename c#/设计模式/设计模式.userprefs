@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{B23314DD-0B27-471A-B0FA-E019AAA62BEC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="设计模式/Program.cs">
+    <Files>
+      <File FileName="设计模式/Program.cs" Line="2" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.设计模式 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
