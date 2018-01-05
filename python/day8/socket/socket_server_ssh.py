@@ -1,8 +1,5 @@
 # Author: Jason Lu
-
-import socket
-import os
-import time
+import socket, os, time
 
 # 初始化socket
 server = socket.socket()
@@ -43,7 +40,6 @@ while True:
         print("%s" %(client_ack.decode()))
         # 然后发送整个数据
         conn.send(ret.encode("utf-8"))
-
 
     conn.close()
 

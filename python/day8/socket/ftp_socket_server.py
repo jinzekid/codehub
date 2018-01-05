@@ -58,7 +58,6 @@ while True:
                 m.update(line.encode("utf-8"))
                 conn.send(line.encode("utf-8"))
 
-
         print("file md5: %s" %(m.hexdigest()))
 
         # wait client to confirm
@@ -67,28 +66,6 @@ while True:
             print("发送md5校验码...")
             # 5.发送md5数据进行校验
             conn.send(m.hexdigest().encode("utf-8"))
-
-
-        # str_cmd = data_recv.decode() # 转换字符串
-        # ret = os.popen(str_cmd).read()
-        #
-        # # 需要判断返回结果是否为空
-        # if len(ret) == 0:
-        #     ret = "cmd has no output..."
-        #
-        # print("res: %s" %(ret))
-        # print("ret: %s" %(str(len(ret))))
-        # # 首先发送数据的长度
-        # len_ret = len(ret)
-        # conn.send(str(len_ret).encode("utf-8"))
-        # # time.sleep(0.5)
-        #
-        # # wait client to confirm
-        # client_ack = conn.recv(1024)
-        # print("%s" %(client_ack.decode()))
-        # # 然后发送整个数据
-        # conn.send(ret.encode("utf-8"))
-
 
     conn.close()
 

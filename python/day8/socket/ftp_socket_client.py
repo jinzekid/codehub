@@ -20,7 +20,6 @@ def do_checkFileMd5(str_filename, str_origin_md5):
 
 
 client = socket.socket() # 声明socket类型，同时生成socket连接对象
-
 client.connect(('localhost', 8080))
 print("client socket connect success...")
 bool_successOpen = True
