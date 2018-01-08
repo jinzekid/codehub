@@ -53,8 +53,19 @@ if bool_successOpen:
 
         str_filename_bak = '''%s.bak''' %(str_filename)
         f_new = open(str_filename_bak, "w", encoding="utf-8")
+
+        # 有可能出现socket粘包
+        # 出现在最后一次recv的时候，把md5的信息也一起接受过来
+        # 解决办法：
+        # 在最后一次的时候，就收剩下的数据大小
         while recv_size < recv_totalSize:
-            data = client.recv(1024)
+            size = recv_totalSize - recv_size
+            if size > 1024:
+                size = 1024
+            else:
+                print("最后一次收数据大小: %s" %(size))
+
+            data = client.recv(size)
             recv_size += len(data)
             recv_data += data
             f_new.write(data.decode())
