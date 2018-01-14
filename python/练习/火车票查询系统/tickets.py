@@ -91,6 +91,7 @@ def do_printStations(list_stations, list_titles):
 
         x.add_row(list_row_info)
 
+    x.align["Station name"] = "l"
     print(x.get_string(sortby="No."))
 
 # 根据分割分割字符串
