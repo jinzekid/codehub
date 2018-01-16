@@ -19,7 +19,7 @@
 
 """
 
-
+# https://kyfw.12306.cn/otn/leftTicket/init
 # from docopt import docopt
 #
 # # print(docopt(__doc__))
