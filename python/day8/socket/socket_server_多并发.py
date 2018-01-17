@@ -37,7 +37,9 @@ if __name__ == "__main__":
     HOST, PORT = "0.0.0.0", 9999
 
     # Create the server, binding to localhost on port 9999
-    # 支持多并发
+    # 支持多并发,多进程，耗资源
+    # server = socketserver.ForkingTCPServer((HOST, PORT), MyTCPHandler)
+    # 支持多并发，多线程
     server = socketserver.ThreadingTCPServer((HOST, PORT), MyTCPHandler)
 
     # Activate the server; this will keep running until you

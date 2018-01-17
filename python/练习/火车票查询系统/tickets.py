@@ -161,46 +161,49 @@ def do_getLocationInfo(str_location_title):
 
 
 ############主循环##############
-while True:
-
-    print("欢迎来到车票订阅系统...")
-
+def main():
     while True:
 
-        str_fromInfo = do_getLocationInfo(">>>请输入起始地:")
-        str_toInfo = do_getLocationInfo(">>>请输入目的地:")
+        print("欢迎来到车票订阅系统...")
 
-        print("from: ", str_fromInfo)
-        print("to: ", str_toInfo)
-
-        str_date = input(">>>请输入日期(xxxx-xx-xx):")
-        str_from = do_getListInfo(str_fromInfo, "|")[2]
-        str_to = do_getListInfo(str_toInfo, "|")[2]
-
-        print(str_from, str_to, str_date)
         while True:
 
-            print("开始请求数据...")
+            str_fromInfo = do_getLocationInfo(">>>请输入起始地:")
+            str_toInfo = do_getLocationInfo(">>>请输入目的地:")
 
-            # str_url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=2018-01-15&leftTicketDTO.from_station=SHH&leftTicketDTO.to_station=BOP&purpose_codes=ADULT"
-            str_url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=" + str_date + "&leftTicketDTO.from_station=" + str_from + "&leftTicketDTO.to_station=" + str_to + "&purpose_codes=ADULT"
-            print(str_url)
-            # http = urllib3.PoolManager()
-            # content = http.request(
-            #                 "GET",
-            #                  str_url)
-            # print(content.read().decode())
+            print("from: ", str_fromInfo)
+            print("to: ", str_toInfo)
 
-            content = urllib.request.urlopen(str_url, timeout=30)
-            str_json = content.read().decode()
-            try:
-                json_res = json.loads(str_json)
+            str_date = input(">>>请输入日期(xxxx-xx-xx):")
+            str_from = do_getListInfo(str_fromInfo, "|")[2]
+            str_to = do_getListInfo(str_toInfo, "|")[2]
 
-                arr_result = json_res["data"]["result"]
-                do_printAvaliableTrains(arr_result)
-                break
-            except Exception as e:
-                print(e)
-                time.sleep(0.25)
+            print(str_from, str_to, str_date)
+            while True:
+
+                print("开始请求数据...")
+
+                # str_url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=2018-01-15&leftTicketDTO.from_station=SHH&leftTicketDTO.to_station=BOP&purpose_codes=ADULT"
+                str_url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=" + str_date + "&leftTicketDTO.from_station=" + str_from + "&leftTicketDTO.to_station=" + str_to + "&purpose_codes=ADULT"
+                print(str_url)
+                # http = urllib3.PoolManager()
+                # content = http.request(
+                #                 "GET",
+                #                  str_url)
+                # print(content.read().decode())
+
+                content = urllib.request.urlopen(str_url, timeout=30)
+                str_json = content.read().decode()
+                try:
+                    json_res = json.loads(str_json)
+
+                    arr_result = json_res["data"]["result"]
+                    do_printAvaliableTrains(arr_result)
+                    break
+                except Exception as e:
+                    print(e)
+                    time.sleep(0.25)
 
 
+if __name__ == "__main__":
+    main()
