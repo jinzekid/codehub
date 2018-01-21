@@ -1,4 +1,16 @@
 # Author: Jason Lu
+# 英文
+'''
+data = conn.recv(1024)
+print("recv: %s" % (data))
+'''
+# 中文
+''''
+data = conn.recv(1024)
+print("recv: %s" % (data.decode()))
+
+conn.send(data.upper())
+'''
 
 import socket
 
@@ -9,7 +21,6 @@ PORT = 9999
 server = socket.socket()
 server.bind((HOST, PORT))
 server.listen(100)
-
 
 def do_main():
     print("开始启动监听...")
