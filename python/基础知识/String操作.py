@@ -1,9 +1,10 @@
 # Author: Jason Lu
 
-name = "My \tname is alex"
+name = "My name is alex"
 name2 = "My \tname is {name}, age is {age}"
 name3 = 2312
 
+print(name[2: 6]) #顾头不顾尾，或左闭右开
 print(name.capitalize()) #首字母大写
 print(name.count('a')) #统计a字符
 print(name.center(50, "-")) #类似格式化输出
@@ -24,9 +25,9 @@ print('df'.isspace())
 print("My Name is".istitle()) #第一个字母大写
 print("My Name is".isprintable()) #第一个字母大写
 print("My name is ".join("==="))
-print(", ".join(['1','2','3']))
-print(name.ljust(50,'*')) #右边填充*
-print(name.rjust(50,'-')) #右边填充-
+print(", ".join(['1', '2', '3']))
+print(name.ljust(50, '*')) #右边填充*
+print(name.rjust(50, '-')) #右边填充-
 print(name.lower())
 print(name.upper())
 print("\nAlex\n".lstrip()) #默认去掉左边去空格和回车
