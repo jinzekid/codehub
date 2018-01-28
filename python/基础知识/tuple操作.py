@@ -8,7 +8,10 @@ try:
 except ValueError as ve:
     print('Exception:', ve)
 
-
+# 只读列表
+tuple_names = ('alex', 'jack')
+print(tuple_names.count('alex'))
+print(tuple_names.index('alex'))
 
 
 

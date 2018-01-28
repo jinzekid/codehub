@@ -15,8 +15,6 @@ print("字典key--》元组 ", tuple(dict))
 print("字典value--》元组 ", tuple(dict.values()))
 # 字典key--》列表
 print("字典key--》列表 ", list(dict))
-# 字典value--》列表
-print("字典value--》列表 ", list(dict.values()))
 
 print("\n============元组转换============\n")
 tup = (1, 2, 3, 4, 5)

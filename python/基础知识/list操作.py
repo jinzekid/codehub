@@ -52,8 +52,29 @@ print(names)
 
 names.extend(names2) #拼接元素
 print(names)
+del names2 #删除变量
 
+print("====for循环====")
+for i in names:
+    print(i)
 
+print("====步长切片====")
+print(names[::2]) #从0到-1，跳步长
 
+# 浅拷贝
+import copy
+names22 = [["111", "222"], "ddd"]
+names4 = names22.copy()
+print(names4) #[['111', '222'], 'ddd']
+names4[0][1] = 'why'
+print(names4) #[['111', 'why'], 'ddd']
+print(names22) #[['111', 'why'], 'ddd']
+
+# 深拷贝
+names5 = copy.deepcopy(names22)
+print(names5) #[['111', 'why'], 'ddd']
+names5[0][1] = 'time'
+print(names5) #[['111', 'time'], 'ddd']
+print(names22) #[['111', 'why'], 'ddd']
 
 
