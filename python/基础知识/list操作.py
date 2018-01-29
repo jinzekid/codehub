@@ -78,3 +78,6 @@ print(names5) #[['111', 'time'], 'ddd']
 print(names22) #[['111', 'why'], 'ddd']
 
 
+
+li = ['alex', 'eric', 'rain']
+print("_".join(li))
