@@ -1,4 +1,5 @@
 # Author: Jason Lu
+# Author: Jason Lu
 
 name = input("name:")
 age = int(input("age:"))
@@ -41,3 +42,6 @@ Salary: {3}
 '''.format(name,age,job,salary)
 
 print(info3)
+
+
+print("this is {} format {}".format("test", "output"))

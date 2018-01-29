@@ -1,5 +1,4 @@
 # Author: Jason Lu
-
 import getpass
 
 _username = 'jason'
