@@ -1,17 +1,16 @@
 # Author: Jason Lu
 
-school = "oldboy edu."
+school = 'oldboy edu.'
 
 def change_name(name):
-    global school # 修改全局变量， 不建议用（因为是全局变量）
-    school = "Mage Linux"
+    global school
+    school = 'Magic school'
     print(school)
 
-change_name("aaa")
-print(school)
+change_name('Jason')
+print('global school:', school)
 
 
-# 不建议这么做
 def change_name2():
     global name
     name = "alex"
@@ -27,3 +26,7 @@ def change_name3():
 
 change_name3()
 print(names) #output：['kkk', 'bbb', 'ccc']
+
+
+
+

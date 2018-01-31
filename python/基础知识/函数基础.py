@@ -1,25 +1,23 @@
 # Author: Jason Lu
-
 import time
 
-# 定一个函数
+# 函数定义
 def func1():
-    print("I'm a function!")
+    print('I\'m a function')
     return 0
 
 x = func1()
 
-
-# 定一个过程
+# 定义过程，没有返回值
 def func2():
-    print("I'm process!")
+    print('I\'m a process')
 
 y = func2()
 
-print(type(x), type(y))
+print(type(x), type(y)) #<class 'int'> <class 'NoneType'>
 
-# with open("a.txt", "ab") as f:
-#     f.write("end action")
+print()
+
 
 # 使用函数的好处
 # 可扩展
@@ -49,14 +47,16 @@ def func_test3():
 # func_test2()
 # func_test3()
 
+
 print("\n------------------我是分割符------------------\n")
-# 无参数
+# 返回值
 def func_test4():
     print("func_test4 in action...")
     return 1, "hello", ["alex","wepeiqi"], {"name":"alex"}
 
 ret = func_test4()
 print(ret, type(ret)) # 返回元组
+
 
 # 固定位置参数
 def func_test5(x, y):
@@ -69,7 +69,8 @@ def func_test6(x, y):
     print(x)
     print(y)
 
-func_test6(10, y = 20)
+func_test6(10, y=20)
+
 
 # 默认参数
 def func_test7(x=1, y=2):
@@ -79,13 +80,15 @@ def func_test7(x=1, y=2):
 func_test7()
 func_test7(10)
 
+print("\n------------------我是分割符------------------\n")
 # 不确定参数个数
 # args接受n个位置参数，转换成元组的形式
 def func_test8(*args):
     for v in args:
         print(v)
 
-func_test8()
+func_test8(1, 2, [2, 3, 4, 4])
+
 
 # kwargs把n个关键字参数，转换成字典的方式
 def func_test9(**kwargs):
@@ -95,8 +98,9 @@ def func_test9(**kwargs):
         if k == "name":
             print(kwargs[k])
 
-func_test9(name="alex", age=8, sex="F")
+func_test9(name="alex", age=8, sex="F", list=[1,3,4])
 func_test9(**{"name": "alex", "age": 8})
+
 
 def func_test10(name, **kwargs):
     print(name)
@@ -111,16 +115,22 @@ func_test11("alex", sex="m", hobby="tesla", age=3)
 func_test11("alex", 20, sex="m", hobby="tesla")
 
 
-def func_test12(name, age= 18, *args, **kwargs):
+def func_test12(name, age=18, *args, **kwargs):
     print(name)
     print(age)
     print(args)
     print(kwargs)
 
-func_test12("alex", 1, 2, 3, sex="m", hobby="tesla")
+func_test12("alex12", 100, 1, 2, 3, sex="m", hobby="tesla")
 
 
 # 匿名函数
 calc = lambda x: x*3
 print(calc(3))
+
+
+
+
+
+
 

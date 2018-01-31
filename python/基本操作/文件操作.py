@@ -73,7 +73,7 @@ print(eval(str_list)["Iphone"])
 
 print("\n============其他============\n")
 
-str_filename2 = '/Users/jasonlu/Desktop/Dev/GitHub/codehub/python/day3/1.txt'
+str_filename2 = '/Users/jasonlu/Desktop/Dev/GitHub/codehub/python/res/1.txt'
 '''
 # 直接读取文件内容
 # data = open(str_filename2, encoding="utf-8").read()
@@ -195,3 +195,60 @@ f2 = open("yesterday2", "ab")
 f2.write(("hello binary\n").encode())
 f2.close()
 '''
+
+
+# 文件操作with语句
+with open('yesterday2', 'r', encoding='utf-8') as f:
+    print(f.readline())
+
+with open('yesterday2', 'r', encoding='utf-8') as f:
+    for line in f:
+        print(line)
+
+# py2.7以后可以打开多个文件
+with open("yesterday2", "r", encoding="utf-8") as f, \
+     open("yesterday2", "r", encoding="utf-8") as f2:
+    for line in f:
+        print(line)
+
+
+print("\n============文件操作内容：写入新文件============\n")
+# 高效文件写方式
+f = open('yesterday2', 'r', encoding='utf-8')
+f_new = open('yesterday2.bak', 'w', encoding='utf-8')
+
+# 打开文件(高效写文件)
+for line in f:
+    if 'xx' in line:
+        line = line.replace('xx', 'bb')
+
+    f_new.write(line)
+
+f.close()
+f_new.close()
+
+
+# 改进版本
+# 可以使用参数来进行替换
+import sys
+
+str_find = sys.argv[1]
+str_replace = sys.argv[2]
+
+print(str_find, str_replace)
+
+f = open("yesterday2", "r", encoding="utf-8")
+f_new = open("yesterday2.bak", "w", encoding="utf-8")
+
+# 打开文件，修改完了，写到新文件中（效率高）
+for line in f:
+    # 循环查找字符串
+    if str_find in line:
+        line = line.replace(str_find, str_replace)
+
+    # 每一行都要写入新文件
+    f_new.write(line)
+
+
+f.close()
+f_new.close()
