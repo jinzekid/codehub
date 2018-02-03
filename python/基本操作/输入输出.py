@@ -1,5 +1,4 @@
 # Author: Jason Lu
-# Author: Jason Lu
 
 name = input("name:")
 age = int(input("age:"))
