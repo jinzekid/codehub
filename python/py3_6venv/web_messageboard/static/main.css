@@ -1,0 +1,32 @@
+body{
+    margin:0;
+    padding:0;
+    color: #000e41;
+    background-color: #004080;
+}
+
+h1{
+    padding: 0 1em;
+    color: #ffffff;
+}
+
+form{
+    padding:0.5em 2em;
+    background-color: #78b8f8;
+}
+
+.main {
+    padding:0;
+}
+
+.entries-area{
+    padding: 0.5em 2em;
+    background-color: #ffffff;
+}
+
+.entries-area p {
+    padding:0.5em 1em;
+    background-color: #dbdbff;
+}
+
+
