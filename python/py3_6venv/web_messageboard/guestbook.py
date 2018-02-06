@@ -4,6 +4,8 @@ import shelve
 
 from datetime import datetime
 from flask import Flask, request, render_template, redirect, escape, Markup
+from flask import jsonify
+from bpmappers import Mapper, RawField, ListDelegateField
 
 app = Flask(__name__)
 
@@ -72,6 +74,21 @@ def datetime_fmt_filter(dt):
     return dt.strftime('%Y/%m/%d %H:%M:%S')
 
 
+class GreetingMapper(Mapper):
+    name = RawField()
+    comment = RawField()
+
+class GreetingListMapper(Mapper):
+    greeting_list = ListDelegateField(GreetingMapper)
+
+
+@app.route('/api/')
+def api_index():
+    # 留言
+    greeting_list = load_data()
+    result_dict = GreetingListMapper({'greeting_list': greeting_list}).as_dict()
+
+    return jsonify(**result_dict)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
