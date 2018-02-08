@@ -3,14 +3,17 @@
 import shelve
 
 from datetime import datetime
-from flask import Flask, request, render_template, redirect, escape, Markup
-from flask import jsonify
+from flask import Flask, request, render_template, redirect, escape, Markup, make_response
+from flask import jsonify, url_for, abort, make_response
 from bpmappers import Mapper, RawField, ListDelegateField
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
+# app.config.update()
 
 DATA_FILE = 'guestbook.dat'
 
+###################### 相关方法 ######################
 def save_data(name, comment, create_at):
     # 通过shelve模块打开数据库文件
     database = shelve.open(DATA_FILE)
@@ -34,7 +37,6 @@ def save_data(name, comment, create_at):
     # 关闭数据库
     database.close()
 
-
 def load_data():
     # 通过shelve模块打开数据库文件
     database = shelve.open(DATA_FILE)
@@ -43,14 +45,83 @@ def load_data():
     database.close()
     return greeting_list
 
+
+###################### 相关类 ######################
+class GreetingMapper(Mapper):
+    name = RawField()
+    comment = RawField()
+
+class GreetingListMapper(Mapper):
+    greeting_list = ListDelegateField(GreetingMapper)
+
+
+###################### 路由地址 ######################
+@app.errorhandler(404)
+def not_found(error):
+    resp = make_response(render_template('error.html'), 404)
+    return resp
+
+# 登陆页面
+@app.route('/login/')
+def page_login():
+    return render_template('login.html')
+
+# 留言板首页
 @app.route('/')
-def index():
+def page_index():
     greeting_list = load_data()
     return render_template('index.html', greeting_list=greeting_list)
 
+@app.route('/api/')
+def api_index():
+    # 留言
+    greeting_list = load_data()
+    result_dict = GreetingListMapper({'greeting_list': greeting_list}).as_dict()
+    return jsonify(**result_dict)
 
-@app.route('/post', methods=['POST'])
-def post():
+# 动态url抽象成一个url模式
+@app.route('/item/<id>/')
+def item(id):
+    return 'Item: {}'.format(id)
+
+# 访问/a和/b都符合这个规则
+@app.route('/<any(a, b):page_name>/')
+def pageAB(page_name):
+    return page_name
+
+@app.route('/j/item/<id>', methods=['DELETE', 'POST'])
+def getItem(id):
+    return id
+
+# 构造URL
+@app.route('/newurl/1/')
+def item2():
+    return url_for('item', id=2, aid='/') #output:/item/2/?aid=%2F
+
+@app.route('/secret/')
+def secret():
+    abort(401)
+    print('This is never executed')
+
+###################### 请求方法 ######################
+# 登陆请求
+@app.route('/post_tologin', methods=['GET', 'POST'])
+def do_login():
+    if request.method == 'POST':
+        # 获取登陆表单的用户名和密码
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+    if username == 'lu' and password == '123':
+        # 保存后重定向到首页
+        return redirect('/')
+    else:
+        # 保存后重定向到首页
+        return redirect('/login/')
+
+
+@app.route('/post_comment', methods=['POST'])
+def post_comment():
 
     # 获取已提交的数据
     name = request.form.get('name')
@@ -63,6 +134,8 @@ def post():
     # 保存后重定向到首页
     return redirect('/')
 
+
+###################### 其他功能 ######################
 @app.template_filter('nl2br')
 def nl2br_filter(s):
     # 将换行符置换为br标签的模版过滤器
@@ -73,22 +146,6 @@ def datetime_fmt_filter(dt):
     # 使datetime对象更容易分辨的模版过滤器
     return dt.strftime('%Y/%m/%d %H:%M:%S')
 
-
-class GreetingMapper(Mapper):
-    name = RawField()
-    comment = RawField()
-
-class GreetingListMapper(Mapper):
-    greeting_list = ListDelegateField(GreetingMapper)
-
-
-@app.route('/api/')
-def api_index():
-    # 留言
-    greeting_list = load_data()
-    result_dict = GreetingListMapper({'greeting_list': greeting_list}).as_dict()
-
-    return jsonify(**result_dict)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
