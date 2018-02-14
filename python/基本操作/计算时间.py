@@ -50,8 +50,9 @@ print(date2)
 # 毫秒为单位获取当前时间
 import time
 milliseconds = int(round(time.time() * 1000))
-print(milliseconds)
-
+print(time.time())
+print("milliseconds:", milliseconds)
+print()
 # 获取mst，est，utc，gmt和hst形式的当前日期时间
 from datetime import datetime
 from pytz import timezone
@@ -127,8 +128,10 @@ print()
 
 from dateutil.relativedelta import relativedelta
 from datetime import timedelta
-import datetime
+import datetime, time
 DATEFORMAT = '%Y-%m-%d %H:%M:%S.%f'
+DATEFORMAT_YMD = '%Y-%m-%d'
+
 # 定义常量
 SECONDS_PRE_MINUTE  = 60
 SECONDS_PRE_HOUR    = 3600
@@ -137,10 +140,48 @@ SECONDS_PRE_DAY     = 86400
 # 时间工具类
 class TimeUtil(object):
 
+    # 获取当前时间秒
+    @staticmethod
+    def getSeconds():
+        seconds = int(round(time.time()))
+        return seconds
+
+    # 获取当前时间的毫秒
+    @staticmethod
+    def getMilliSeconds():
+        milliseconds = int(round(time.time() * 1000))
+        return milliseconds
+
+    # 指定的开始日期和结束日期之间获取日期范围
+    @staticmethod
+    def getDateRange(str_start_date, str_end_date):
+        start_date = datetime.datetime.strptime(str_start_date, DATEFORMAT_YMD)
+        end_date = datetime.datetime.strptime(str_end_date, DATEFORMAT_YMD)
+        end_date = TimeUtil.addDays(1, end_date)
+        date_arr = (start_date + datetime.timedelta(days=x) for x in range(0, (end_date-start_date).days))
+
+        for date_obj in date_arr:
+            print(date_obj.strftime(DATEFORMAT_YMD))
+
     # 获取当前季度的第一天和最后一天
     @staticmethod
-    def getQuarterFirstDayAndLastDayWithStrDate(str_date=datetime.datetime.now()):
-        pass
+    def getQuarterFirstDayAndLastDayWithStrDate(str_date):
+        if not str_date:
+            return None, None
+
+        date_obj = datetime.datetime.strptime(str_date, '%Y-%m-%d')
+        return TimeUtil.getQuarterFirstDayAndLastDayWithObjDate(date_obj)
+
+    # 获取当前季度的第一天和最后一天
+    @staticmethod
+    def getQuarterFirstDayAndLastDayWithObjDate(obj_date):
+        date_obj = obj_date  # datetime.datetime.strptime(str_date, '%Y-%m-%d')
+        current_quarter = round((date_obj.month - 1) / 3 + 1)
+        first_date = datetime.datetime(date_obj.year, 3 * current_quarter - 2, 1)
+        last_date = datetime.datetime(date_obj.year, 3 * current_quarter + 1, 1) \
+                    + timedelta(days=-1)
+
+        return first_date, last_date
 
     # 获取指定日期的当前月的第一天和最后一天
     @staticmethod
@@ -163,7 +204,7 @@ class TimeUtil(object):
 
         return first_date, last_date
 
-
+    # 得到指定日期所在周的开始和结束日期
     @staticmethod
     def getWeekStartToEndWithStrDate(str_date):
         if not str_date:
@@ -304,12 +345,15 @@ print(TimeUtil.addDays(4, startDate=date1))
 print()
 print(TimeUtil.calculateSeconds(1,0,0,10))
 print()
-start_of_week, end_of_week = TimeUtil.getWeekStartToEndWithStrDate('2018-01-14')
+start_of_week, end_of_week = TimeUtil.getWeekStartToEndWithStrDate('2018-02-14')
 print(start_of_week, end_of_week)
 print()
 first_date, end_date = TimeUtil.getMonthFirstDayAndLastDayWithStrDate('2018-05-14')
 print(first_date, end_date)
-
+first_date, end_date = TimeUtil.getQuarterFirstDayAndLastDayWithObjDate(datetime.datetime.now())
+print(first_date, end_date)
+print()
+TimeUtil.getDateRange('2016-06-15', '2016-06-18')
 
 
 
