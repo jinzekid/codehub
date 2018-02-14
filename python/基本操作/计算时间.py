@@ -1,4 +1,5 @@
 # Author: Jason Lu
+# 参考地址：https://mp.weixin.qq.com/s/X0oMZVxxlt1zIU-fkW531Q
 '''
 import time
 from time import gmtime, strftime
@@ -15,28 +16,6 @@ print(strftime("%y", gmtime()))
 print(strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime(1234567890)))
 '''
 
-'''
-# 将天数，小时，分钟和秒转换为秒
-# 定义常量
-SECONDS_PRE_MINUTE  = 60
-SECONDS_PRE_HOUR    = 3600
-SECONDS_PRE_DAY     = 86400
-
-# 读取来自用户的输入
-days = int(input("Enter number of days: "))
-hours = int(input("Enter number of Hours: "))
-minutes = int(input("Enter number of Minutes: "))
-seconds = int(input("Enter number of Seconds: "))
-
-# 计算天数，小时，分钟和秒
-total_seconds = days * SECONDS_PRE_DAY
-total_seconds += (hours * SECONDS_PRE_HOUR)
-total_seconds += (minutes * SECONDS_PRE_MINUTE)
-total_seconds += seconds
-
-# 显示结果
-print("Total number of seconds: {}".format(total_seconds))
-'''
 
 # 利用pandas获取当前日期和时间
 import pandas as pd
@@ -110,13 +89,115 @@ date_obj = datetime.datetime(2015, 10, 10, 10, 10, 10, 10)
 print("Unix Timestamp:", (time.mktime(date_obj.timetuple())))
 
 
+# 得到指定日期所在周的开始和结束日期
+from datetime import datetime, timedelta
+date_str = '2018-01-14'
+date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+
+start_of_week = date_obj - timedelta(days = date_obj.weekday())
+end_of_week = start_of_week + timedelta(days=6)
+
+
+# 获取当前季度的第一天和最后一天
+current_date = datetime.now()
+date_str = '2018-06-14'
+date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+current_date = date_obj
+
+current_quarter = round((current_date.month -1) / 3 + 1)
+first_date = datetime(current_date.year, 3 * current_quarter - 2, 1)
+last_date = datetime(current_date.year, 3 * current_quarter + 1, 1) \
+            + timedelta(days=-1)
+
+print("xxxx:", first_date, last_date)
+print()
+# current_date = datetime.now()
+date_str = '2018-01-14'
+date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+current_date = date_obj
+current_quarter = round((current_date.month -1) / 1 + 1)
+first_date = datetime(current_date.year, 1 * current_quarter, 1)
+last_date = datetime(current_date.year, 1 * current_quarter + 1, 1) \
+            + timedelta(days=-1)
+
+print("2222:", first_date, last_date)
+print()
+
+####################### 自定义时间工具类 #######################
+
 from dateutil.relativedelta import relativedelta
 from datetime import timedelta
 import datetime
 DATEFORMAT = '%Y-%m-%d %H:%M:%S.%f'
+# 定义常量
+SECONDS_PRE_MINUTE  = 60
+SECONDS_PRE_HOUR    = 3600
+SECONDS_PRE_DAY     = 86400
 
 # 时间工具类
 class TimeUtil(object):
+
+    # 获取当前季度的第一天和最后一天
+    @staticmethod
+    def getQuarterFirstDayAndLastDayWithStrDate(str_date=datetime.datetime.now()):
+        pass
+
+    # 获取指定日期的当前月的第一天和最后一天
+    @staticmethod
+    def getMonthFirstDayAndLastDayWithStrDate(str_date):
+        if not str_date:
+            return None, None
+
+        date_obj = datetime.datetime.strptime(str_date, '%Y-%m-%d')
+        return TimeUtil.getMonthFirstDayAndLastDayWithObjDate(date_obj)
+
+
+    # 获取指定日期的当前月的第一天和最后一天
+    @staticmethod
+    def getMonthFirstDayAndLastDayWithObjDate(obj_date):
+        date_obj = obj_date #datetime.datetime.strptime(str_date, '%Y-%m-%d')
+        current_quarter = round((date_obj.month - 1) / 1 + 1)
+        first_date = datetime.datetime(date_obj.year, 1 * current_quarter, 1)
+        last_date = datetime.datetime(date_obj.year, 1 * current_quarter + 1, 1) \
+                    + timedelta(days=-1)
+
+        return first_date, last_date
+
+
+    @staticmethod
+    def getWeekStartToEndWithStrDate(str_date):
+        if not str_date:
+            return None, None
+
+        date_obj = datetime.datetime.strptime(str_date, '%Y-%m-%d')
+        start_of_week = date_obj - timedelta(days=date_obj.weekday())
+        end_of_week = start_of_week + timedelta(days=6)
+
+        return start_of_week, end_of_week
+
+    # 将天数，小时，分钟和秒转换为秒
+    @staticmethod
+    def calculateSeconds(days=None, hours=None, minutes=None, seconds=None):
+        total_seconds = 0
+        if days:
+            total_seconds += days * SECONDS_PRE_DAY
+        if hours:
+            total_seconds += (hours * SECONDS_PRE_HOUR)
+        if minutes:
+            total_seconds += (minutes * SECONDS_PRE_MINUTE)
+        if seconds:
+            total_seconds += seconds
+        return total_seconds
+
+
+    # 根据当前时期找到上一周一和即将到的周一的日期
+    @staticmethod
+    def findDate(obj_date):
+        last_monday = obj_date - datetime.timedelta(days=obj_date.weekday())
+        comming_monday = obj_date + datetime.timedelta(days=obj_date.weekday(), weeks=1)
+        print(obj_date)
+        print(last_monday)
+        print(comming_monday)
 
     # 字符串转日期对象
     @staticmethod
@@ -152,45 +233,46 @@ class TimeUtil(object):
 
     # 添加日
     @staticmethod
-    def add_days(days, date=datetime.datetime.today()):
-        new_date = date + relativedelta(days=days)
+    def addDays(days, startDate=datetime.datetime.today()):
+        new_date = startDate + relativedelta(days=days)
         return new_date
 
     # 添加月
     @staticmethod
-    def add_months(months, date=datetime.datetime.today()):
-        new_date = date + relativedelta(months=months)
+    def addMonths(months, startDate=datetime.datetime.today()):
+        new_date = startDate + relativedelta(months=months)
         return new_date
 
     # 添加年
     @staticmethod
-    def add_years(years, date=datetime.datetime.today()):
-        new_date = date + relativedelta(years=years)
+    def addYears(years, startDate=datetime.datetime.today()):
+        new_date = startDate + relativedelta(years=years)
         return new_date
 
     # 添加小时
     @staticmethod
-    def add_hours(hours, date=datetime.datetime.today()):
-        new_date = date + relativedelta(hours=hours)
+    def addHours(hours, startDate=datetime.datetime.today()):
+        new_date = startDate + relativedelta(hours=hours)
         return new_date
 
     # 添加分
     @staticmethod
-    def add_mins(minutes, date=datetime.datetime.today()):
-        new_date = date + relativedelta(minutes=minutes)
+    def addMins(minutes, startDate=datetime.datetime.today()):
+        new_date = startDate + relativedelta(minutes=minutes)
         return new_date
 
     # 添加秒
     @staticmethod
-    def add_seconds(seconds, date=datetime.datetime.today()):
-        new_date = date + relativedelta(seconds=seconds)
+    def addSeconds(seconds, fromDate=datetime.datetime.today()):
+        new_date = fromDate + relativedelta(seconds=seconds)
         return new_date
 
 
-
-print(TimeUtil.add_days(4))
-print(TimeUtil.add_months(1))
-
+print()
+print(TimeUtil.addDays(4))
+print(TimeUtil.addMonths(1))
+print(TimeUtil.addYears(1))
+print()
 str_date = TimeUtil.timestampToStrDate(timestamp=1415419520)
 print(str_date)
 print()
@@ -217,23 +299,16 @@ print("Difference:", diff)
 print("Days:", diff.days)
 print("Microseconds:", diff.microseconds)
 print("Seconds:", diff.seconds)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print()
+print(TimeUtil.addDays(4, startDate=date1))
+print()
+print(TimeUtil.calculateSeconds(1,0,0,10))
+print()
+start_of_week, end_of_week = TimeUtil.getWeekStartToEndWithStrDate('2018-01-14')
+print(start_of_week, end_of_week)
+print()
+first_date, end_date = TimeUtil.getMonthFirstDayAndLastDayWithStrDate('2018-05-14')
+print(first_date, end_date)
 
 
 
