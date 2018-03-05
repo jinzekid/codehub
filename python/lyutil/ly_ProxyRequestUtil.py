@@ -62,7 +62,7 @@ class proxyutil(object):
         self.int_index = 0
         pass
 
-    def do_parseHttpProxy(self):
+    def parse_httpProxy(self):
         if self.f_proxy is None:
             print(">>>解析文件不存在<<<")
             return
@@ -85,7 +85,7 @@ class proxyutil(object):
         return len(self.list_proxy)
 
 
-    def do_parseHttpsProxy(self):
+    def parse_httpsProxy(self):
         pass
 
 
@@ -116,12 +116,12 @@ class proxyconfig(object):
         self.proxy = proxy
         pass
 
-    def do_updateHeader(self):
+    def update_header(self):
         pass
 
 
     # 创建全局默认的opener对象
-    def do_installGlobalOpener(self, b_openDebug=False):
+    def install_globalOpener(self, b_openDebug=False):
         # proxy = urllib.request.ProxyHandler({'http': self.proxy_addr})
         if self.proxy is None:
             print(">>>设置没有代理地址opener<<<")
@@ -177,7 +177,7 @@ class proxyrequest(object):
         self.pconfig = pconfig
 
     # 自定义函数，功能为使用代理服务器
-    def getdata(self, b_decoded=True):
+    def get_data(self, b_decoded=True):
         try:
             # 创建全局默认的opener对象
             # 将opener安装为全局
@@ -190,11 +190,13 @@ class proxyrequest(object):
 
             return data
         except urllib.error.HTTPError as e:
+            print(">>>发生了HTTPError异常<<<")
             if hasattr(e, 'code'):
                 print(e.code)
             if hasattr(e, 'reason'):
                 print(e.reason)
         except urllib.error.URLError as e:
+            print(">>>发生了URLError异常<<<")
             if hasattr(e, 'code'):
                 print(e.code)
             if hasattr(e, 'reason'):
@@ -202,9 +204,27 @@ class proxyrequest(object):
             # 若为URLError异常，延迟10s执行
             time.sleep(10)
         except Exception as e:
+            print(">>>发生了其他异常<<<")
             print("exception:" + str(e))
             # 若为Exception异常，延迟1s执行
             time.sleep(1)
         finally:
             # 延迟3s执行
+            time.sleep(1)
             pass
+
+
+
+
+
+
+'''
+from urllib.parse import urlencode
+params = {
+    'name':'gemeny',
+    'age':12
+}
+base_url = 'http://www.baidu.com'
+url = base_url + urlencode(params)
+print(url)
+'''
