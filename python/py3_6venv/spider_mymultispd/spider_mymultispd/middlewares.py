@@ -8,7 +8,7 @@
 from scrapy import signals
 
 
-class SpiderMyfirstpjtSpiderMiddleware(object):
+class SpiderMymultispdSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -56,7 +56,7 @@ class SpiderMyfirstpjtSpiderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class SpiderMyfirstpjtDownloaderMiddleware(object):
+class SpiderMymultispdDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
@@ -101,18 +101,3 @@ class SpiderMyfirstpjtDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
-
-
-import random
-from spider_myfirstpjt.settings import IPPOOL
-from scrapy.contrib.downloadermiddleware.httpproxy import HttpProxyMiddleware
-
-class IPPOOLS(HttpProxyMiddleware):
-    def __init__(self, ip= ''):
-        self.ip = ip
-
-    def process_request(self, request, spider):
-        thisip = random.choice(IPPOOL)
-        print("当前使用的IP是: " + thisip['ipaddr'])
-        # 将对应的IP实际添加为具体的代理,用该IP进行爬取
-        request.mete['proxy'] = "http://" + thisip['ipaddr']

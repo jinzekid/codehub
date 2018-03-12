@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for spider_myfirstpjt project
+# Scrapy settings for spider_mymultispd project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,16 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'spider_myfirstpjt'
+BOT_NAME = 'spider_mymultispd'
 
-SPIDER_MODULES = ['spider_myfirstpjt.spiders']
-NEWSPIDER_MODULE = 'spider_myfirstpjt.spiders'
+SPIDER_MODULES = ['spider_mymultispd.spiders']
+NEWSPIDER_MODULE = 'spider_mymultispd.spiders'
 
+COMMANDS_MODULE = 'spider_mymultispd.mycmd'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'spider_myfirstpjt (+http://www.yourdomain.com)'
+#USER_AGENT = 'spider_mymultispd (+http://www.yourdomain.com)'
 
-# Obey robots.txt rules
+# Obey robots.txt rule
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -47,18 +48,14 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'spider_myfirstpjt.middlewares.SpiderMyfirstpjtSpiderMiddleware': 543,
+#    'spider_mymultispd.middlewares.SpiderMymultispdSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-   # 'spider_myfirstpjt.middlewares.SpiderMyfirstpjtDownloaderMiddleware': 543,
-   #  'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 123,
-   #  'spider_myfirstpjt.middlewares.IPPOOLS':125,
-    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': 2,
-    'spider_myfirstpjt.uamid.Uamid': 1
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'spider_mymultispd.middlewares.SpiderMymultispdDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -69,7 +66,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'spider_myfirstpjt.pipelines.SpiderMyfirstpjtPipeline': 300,
+#    'spider_mymultispd.pipelines.SpiderMymultispdPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,20 +92,17 @@ DOWNLOADER_MIDDLEWARES = {
 
 
 #IP池设置
-IPPOOL = [
-    {"ipaddr": "39.81.149.145:4388"},
+IPPOOL = {
+    {"ipaddr":"39.81.149.145:4388"},
     {"ipaddr": "223.244.32.104:4368"},
     {"ipaddr": "221.231.87.241:4387"},
     {"ipaddr": "119.5.181.58:4386"},
     {"ipaddr": "119.5.181.22:4386"},
     {"ipaddr": "115.219.32.109:4318"},
     {"ipaddr": "121.234.115.221:4387"},
-    {"ipaddr": "49.82.253.127:4321"}
-]
+    {"ipaddr": "49.82.253.127:4321"},
+}
 
-# 用户代理（user-agent）池设置
-UAPOOL = [
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36",
-    "Mozilla/5.0 (Android; Mobile; rv:14.0) Gecko/14.0 Firefox/14.0"
-]
+
+
+
