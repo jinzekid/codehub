@@ -1,0 +1,1 @@
+{'title': [<Selector xpath='/html/head/title/text()' data='新浪首页'>]}

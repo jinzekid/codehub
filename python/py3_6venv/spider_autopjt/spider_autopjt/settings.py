@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for spider_myfirstpjt project
+# Scrapy settings for spider_autopjt project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'spider_myfirstpjt'
+BOT_NAME = 'spider_autopjt'
 
-SPIDER_MODULES = ['spider_myfirstpjt.spiders']
-NEWSPIDER_MODULE = 'spider_myfirstpjt.spiders'
+SPIDER_MODULES = ['spider_autopjt.spiders']
+NEWSPIDER_MODULE = 'spider_autopjt.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'spider_myfirstpjt (+http://www.yourdomain.com)'
+#USER_AGENT = 'spider_autopjt (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -27,13 +27,13 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -47,18 +47,14 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'spider_myfirstpjt.middlewares.SpiderMyfirstpjtSpiderMiddleware': 543,
+#    'spider_autopjt.middlewares.SpiderAutopjtSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-   # 'spider_myfirstpjt.middlewares.SpiderMyfirstpjtDownloaderMiddleware': 543,
-   #  'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 123,
-   #  'spider_myfirstpjt.middlewares.IPPOOLS':125,
-    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': 2,
-    'spider_myfirstpjt.uamid.Uamid': 1
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'spider_autopjt.middlewares.SpiderAutopjtDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -69,7 +65,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'spider_myfirstpjt.pipelines.SpiderMyfirstpjtPipeline': 300,
+   'spider_autopjt.pipelines.SpiderAutopjtPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,23 +88,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-
-#IP池设置
-IPPOOL = [
-    {"ipaddr": "39.81.149.145:4388"},
-    {"ipaddr": "223.244.32.104:4368"},
-    {"ipaddr": "221.231.87.241:4387"},
-    {"ipaddr": "119.5.181.58:4386"},
-    {"ipaddr": "119.5.181.22:4386"},
-    {"ipaddr": "115.219.32.109:4318"},
-    {"ipaddr": "121.234.115.221:4387"},
-    {"ipaddr": "49.82.253.127:4321"}
-]
-
-# 用户代理（user-agent）池设置
-UAPOOL = [
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36",
-    "Mozilla/5.0 (Android; Mobile; rv:14.0) Gecko/14.0 Firefox/14.0"
-]
