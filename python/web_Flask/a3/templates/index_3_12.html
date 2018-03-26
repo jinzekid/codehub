@@ -1,0 +1,25 @@
+{% extends "base_3_12.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+<link rel="shortcut icon"
+      href="{{ url_for('static', filename='py.png')}}"
+      type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='py.png')}}"
+      type="image/x-icon">
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_jquery() }}
+{{ moment.include_moment() }}
+{% endblock %}
+
+{% endblock %}
+{% block body %}
+
+<p>{{ current_time }}</p>
+<p>The local date time is {{ moment(current_time).format('LLL') }}.</p>
+<p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+
+{% endblock %}

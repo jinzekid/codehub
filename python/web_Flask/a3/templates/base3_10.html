@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+<link rel="shortcut icon"
+      href="{{ url_for('static', filename='py.png')}}"
+      type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='py.png')}}"
+      type="image/x-icon">
+
+{% endblock %}
+{% block body %}
+<h1>Hello, World!22</h1>
+{% endblock %}

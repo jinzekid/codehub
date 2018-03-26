@@ -12,6 +12,10 @@ def index():
 def user(name):
     return render_template('user_bs_error.html', name=name)
 
+@app.route('/base_ico')
+def base_icon():
+    return render_template('base3_10.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 400

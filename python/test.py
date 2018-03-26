@@ -94,20 +94,20 @@
 
 
 # # 2.共享属性
-# class Borg(object):
-#     _state = {}
-#     def __new__(cls, *args, **kwargs):
-#         ob = super(Borg, cls).__new__(cls, *args, **kwargs)
-#         ob.__dict__ = cls._state
-#
-#         return ob
-#
-# class MyClass2(Borg):
-#     a = 1
-#
-# b = Borg()
-# b2 = Borg()
-# print(id(b))
+class Borg(object):
+    _state = {}
+    def __new__(cls, *args, **kwargs):
+        ob = super(Borg, cls).__new__(cls, *args, **kwargs)
+        ob.__dict__ = cls._state
+
+        return ob
+
+class MyClass2(Borg):
+    a = 1
+
+b = Borg()
+b2 = Borg()
+print(id(b))
 # print(id(b2))
 
 
