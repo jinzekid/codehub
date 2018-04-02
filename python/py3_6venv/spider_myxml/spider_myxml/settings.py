@@ -11,8 +11,8 @@
 
 BOT_NAME = 'spider_myxml'
 
-SPIDER_MODULES = ['spider_myxml.spiders']
-NEWSPIDER_MODULE = 'spider_myxml.spiders'
+SPIDER_MODULES = ['spider_myxml.dev_Spiders']
+NEWSPIDER_MODULE = 'spider_myxml.dev_Spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

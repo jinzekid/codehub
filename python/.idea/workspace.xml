@@ -57,10 +57,12 @@
     <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1512022011846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5/module_test" />
     <SUITE FILE_PATH="coverage/python$2.coverage" NAME="字符编码2 Coverage Results" MODIFIED="1517361828881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day3" />
     <SUITE FILE_PATH="coverage/python$.coverage" NAME="常见函数 Coverage Results" MODIFIED="1519133470922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider/正则表达式" />
+    <SUITE FILE_PATH="coverage/python$numpy_.coverage" NAME="numpy_基础 Coverage Results" MODIFIED="1522487959597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据分析" />
     <SUITE FILE_PATH="coverage/python$json.coverage" NAME="json反序列化 Coverage Results" MODIFIED="1511940429556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day4" />
     <SUITE FILE_PATH="coverage/python$test_error.coverage" NAME="test_error Coverage Results" MODIFIED="1519025494884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider" />
     <SUITE FILE_PATH="coverage/python$gevent.coverage" NAME="测试gevent Coverage Results" MODIFIED="1516092226946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/练习" />
     <SUITE FILE_PATH="coverage/python$mymath.coverage" NAME="mymath Coverage Results" MODIFIED="1516517234614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/结构型模式/修饰起模式" />
+    <SUITE FILE_PATH="coverage/python$test_matplotlib.coverage" NAME="test_matplotlib Coverage Results" MODIFIED="1522243985972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python$test_re_.coverage" NAME="test_re_元字符 Coverage Results" MODIFIED="1519106736746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider/c5" />
     <SUITE FILE_PATH="coverage/python$test_threading.coverage" NAME="test_threading Coverage Results" MODIFIED="1519209175464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider/CustomSpider/多线程爬虫" />
     <SUITE FILE_PATH="coverage/python$Unittests_in_module_test_py.coverage" NAME="Unittests in module_test.py Coverage Results" MODIFIED="1512022659416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5" />
@@ -75,6 +77,7 @@
     <SUITE FILE_PATH="coverage/python$queue.coverage" NAME="进程queue Coverage Results" MODIFIED="1516066741235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day10" />
     <SUITE FILE_PATH="coverage/python$test_proxy.coverage" NAME="test_proxy Coverage Results" MODIFIED="1519025146221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider" />
     <SUITE FILE_PATH="coverage/python$A.coverage" NAME="A Coverage Results" MODIFIED="1521204654788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/python_parsesourcecode" />
+    <SUITE FILE_PATH="coverage/python$hello_sql_5_5.coverage" NAME="hello_sql_5_5 Coverage Results" MODIFIED="1522638884502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a5" />
     <SUITE FILE_PATH="coverage/python$rsa_encrypt.coverage" NAME="rsa_encrypt Coverage Results" MODIFIED="1517888501121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/encryption" />
     <SUITE FILE_PATH="coverage/python$hello.coverage" NAME="hello Coverage Results" MODIFIED="1521600034978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a2" />
     <SUITE FILE_PATH="coverage/python$random.coverage" NAME="random模块 Coverage Results" MODIFIED="1512452577486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5/模块测试/标准库" />
@@ -90,6 +93,7 @@
     <SUITE FILE_PATH="coverage/python$proxy.coverage" NAME="proxy模式 Coverage Results" MODIFIED="1517619126026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/结构型模式/代理模式" />
     <SUITE FILE_PATH="coverage/python$mvc.coverage" NAME="mvc Coverage Results" MODIFIED="1516708796601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/结构型模式/模型-视图-控制器模式" />
     <SUITE FILE_PATH="coverage/python$Unittests_in_test_spider_qiushi_pc_py.coverage" NAME="Unittests in test_spider_qiushi_pc.py Coverage Results" MODIFIED="1519224221216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider/CustomSpider" />
+    <SUITE FILE_PATH="coverage/python$hello_flask_wft_4_1.coverage" NAME="hello_flask_wft_4_1 Coverage Results" MODIFIED="1522114207104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a4" />
     <SUITE FILE_PATH="coverage/python$Unittests_in_test_py.coverage" NAME="Unittests in test.py Coverage Results" MODIFIED="1519005560181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider" />
     <SUITE FILE_PATH="coverage/python$flyweight.coverage" NAME="flyweight Coverage Results" MODIFIED="1516707617571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/结构型模式/享元模式" />
     <SUITE FILE_PATH="coverage/python$hello_.coverage" NAME="hello_渲染模版 Coverage Results" MODIFIED="1521807576280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/FlaskDev" />
@@ -109,10 +113,11 @@
     <SUITE FILE_PATH="coverage/python$sys.coverage" NAME="sys模块 Coverage Results" MODIFIED="1512523430919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5/模块测试/标准库" />
     <SUITE FILE_PATH="coverage/python$configparser.coverage" NAME="configparser生成器模块 Coverage Results" MODIFIED="1512958898561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5/模块测试/标准库" />
     <SUITE FILE_PATH="coverage/python$myspd.coverage" NAME="myspd Coverage Results" MODIFIED="1521031110638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider_mypjt/spider_mypjt/spiders" />
-    <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1521859812636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1522384386482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python$ftp_socket_server.coverage" NAME="ftp_socket_server Coverage Results" MODIFIED="1515135493143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day8/socket" />
     <SUITE FILE_PATH="coverage/python$index.coverage" NAME="index Coverage Results" MODIFIED="1513905856342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day7" />
     <SUITE FILE_PATH="coverage/python$cs_play.coverage" NAME="cs_play Coverage Results" MODIFIED="1513583898534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day6" />
+    <SUITE FILE_PATH="coverage/python$hello_flask_wft_4_2.coverage" NAME="hello_flask_wft_4_2 Coverage Results" MODIFIED="1522286303321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a4" />
     <SUITE FILE_PATH="coverage/python$mapping_model.coverage" NAME="mapping_model Coverage Results" MODIFIED="1517839770613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/pymoduletest/模型映射" />
     <SUITE FILE_PATH="coverage/python$myxmlspider.coverage" NAME="myxmlspider Coverage Results" MODIFIED="1520561608836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/spider_myxml/spider_myxml/spiders" />
     <SUITE FILE_PATH="coverage/python$_.coverage" NAME="继承_学校 Coverage Results" MODIFIED="1513656975168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day6" />
@@ -143,7 +148,9 @@
     <SUITE FILE_PATH="coverage/python$socket_.coverage" NAME="socket_客户端 Coverage Results" MODIFIED="1516349752127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/socket编程/改良版socket-解决粘包问题" />
     <SUITE FILE_PATH="coverage/python$items.coverage" NAME="items Coverage Results" MODIFIED="1520472364737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/weisuen/weisuen" />
     <SUITE FILE_PATH="coverage/python$login.coverage" NAME="login Coverage Results" MODIFIED="1517276496989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2/new_dir" />
-    <SUITE FILE_PATH="coverage/python$1.coverage" NAME="1 Coverage Results" MODIFIED="1516414335839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/工厂模式" />
+    <SUITE FILE_PATH="coverage/python$hello_4_5.coverage" NAME="hello_4_5 Coverage Results" MODIFIED="1522197461621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a4" />
+    <SUITE FILE_PATH="coverage/python$hello_flask_wft_4_5.coverage" NAME="hello_flask_wft_4_5 Coverage Results" MODIFIED="1522286562723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_Flask/a4" />
+    <SUITE FILE_PATH="coverage/python$1.coverage" NAME="1 Coverage Results" MODIFIED="1522401243880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据分析" />
     <SUITE FILE_PATH="coverage/python$os.coverage" NAME="os模块 Coverage Results" MODIFIED="1512462059916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5/模块测试/标准库" />
     <SUITE FILE_PATH="coverage/python$aes_encrypt.coverage" NAME="aes_encrypt Coverage Results" MODIFIED="1517884888915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py3_6venv/encryption" />
     <SUITE FILE_PATH="coverage/python$apple_factory.coverage" NAME="apple_factory Coverage Results" MODIFIED="1516507724884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/设计模式/创建模式/建造者模式" />
@@ -152,103 +159,109 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hello_bootstrap.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_bootstrap.py">
+      <file leaf-file-name="list操作.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/基础知识/list操作.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="142">
+              <caret line="138" column="11" lean-forward="true" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base3_10.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/base3_10.html">
+      <file leaf-file-name="numpy_基础.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/数据分析/numpy_基础.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="113">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/404.html">
+      <file leaf-file-name="eye.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/数据分析/eye.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello_3_12.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_3_12.py">
+      <file leaf-file-name="hello_sql_5_1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a5/hello_sql_5_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="267">
+              <caret line="37" column="42" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="37" selection-end-column="42" />
               <folding>
-                <element signature="e#19#59#0" expanded="true" />
+                <element signature="e#19#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello_3_11.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_3_11.py">
+      <file leaf-file-name="hello_flask_wft_4_5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="344">
+              <caret line="35" column="50" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="50" />
+              <folding>
+                <element signature="e#19#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hello_sql_5_5.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a5/hello_sql_5_5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="74" column="35" lean-forward="true" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+              <folding>
+                <element signature="e#19#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_5_5.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a5/templates/index_5_5.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_3_12.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/index_3_12.html">
+      <file leaf-file-name="index_flask_wft_4_5.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="289">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <element signature="e#285#292#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/base.html">
+        <entry file="file://$PROJECT_DIR$/web_Flask/a5/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_3_12.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/base_3_12.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_bs_error.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs_error.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_bs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -266,10 +279,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>我是一名</find>
-      <find>3297</find>
-      <find>do_installGlobalOpener</find>
-      <find>proxyrequest</find>
       <find>userList</find>
       <find>targetInfo</find>
       <find>510818024</find>
@@ -296,6 +305,10 @@
       <find>urlretrieve</find>
       <find>page_content</find>
       <find>print</find>
+      <find>J_goodsList</find>
+      <find>主题: 9014</find>
+      <find>endfor</find>
+      <find>SQLALCHEMY_TRACK_MODIFICATIONS</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -309,35 +322,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mypjt/spider_mypjt/items.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_autopjt/spider_autopjt/items.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_autopjt/spider_autopjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_autopjt/spider_autopjt/spiders/autospd.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mycwpjt/spider_mycwpjt/items.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mycwpjt/spider_mycwpjt/pipelines.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mycwpjt/spider_mycwpjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mycwpjt/spider_mycwpjt/spiders/weisuen.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mysqlpjt/spider_mysqlpjt/items.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mysqlpjt/spider_mysqlpjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mysqlpjt/spider_mysqlpjt/spiders/weiwei.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_mysqlpjt/spider_mysqlpjt/pipelines.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_autopjt/mydata.json" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_autopjt/spider_autopjt/pipelines.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/python_parsesourcecode/B.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/python_parsesourcecode/A.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/items.py" />
-        <option value="$PROJECT_DIR$/lyutil/ly_proxy_test_http.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/spiders/myhexunspd.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/pipelines.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/items.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/spiders/qtspd.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_loginpjt/spider_loginpjt/settings.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_loginpjt/spider_loginpjt/spiders/loginspd.py" />
-        <option value="$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/pipelines.py" />
-        <option value="$PROJECT_DIR$/数据库/mysq_conn.py" />
-        <option value="$PROJECT_DIR$/源代码测试/A.py" />
         <option value="$PROJECT_DIR$/hello.py" />
         <option value="$PROJECT_DIR$/web_Flask/hello.py" />
         <option value="$PROJECT_DIR$/web_Flask/a2/getUserAgent.py" />
@@ -350,7 +334,6 @@
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/404.html" />
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/user_bs_error.html" />
         <option value="$PROJECT_DIR$/lyutil/ly_comm_util.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/web_Flask/a3/hello_bootstrap.py" />
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/sec_base.html" />
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/base3_10.html" />
@@ -360,6 +343,36 @@
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/base3_12.html" />
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/index_3_12.html" />
         <option value="$PROJECT_DIR$/web_Flask/a3/templates/base_3_12.html" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/readme" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/__init__.py" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/items.py" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/settings.py" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/spiders/jd_phone.py" />
+        <option value="$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/pipelines.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/hello.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_1.html" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_1.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_2.html" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_2.py" />
+        <option value="$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/settings.py" />
+        <option value="$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/bankuai.html" />
+        <option value="$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/items.py" />
+        <option value="$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/spiders/bankuai_info.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/hello_4_5.py" />
+        <option value="$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/pipelines.py" />
+        <option value="$PROJECT_DIR$/test_matplotlib.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/templates/base.html" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_5.html" />
+        <option value="$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_5.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/基础知识/list操作.py" />
+        <option value="$PROJECT_DIR$/数据分析/1.py" />
+        <option value="$PROJECT_DIR$/数据分析/vector_sum.py" />
+        <option value="$PROJECT_DIR$/数据分析/ipython_log.py" />
+        <option value="$PROJECT_DIR$/数据分析/numpy_基础.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a5/templates/index_5_5.html" />
+        <option value="$PROJECT_DIR$/web_Flask/a5/hello_sql_5_1.py" />
+        <option value="$PROJECT_DIR$/web_Flask/a5/hello_sql_5_5.py" />
       </list>
     </option>
   </component>
@@ -371,8 +384,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="824" />
-    <option name="height" value="1027" />
+    <option name="width" value="767" />
+    <option name="height" value="971" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -389,7 +402,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,11 +434,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web_Flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a3" />
+              <option name="myItemId" value="数据分析" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,7 +452,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="a3" />
+              <option name="myItemId" value="a5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web_Flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -466,11 +492,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="a3" />
+              <option name="myItemId" value="a4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="web_Flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,22 +532,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="py3_6venv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -515,17 +546,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_Flask/a5/templates" />
+      <recent name="$PROJECT_DIR$/web_Flask/a4/templates" />
+      <recent name="$PROJECT_DIR$/web_Flask/a3/templates" />
       <recent name="$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt" />
       <recent name="$PROJECT_DIR$/py3_6venv/FlaskDev/5a" />
-      <recent name="$PROJECT_DIR$/py3_6venv/FlaskDev/4a" />
-      <recent name="$PROJECT_DIR$/py3_6venv/FlaskDev/4a/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_Flask/a4/templates" />
       <recent name="$PROJECT_DIR$/web_Flask/a2" />
       <recent name="$PROJECT_DIR$/web_Flask" />
       <recent name="$PROJECT_DIR$/py3_6venv/spider_qtpjt" />
       <recent name="$PROJECT_DIR$/py3_6venv/spider_mymultispd/spider_mymultispd" />
-      <recent name="$PROJECT_DIR$/lyutil" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -540,59 +572,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hello_3_12">
-    <configuration default="false" name="hello_bootstrap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.hello_sql_5_5">
+    <configuration default="false" name="hello_flask_wft_4_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_Flask/a3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_Flask/a4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_Flask/a3/hello_bootstrap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="dog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day6" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day6/dog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="hello_渲染模版" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py3_6venv/FlaskDev" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py3_6venv/FlaskDev/hello_渲染模版.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -617,20 +611,58 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="hello_3_12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_Flask/a3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/数据分析" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_Flask/a3/hello_3_12.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/数据分析/vector_sum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="numpy_基础" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/数据分析" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/数据分析/numpy_基础.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="hello_sql_5_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_Flask/a5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_Flask/a5/hello_sql_5_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -785,19 +817,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.hello_bootstrap" />
-      <item index="1" class="java.lang.String" itemvalue="Python.dog" />
-      <item index="2" class="java.lang.String" itemvalue="Python.hello_渲染模版" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.hello_3_12" />
+      <item index="0" class="java.lang.String" itemvalue="Python.hello_flask_wft_4_5" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.numpy_基础" />
+      <item index="4" class="java.lang.String" itemvalue="Python.hello_sql_5_5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.hello_3_12" />
-        <item index="1" class="java.lang.String" itemvalue="Python.hello_bootstrap" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.hello_渲染模版" />
-        <item index="4" class="java.lang.String" itemvalue="Python.dog" />
+        <item index="0" class="java.lang.String" itemvalue="Python.hello_sql_5_5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.numpy_基础" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.hello_flask_wft_4_5" />
       </list>
     </recent_temporary>
   </component>
@@ -847,27 +879,27 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="824" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="767" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3043478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2537931" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18385093" sideWeight="0.5090703" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.4909297" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18316269" sideWeight="0.4909297" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27224436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -891,263 +923,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py3_6venv/spider_qtpjt/spider_qtpjt/spiders/qtspd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/MutilToMutil/orm_createTable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/MutilToMutil/orm_m2m_api.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/FK/orm_api.py">
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="26" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/FK/orm_fk_createTable.py">
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/orm_base_sqlchemy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-737">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/orm_fk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/数据库/mysq_conn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day5/module_test/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day5/module_test/module_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/源代码测试/A.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/pyven3_6/lib/python3.6/site-packages/flask/helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="830" column="6" lean-forward="false" selection-start-line="830" selection-start-column="6" selection-end-line="830" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/pyven3_6/lib/python3.6/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8874">
-          <caret line="547" column="21" lean-forward="false" selection-start-line="547" selection-start-column="21" selection-end-line="547" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a2/getUserAgent.py" />
-    <entry file="file://$PROJECT_DIR$/web_Flask/a2/hello.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="53" column="22" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="53" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day13/test_ssh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day4/生成器.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day5/module_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础知识/String操作.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day6/dog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/templates/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/hello_渲染模版.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/hello.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_loginpjt/spider_loginpjt/spiders/loginspd.py">
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/pyven3_6/lib/python3.6/site-packages/scrapy/spiders/__init__.py">
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-861">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lyutil/ly_comm_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_loginpjt/spider_loginpjt/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/1072512564/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="468" column="19" lean-forward="true" selection-start-line="468" selection-start-column="19" selection-end-line="468" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/sec_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="10" />
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1158,57 +967,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs_error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_3_11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_3_12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_bootstrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1216,7 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,32 +999,354 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/index_3_12.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/base_3_12.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="85">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/index_3_12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/sec_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="33" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a3/templates/user_bs_error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_Flask/a3/hello_3_12.py">
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/bankuai.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="640" column="31" lean-forward="true" selection-start-line="640" selection-start-column="31" selection-end-line="640" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#10163#10169#1" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#10599#10605#1" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#11289#11295#0" expanded="false" />
+            <element signature="e#11295#11301#0" expanded="false" />
+            <element signature="e#11301#11307#0" expanded="false" />
+            <element signature="e#11307#11313#0" expanded="false" />
+            <element signature="e#11831#11837#0" expanded="false" />
+            <element signature="e#11837#11843#0" expanded="false" />
+            <element signature="e#11843#11849#0" expanded="false" />
+            <element signature="e#11849#11855#0" expanded="false" />
+            <element signature="e#12525#12531#0" expanded="false" />
+            <element signature="e#12531#12537#0" expanded="false" />
+            <element signature="e#12537#12543#0" expanded="false" />
+            <element signature="e#12543#12549#0" expanded="false" />
+            <marker date="1522153940938" expanded="true" signature="79457:79473" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider/正则表达式/test_re_元字符.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider/test_scrapy/first.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider/CustomSpider/多线程爬虫/test_queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider/CustomSpider/多线程爬虫/test_threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider/CustomSpider/多线程爬虫/test_spider_mutilThreading_weixin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="82" column="64" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="82" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_hexunpjt/spider_hexunpjt/spiders/myhexunspd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/spider_jd_phone/spider_jd_phone/spiders/jd_phone.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="2" selection-end-line="56" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/hello_4_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="50" />
+          <folding>
+            <element signature="e#19#87#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/spiders/bankuai_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <element signature="e#24#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_Spiders/spider_taisha_hsbc/spider_taisha_hsbc/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/pyven3_6/lib/python3.6/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="840" column="0" lean-forward="false" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="e#19#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/pyven3_6/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="582" column="6" lean-forward="false" selection-start-line="582" selection-start-column="6" selection-end-line="582" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py3_6venv/FlaskDev/5a/hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_matplotlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据分析/vector_sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据分析/ipython_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据分析/eye.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据分析/numpy_基础.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础知识/list操作.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="138" column="11" lean-forward="true" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a5/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/templates/index_flask_wft_4_5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#285#292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a4/hello_flask_wft_4_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="35" column="50" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="50" />
+          <folding>
+            <element signature="e#19#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a5/templates/index_5_5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a5/hello_sql_5_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="37" column="42" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <element signature="e#19#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_Flask/a5/hello_sql_5_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="74" column="35" lean-forward="true" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding>
+            <element signature="e#19#94#0" expanded="true" />
           </folding>
         </state>
       </provider>

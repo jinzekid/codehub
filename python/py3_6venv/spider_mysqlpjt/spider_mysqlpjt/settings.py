@@ -11,8 +11,8 @@
 
 BOT_NAME = 'spider_mysqlpjt'
 
-SPIDER_MODULES = ['spider_mysqlpjt.spiders']
-NEWSPIDER_MODULE = 'spider_mysqlpjt.spiders'
+SPIDER_MODULES = ['spider_mysqlpjt.dev_Spiders']
+NEWSPIDER_MODULE = 'spider_mysqlpjt.dev_Spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -11,8 +11,8 @@
 
 BOT_NAME = 'spider_mymultispd'
 
-SPIDER_MODULES = ['spider_mymultispd.spiders']
-NEWSPIDER_MODULE = 'spider_mymultispd.spiders'
+SPIDER_MODULES = ['spider_mymultispd.dev_Spiders']
+NEWSPIDER_MODULE = 'spider_mymultispd.dev_Spiders'
 
 COMMANDS_MODULE = 'spider_mymultispd.mycmd'
 

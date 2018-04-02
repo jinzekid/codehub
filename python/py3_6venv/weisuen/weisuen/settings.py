@@ -11,8 +11,8 @@
 
 BOT_NAME = 'weisuen'
 
-SPIDER_MODULES = ['weisuen.spiders']
-NEWSPIDER_MODULE = 'weisuen.spiders'
+SPIDER_MODULES = ['weisuen.dev_Spiders']
+NEWSPIDER_MODULE = 'weisuen.dev_Spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

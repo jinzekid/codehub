@@ -1,0 +1,23 @@
+# IPython log file
+
+a = arange(5)
+import numpy as np
+a = np.arange(5)
+a.dtype
+get_ipython().run_line_magic('hist', '')
+get_ipython().run_line_magic('logstart', '')
+import numpy as np
+a = np.arange(5)
+a.dtype
+get_ipython().run_line_magic('hist', '')
+a
+a.shape
+m = array(np.arange(2), np.arange(2))
+m = np.array(np.arange(2), np.arange(2))
+m = np.array([np.arange(2), np.arange(2))
+m
+]
+get_ipython().run_line_magic('logstart', '')
+get_ipython().run_line_magic('hist', '')
+get_ipython().run_line_magic('logstart', '')
+exit()

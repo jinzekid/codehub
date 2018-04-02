@@ -131,4 +131,27 @@ print(list_1)
 list_1.discard(99)
 print(list_1)
 
+print("\n----------------其他操作----------------\n")
+# 使用zip函数将键/值列表链在一起
+names = ['name', 'age', 'pay', 'job']
+values = ['Sue', 45, 4000, 'dev']
+l = list(zip(names, values))
+d = dict(zip(names, values))
+print(l, d)
+
+# 初始化字典
+fields = ('name', 'age', 'pay', 'job')
+record = dict.fromkeys(fields, '?')
+print(record)
+
+people = []
+bob = {'name': 'bob', 'pay': 400}
+sue = {'name': 'sue', 'pay': 500}
+people = [bob, sue]
+names = [person['name'] for person in people]
+print(names)
+names_list = list(map((lambda x: x['name']), people))
+print(names_list)
+sum_pay = sum(person['pay'] for person in people)
+print(sum_pay)
 
