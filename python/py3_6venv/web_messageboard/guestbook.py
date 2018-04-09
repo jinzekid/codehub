@@ -9,7 +9,7 @@ from bpmappers import Mapper, RawField, ListDelegateField
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
-# app.config.update()
+# app2.config.update()
 
 DATA_FILE = 'guestbook.dat'
 

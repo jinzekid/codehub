@@ -35,10 +35,10 @@ class MyhexunspdSpider(scrapy.Spider):
             comment = scrapy.Field() #存储文章评论数
         '''
         item['name'] = response.xpath("//span["
-                                      "@class='ArticleTitleText']/a/text("
+                                      "@class='ArticleTitleText']/a4/text("
                                       ")").extract()
         item['url'] = response.xpath("//span["
-                                     "@class='ArticleTitleText']/a/@href").extract()
+                                     "@class='ArticleTitleText']/a4/@href").extract()
 
         # 接下来需要使用urllib和re模块获取博文的评论数和阅读数
         pat1 = '<script type="text/javascript" src="(http://click.tool.hexun.com/.*?)">'

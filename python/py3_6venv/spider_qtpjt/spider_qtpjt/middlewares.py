@@ -9,7 +9,7 @@ from scrapy import signals
 
 
 class SpiderQtpjtSpiderMiddleware(object):
-    # Not all methods need to be defined. If a method is not defined,
+    # Not all methods need to be defined. If a4 method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
 
@@ -36,7 +36,7 @@ class SpiderQtpjtSpiderMiddleware(object):
             yield i
 
     def process_spider_exception(self, response, exception, spider):
-        # Called when a spider or process_spider_input() method
+        # Called when a4 spider or process_spider_input() method
         # (from other spider middleware) raises an exception.
 
         # Should return either None or an iterable of Response, dict
@@ -46,7 +46,7 @@ class SpiderQtpjtSpiderMiddleware(object):
     def process_start_requests(self, start_requests, spider):
         # Called with the start requests of the spider, and works
         # similarly to the process_spider_output() method, except
-        # that it doesn’t have a response associated.
+        # that it doesn’t have a4 response associated.
 
         # Must return only requests (not items).
         for r in start_requests:
@@ -57,7 +57,7 @@ class SpiderQtpjtSpiderMiddleware(object):
 
 
 class SpiderQtpjtDownloaderMiddleware(object):
-    # Not all methods need to be defined. If a method is not defined,
+    # Not all methods need to be defined. If a4 method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
 
@@ -74,8 +74,8 @@ class SpiderQtpjtDownloaderMiddleware(object):
 
         # Must either:
         # - return None: continue processing this request
-        # - or return a Response object
-        # - or return a Request object
+        # - or return a4 Response object
+        # - or return a4 Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
         return None
@@ -84,19 +84,19 @@ class SpiderQtpjtDownloaderMiddleware(object):
         # Called with the response returned from the downloader.
 
         # Must either;
-        # - return a Response object
-        # - return a Request object
+        # - return a4 Response object
+        # - return a4 Request object
         # - or raise IgnoreRequest
         return response
 
     def process_exception(self, request, exception, spider):
-        # Called when a download handler or a process_request()
+        # Called when a4 download handler or a4 process_request()
         # (from other downloader middleware) raises an exception.
 
         # Must either:
         # - return None: continue processing this exception
-        # - return a Response object: stops process_exception() chain
-        # - return a Request object: stops process_exception() chain
+        # - return a4 Response object: stops process_exception() chain
+        # - return a4 Request object: stops process_exception() chain
         pass
 
     def spider_opened(self, spider):

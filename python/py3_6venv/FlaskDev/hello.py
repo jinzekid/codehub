@@ -15,7 +15,7 @@ def user(name):
 # 返回response对象
 @app.route('/rep')
 def rep():
-    response = make_response('<h1>This document carries a cookies!</h1>')
+    response = make_response('<h1>This document carries a4 cookies!</h1>')
     response.set_cookie('answer', '42')
     return response
 

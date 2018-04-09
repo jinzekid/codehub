@@ -7,7 +7,7 @@ from Crypto.Signature import PKCS1_v1_5 as Signature_pkcs1_v1_5
 from Crypto.PublicKey import RSA
 import base64
 
-DATA = 'hello ghost, this is a plian text'
+DATA = 'hello ghost, this is a4 plian text'
 
 PUBLIC_KEY_PEM = """-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRWjFY+TrQp3lOnRJmbjcZ5+Hh

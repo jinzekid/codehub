@@ -5,7 +5,7 @@ from enum import Enum
 
 TreeType = Enum('TreeType', 'apple_tree cherry_tree peach_tree')
 
-class Tree:
+class Tree(object):
     pool = dict()
 
     def __new__(cls, tree_type):
@@ -19,7 +19,7 @@ class Tree:
         return obj
 
     def render(self, age, x, y):
-        print('render a tree of type {} and age {} at ({}, {})'.format(
+        print('render a4 tree of type {} and age {} at ({}, {})'.format(
             self.tree_type,
             age,
             x,

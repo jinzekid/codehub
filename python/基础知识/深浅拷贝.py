@@ -2,7 +2,7 @@
 
 import copy
 
-name1 = ['name', ['a', 100]]
+name1 = ['name', ['a4', 100]]
 print("====浅拷贝操作====")
 # 方式一
 p1 = copy.copy(name1) #浅拷贝

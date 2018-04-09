@@ -24,7 +24,7 @@ class WeisuenSpider(CrawlSpider):
         print("parse_item...")
         i = SpiderMycwpjtItem()
         i['name'] = response.xpath('/html/head/title/text()').extract_first()
-        # i['link'] = response.xpath("//a/@href").extract_first()
+        # i['link'] = response.xpath("//a4/@href").extract_first()
         #i['domain_id'] = response.xpath('//input[@id="sid"]/@value').extract()
         #i['name'] = response.xpath('//div[@id="name"]').extract()
         #i['description'] = response.xpath('//div[@id="description"]').extract()

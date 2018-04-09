@@ -45,7 +45,7 @@ ret = re.sub("[0-9]+", "!", "abc12de3f45GH")
 print(ret) # output: abc!de!f!GH
 ret = re.sub("[0-9]+", "!", "abc12de3f45GH", count=2)
 print(ret) # output: abc!de!f45GH
-ret = re.search("/", "a/bc/fddfd/\//")
+ret = re.search("/", "a4/bc/fddfd/\//")
 print(ret)
 
 

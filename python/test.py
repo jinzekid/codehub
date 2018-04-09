@@ -1,18 +1,19 @@
+
 # a = 1
-# def fun(a):
-#     a = 2
+# def fun(a4):
+#     a4 = 2
 #
-# fun(a)
-# print(a)
+# fun(a4)
+# print(a4)
 #
 # print()
 #
-# a = []
-# def fun2(a):
-#     a.append(1)
+# a4 = []
+# def fun2(a4):
+#     a4.append(1)
 #
-# fun2(a)
-# print(a)
+# fun2(a4)
+# print(a4)
 
 
 # def foo(x):
@@ -30,10 +31,10 @@
 #     def static_foo(x):
 #         print("executing static_foo({})".format(x))
 #
-# a = A()
-# a.foo(1)
-# a.class_foo(2)
-# a.static_foo(3)
+# a4 = A()
+# a4.foo(1)
+# a4.class_foo(2)
+# a4.static_foo(3)
 #
 # A.class_foo(4)
 # A.static_foo(5)
@@ -62,7 +63,7 @@
 #         return cls._instance
 #
 # class MyClass(Singleton):
-#     a = 1
+#     a4 = 1
 #
 # am = MyClass(Singleton())
 # am2 = MyClass(Singleton())
@@ -80,7 +81,7 @@
 #
 # @singleton
 # class MyClass3(object):
-#     a = 1
+#     a4 = 1
 #
 # a1 = MyClass3()
 # a2 = MyClass3()
@@ -100,7 +101,7 @@
 #         return ob
 #
 # class MyClass2(Borg):
-#     a = 1
+#     a4 = 1
 #
 # b = Borg()
 # b2 = Borg()
@@ -151,16 +152,6 @@ names_list = list(map((lambda x: x['name']), people))
 print(names_list)
 sum_pay = sum(person['pay'] for person in people)
 print(sum_pay)
-
-
-
-
-
-
-
-
-
-
 
 
 

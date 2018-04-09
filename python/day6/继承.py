@@ -50,7 +50,7 @@ class Man(People, Relation):
 class Woman(People):
 
     def get_birth(self):
-        print("%s is born a baby..." % self.name)
+        print("%s is born a4 baby..." % self.name)
 
 ######################################################
 p = People("tt", 23)
@@ -59,5 +59,5 @@ m.eat() # m1 eating...
 print(m.money) # 100
 m.sleep() # m1 sleeping...
 w = Woman("w1", 26)
-w.get_birth() # w1 is born a baby...
+w.get_birth() # w1 is born a4 baby...
 m.make_friends(w) # m1 is making friends with w1

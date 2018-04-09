@@ -32,7 +32,7 @@ print(os.path.isabs("/Users/jasonlu/Desktop/Dev")) # 以根开头的，/ 绝对�
 print(os.path.isfile("/Users/jasonlu/Desktop/thefile.txt")) # 判断是否是文件
 print(os.path.isdir("/Users/jasonlu/Desktop/")) # 是否是目录
 
-path = os.path.join("/Users/jasonlu/Desktop/", "a", "b", "a.txt")
+path = os.path.join("/Users/jasonlu/Desktop/", "a4", "b", "a4.txt")
 print(path)
 print(os.path.getatime("/Users/jasonlu/Desktop/thefile.txt")) # 创建时间
 changetime = time.gmtime(os.path.getctime("/Users/jasonlu/Desktop/thefile.txt"))

@@ -12,7 +12,7 @@ def getContent(page_start, page_end):
         # data = urllib.request.urlopen(url).read().decode('utf-8')
         # print(data)
         # 可以正确解析
-        # pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a>(.*?)<a href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a>(.*?)'
+        # pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a4>(.*?)<a4 href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a4>(.*?)'
         pat_article = '<div class="article .*?<h2>(.*?)</h2>.*?<div class="content">.*?<span>(.*?)</span>.*?</div>'
 
         list_article = re.compile(pat_article, re.S).findall(data)

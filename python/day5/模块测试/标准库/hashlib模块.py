@@ -7,7 +7,7 @@ m.update(b"Hello")
 print(m.hexdigest())
 m.update(b"It's me")
 print(m.hexdigest())
-m.update(b"It's been a long time since last time we ...")
+m.update(b"It's been a4 long time since last time we ...")
 
 print(m.hexdigest())
 

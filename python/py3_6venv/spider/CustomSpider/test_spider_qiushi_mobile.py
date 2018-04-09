@@ -61,7 +61,7 @@ def getContent(proxy_addr, page_start, page_end):
         # data = urllib.request.urlopen(url).read().decode('utf-8')
         # print(data)
         # 可以正确解析
-        pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a>(.*?)<a href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a>(.*?)'
+        pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a4>(.*?)<a4 href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a4>(.*?)'
         # pat_article = '<div class="article .*?<h2>(.*?)</h2>.*?<div class="content">.*?<span>(.*?)</span>.*?</div>'
 
         list_article = re.compile(pat_article, re.S).findall(data)
@@ -100,12 +100,12 @@ getContent(proxy_addr, 1, 1)
 #     # print(data)
 #     # 构建对应用户提取的正则表达式
 #     # pat_user = 'target="_blank" title="(.*?)">'
-#     pat_user = '<a href="/users/([0-9]{8})/" class="username" (.*?)>(.*?)</a>'
+#     pat_user = '<a4 href="/users/([0-9]{8})/" class="username" (.*?)>(.*?)</a4>'
 #     # 寻找出所有的用户
 #     list_user = re.compile(pat_user, re.S).findall(data)
 #     # 构建段子内容提取的正则表达式
 #     # pat_content = '<div class="content">(.*?)</div>'
-#     pat_content = '<a href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a>'
+#     pat_content = '<a4 href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a4>'
 #     # 寻找出所有的内容
 #     list_content = re.compile(pat_content, re.S).findall(data)
 #     print(len(list_content))
@@ -134,7 +134,7 @@ getContent(proxy_addr, 1, 1)
 #     '''
 #
 #     # 可以正确解析
-#     pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a>(.*?)<a href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a>(.*?)'
+#     pat_article = '<article class="item tiezi(.*?) class="username"(.*?)>(.*?)</a4>(.*?)<a4 href="/article/[0-9]{9}" class="text" (.*?)>(.*?)</a4>(.*?)'
 #     list_article = re.compile(pat_article, re.S).findall(data)
 #     print(len(list_article))
 #     for article in list_article:

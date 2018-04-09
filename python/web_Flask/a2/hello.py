@@ -29,7 +29,7 @@ from flask import make_response
 @app.route('/makerespnose')
 def get_make_response():
     response = make_response('<h1>This is document carries'
-                             ' a cookie!</h1>')
+                             ' a4 cookie!</h1>')
     response.set_cookie('answer', '42')
     return response
 
@@ -41,7 +41,7 @@ def get_redirect():
 
 # # 处理错误
 # from flask import abort
-# @app.route('/user_id/<id>')
+# @app2.route('/user_id/<id>')
 # def go_user_id():
 #     user = load_user(id)
 #     if not user:

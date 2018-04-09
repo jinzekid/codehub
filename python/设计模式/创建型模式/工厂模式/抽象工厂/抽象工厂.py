@@ -12,7 +12,7 @@ class Frog:
 
 class Bug:
     def __str__(self):
-        return 'a bug'
+        return 'a4 bug'
 
     def action(self):
         return 'eats it'

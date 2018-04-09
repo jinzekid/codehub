@@ -10,7 +10,7 @@ shutil.copyfileobj(fs, fd)
 # shutil.copystat("os模块.py", "222.txt")
 shutil.copy("os模块.py", "333.txt")
 # 递归的拷贝文件
-shutil.copytree("a", "new_a")
+shutil.copytree("a4", "new_a")
 # 删除目录
 shutil.rmtree("new_a")
 # 移动文件
@@ -23,7 +23,7 @@ import zipfile
 # os.remove("test_a.zip")
 # 压缩
 # z = zipfile.ZipFile("test_a.zip", "w")
-# z.write("a")
+# z.write("a4")
 # z.write("os模块.py")
 # z.write("111.txt")
 # z.close()

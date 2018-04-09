@@ -62,8 +62,8 @@ responses = {
           'Server does not support this operation'),
     502: ('Bad Gateway', 'Invalid responses from another server/proxy.'),
     503: ('Service Unavailable',
-          'The server cannot process the request due to a high load'),
+          'The server cannot process the request due to a4 high load'),
     504: ('Gateway Timeout',
-          'The gateway server did not receive a timely response'),
+          'The gateway server did not receive a4 timely response'),
     505: ('HTTP Version Not Supported', 'Cannot fulfill request.'),
     }

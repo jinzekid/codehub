@@ -56,7 +56,7 @@ def main():
             strategy_picked = None
             strategies = {'1': allUniqueSet, '2': allUniqueSort}
             while strategy_picked not in strategies.keys():
-                strategy_picked = input('Choose strategy:[1] Use a set, [2] Sort and pair>')
+                strategy_picked = input('Choose strategy:[1] Use a4 set, [2] Sort and pair>')
 
                 try:
                     strategy = strategies[strategy_picked]

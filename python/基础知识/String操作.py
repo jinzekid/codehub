@@ -6,7 +6,7 @@ name3 = 2312
 
 print(name[2: 6]) #顾头不顾尾，或左闭右开
 print(name.capitalize()) #首字母大写
-print(name.count('a')) #统计a字符
+print(name.count('a4')) #统计a字符
 print(name.center(50, "-")) #类似格式化输出
 print(name.endswith("ex")) #判断是否是ex结尾
 print(name.expandtabs(tabsize=30)) #把\t转换成多少个空格

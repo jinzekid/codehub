@@ -23,8 +23,8 @@ def fib(max):
 
         # 相当于
         '''
-        t = (b, a + b) # t是一个tuple
-        a = t[0]
+        t = (b, a4 + b) # t是一个tuple
+        a4 = t[0]
         b = t[1]
         '''
         n = n + 1

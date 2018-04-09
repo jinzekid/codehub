@@ -8,7 +8,7 @@ class Computer:
         return 'the {} computer'.format(self.name)
 
     def execute(self):
-        return 'executes a program'
+        return 'executes a4 program'
 
 
 class Synthesizer:

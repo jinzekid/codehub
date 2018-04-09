@@ -79,7 +79,7 @@ class geturl(threading.Thread):
             data = use_proxy(self.proxy, str_url)
             print(data)
             # 可以正确解析
-            pat_link = '<div class="list-txt">(.*?)<a href="(.*?)" (.*?)/a>'
+            pat_link = '<div class="list-txt">(.*?)<a4 href="(.*?)" (.*?)/a4>'
             list_link = re.compile(pat_link, re.S).findall(data)
             print(len(list_link))
             for link in list_link:

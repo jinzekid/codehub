@@ -2,7 +2,7 @@
 
 quotes = ('A man is not complete until he is married. Then he is finished.',
           'As I said before, I never repeat myself.',
-          'Behind a successful man is na exhausted woman',
+          'Behind a4 successful man is na exhausted woman',
           'Black holes really suck...', 'Facts are stubborn things.')
 
 class QuoteMode:

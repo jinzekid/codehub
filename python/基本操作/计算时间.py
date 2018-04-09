@@ -6,14 +6,14 @@ from time import gmtime, strftime
 
 t = time.localtime()
 print(time.asctime(t))
-print(strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
+print(strftime("%a4, %d %b %Y %H:%M:%S +0000", gmtime()))
 print(strftime("%A", gmtime()))
 print(strftime("%D", gmtime()))
 print(strftime("%B", gmtime()))
 print(strftime("%y", gmtime()))
 
 # 将秒转换为GMT日期
-print(strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime(1234567890)))
+print(strftime("%a4, %d %b %Y %H:%M:%S +0000", gmtime(1234567890)))
 '''
 
 

@@ -19,7 +19,7 @@ class Command(ScrapyCommand):
 
     def add_options(self, parser):
         ScrapyCommand.add_options(self, parser)
-        parser.add_option("-a", dest="spargs", action="append", default=[],
+        parser.add_option("-a4", dest="spargs", action="append", default=[],
                           metavar="NAME=VALUE",
                           help="set spider argument (may be repeated)")
         parser.add_option("-o", "--output", metavar="FILE",
@@ -32,7 +32,7 @@ class Command(ScrapyCommand):
         try:
             opts.spargs = arglist_to_dict(opts.spargs)
         except ValueError:
-            raise UsageError("Invalid -a value, use -a NAME=VALUE",
+            raise UsageError("Invalid -a4 value, use -a4 NAME=VALUE",
                              print_help=False)
         if opts.output:
             if opts.output == '-':
@@ -47,7 +47,7 @@ class Command(ScrapyCommand):
                     ".", "")
             if opts.output_format not in valid_output_formats:
                 raise UsageError("Unrecognized output format '%s', set one"
-                                 " using the '-t' switch or as a file extension"
+                                 " using the '-t' switch or as a4 file extension"
                                  " from the supported list %s" % (
                                  opts.output_format,
                                  tuple(valid_output_formats)))

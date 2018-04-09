@@ -3,14 +3,14 @@ import time
 
 # 函数定义
 def func1():
-    print('I\'m a function')
+    print('I\'m a4 function')
     return 0
 
 x = func1()
 
 # 定义过程，没有返回值
 def func2():
-    print('I\'m a process')
+    print('I\'m a4 process')
 
 y = func2()
 
@@ -26,7 +26,7 @@ print()
 def logger():
     time_format = "%Y-%m-%d %X"
     time_current = time.strftime(time_format)
-    with open("a.txt", "a+") as f:
+    with open("a4.txt", "a4+") as f:
         time.sleep(1)
         f.write("%s end action\n" %time_current)
 

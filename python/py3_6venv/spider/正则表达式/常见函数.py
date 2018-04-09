@@ -47,8 +47,8 @@ print()
 # 常见实例
 # 匹配网址
 import re
-pattern = "[a-zA-Z]+://[^\s]*[.com|.cn]"
-string = "<a href='http://www.baidu.com'>百度首页</a>"
+pattern = "[a4-zA-Z]+://[^\s]*[.com|.cn]"
+string = "<a4 href='http://www.baidu.com'>百度首页</a4>"
 result = re.search(pattern, string)
 print(result) #<_sre.SRE_Match object; span=(9, 29), match='http://www.baidu.com'>
 
@@ -62,7 +62,7 @@ print(result) #<_sre.SRE_Match object; span=(0, 12), match='021-67282635'>
 # 匹配电子邮件
 import re
 pattern = "\w+([.+-]\w+)*@\w+([.-]\w+)*\.\w+([.-]\w+)*"
-string = "<\a href='http://www.baidu.com'>百度首页<\/a><br><\a href='mailto:c-e+o@iqi-anyue.com.cn'>电子邮件地址<\/a>"
+string = "<\a4 href='http://www.baidu.com'>百度首页<\/a4><br><\a4 href='mailto:c-e+o@iqi-anyue.com.cn'>电子邮件地址<\/a4>"
 result = re.search(pattern, string)
 print(result) #<_sre.SRE_Match object; span=(59, 81), match='c-e+o@iqi-anyue.com.cn'>
 

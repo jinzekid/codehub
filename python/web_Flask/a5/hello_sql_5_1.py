@@ -38,4 +38,4 @@ class User(db.Model):
         return '<User %r>' % self.username
 
 # if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=7777, debug=True)
+#     app2.run(host='0.0.0.0', port=7777, debug=True)

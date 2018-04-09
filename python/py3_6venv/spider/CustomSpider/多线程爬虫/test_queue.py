@@ -2,5 +2,5 @@
 import queue
 
 a = queue.Queue()
-a.put("a")
+a.put("a4")
 print(a.get())

@@ -35,7 +35,7 @@ class BankuaiInfoSpider(scrapy.Spider):
         pat = "<em>.?*</em>"
         # 解析信息
         item['name'] = response.xpath("//td["
-                                      "@class='fl_g']/dl/dt/a/text()"
+                                      "@class='fl_g']/dl/dt/a4/text()"
                                       "").extract()
         item['topic_d'] = response.xpath("//td[@class='fl_g']/dl/dd/em[1]"
                                             "").extract()

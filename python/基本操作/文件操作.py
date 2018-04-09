@@ -45,7 +45,7 @@ file_object.write("debug")
 file_object.close()
 
 print("\n============追加文件内容============\n")
-fsock = open(str_filename, "a")
+fsock = open(str_filename, "a4")
 fsock.write("""
 #Line 1 Just for debug purpose
 #Line 2 Just for debug purpose
@@ -89,7 +89,7 @@ print(data2)
 f.close()
 '''
 
-# f = open("yesterday2", "a", encoding="utf-8")
+# f = open("yesterday2", "a4", encoding="utf-8")
 # f.write("\n我爱北京天安门........\n")
 # f.write("天安门上太阳升....")
 # f.close()
@@ -110,7 +110,7 @@ print(f2.name)
 f2.flush()
 f2.close()
 
-f2 = open("yesterday2", "a", encoding="utf-8")
+f2 = open("yesterday2", "a4", encoding="utf-8")
 f2.write("hello 1")
 
 # 从文件开头截断

@@ -2,8 +2,8 @@
 
 # 方法一
 '''
-import day7.lib.aa as a
-objc = a.C()
+import day7.lib.aa as a4
+objc = a4.C()
 print(objc)
 '''
 

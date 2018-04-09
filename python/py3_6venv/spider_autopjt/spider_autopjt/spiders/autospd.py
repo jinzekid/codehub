@@ -12,15 +12,15 @@ class AutospdSpider(scrapy.Spider):
         item = SpiderAutopjtItem()
 
         item['name'] = response.xpath("//div["
-                                     "@class='name']/a/text()").extract()
+                                     "@class='name']/a4/text()").extract()
 
         item['price'] = response.xpath("//span["
                                        "@class='price_n']/text()"
                                        "").extract()
         item['link'] = response.xpath("//div["
-                                     "@class='name']/a/@href").extract()
+                                     "@class='name']/a4/@href").extract()
         item['comnum'] = response.xpath("//div["
-                                      "@class='star']/a/text("
+                                      "@class='star']/a4/text("
                                         ")").extract()
         yield item
 
