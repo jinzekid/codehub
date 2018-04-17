@@ -1,6 +1,6 @@
 # Author: Jason Lu
 from dateutil.relativedelta import relativedelta
-from datetime import timedelta
+from datetime import timedelta, datetime
 import datetime, time
 DATEFORMAT = '%Y-%m-%d %H:%M:%S.%f'
 DATEFORMAT_YMD = '%Y-%m-%d'
@@ -12,6 +12,14 @@ SECONDS_PRE_DAY     = 86400
 
 # 时间工具类
 class timeutil(object):
+
+    # 获取方法的计算时间
+    @staticmethod
+    def calu_func_time(func):
+        start = datetime.now()
+        func()
+        delta = datetime.now()  - start
+        print(func , ":elapsed time in microseconds:" , delta.microseconds)
 
     # 获取当前时间秒
     @staticmethod

@@ -1,3 +1,4 @@
+#!/Users/jasonlu/.virtualenvs/pyven3_6/bin/python
 import jieba
 import jieba.analyse
 from scipy.misc import imread
@@ -37,7 +38,6 @@ with open('testing.txt', 'r', encoding='utf-8') as f:
 
     tags = jieba.analyse.extract_tags(content, topK=10, withWeight=True, allowPOS=())
     for item in tags:
-        #list_kw.append(item[0].encoding('utf-8'))
         list_kw.append(item[0])
         list_vl.append(item[1])
         print(item[0], item[1])
