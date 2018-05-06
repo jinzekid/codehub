@@ -1,4 +1,5 @@
-
+import sys
+sys.path.remove(1)
 # a = 1
 # def fun(a4):
 #     a4 = 2

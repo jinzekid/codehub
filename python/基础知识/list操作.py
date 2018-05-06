@@ -1,5 +1,5 @@
 # Author: Jason Lu
-
+import sys
 # 固定列表
 a = [1, 2, 3]
 print(a)
@@ -154,4 +154,5 @@ names_list = list(map((lambda x: x['name']), people))
 print(names_list)
 sum_pay = sum(person['pay'] for person in people)
 print(sum_pay)
+
 

@@ -18,7 +18,7 @@ stopwords_path = 'stop_words.txt' #停用词词表
 jieba.add_word('美国留学')
 jieba.add_word('面试')
 
-with open('testing.txt', 'r', encoding='utf-8') as f:
+with open('testing_南极洲留学.txt', 'r', encoding='utf-8') as f:
     content = f.read()
     #seg_list = jieba.cut(content, cut_all=False)
     #print("[精确模式]: ", '/ '.join(seg_list))
@@ -48,8 +48,6 @@ with open('testing.txt', 'r', encoding='utf-8') as f:
     ax = plt.gca()
     ax.set_xticklabels(list_kw, fontproperties=myfont, rotation='horizontal')
     plt.show()
-
-
 
 """
     fig = plt.figure()
