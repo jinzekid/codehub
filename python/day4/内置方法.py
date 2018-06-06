@@ -58,7 +58,7 @@ print(hex(255)) #16进制
 print(oct(8)) #8进制
 
 a = {6:2, 8:0, 1:4, -5:6, 99:11, 4:22}
-# sorted(a)
+# sorted(a4)
 # 默认按照key排序
 print(sorted(a.items()))
 # 默认按照value排序
@@ -66,7 +66,7 @@ print(sorted(a.items(), key=lambda x: x[1], reverse=True))
 
 # zip按照最小的进行key value组合
 a = [1, 2, 3, 4, 5, 6]
-b = ["a", "b", "c", "d"]
+b = ["a4", "b", "c", "d"]
 ret = zip(a, b)
 print(type(ret))
 for i in ret:

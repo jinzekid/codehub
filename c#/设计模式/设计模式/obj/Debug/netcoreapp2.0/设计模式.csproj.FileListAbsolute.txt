@@ -1,0 +1,10 @@
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/obj/Debug/netcoreapp2.0/设计模式.csproj.CoreCompileInputs.cache
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/obj/Debug/netcoreapp2.0/设计模式.AssemblyInfoInputs.cache
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/obj/Debug/netcoreapp2.0/设计模式.AssemblyInfo.cs
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/bin/Debug/netcoreapp2.0/设计模式.deps.json
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/bin/Debug/netcoreapp2.0/设计模式.runtimeconfig.json
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/bin/Debug/netcoreapp2.0/设计模式.runtimeconfig.dev.json
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/bin/Debug/netcoreapp2.0/设计模式.dll
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/bin/Debug/netcoreapp2.0/设计模式.pdb
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/obj/Debug/netcoreapp2.0/设计模式.dll
+/Users/jasonlu/Desktop/Dev/GitHub/codehub/c#/设计模式/设计模式/obj/Debug/netcoreapp2.0/设计模式.pdb

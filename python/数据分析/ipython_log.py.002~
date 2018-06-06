@@ -1,0 +1,45 @@
+# IPython log file
+
+get_ipython().run_line_magic('logstart', '')
+get_ipython().run_line_magic('ls', '')
+get_ipython().run_line_magic('run', '-i vector_sum.py 1000')
+get_ipython().run_line_magic('run', '-d vector_sum.py 1000')
+get_ipython().run_line_magic('run', '-d vector_sum.py 1000')
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+get_ipython().run_line_magic('clear', '')
+get_ipython().run_line_magic('run', '-i vector_sum.py 1000')
+get_ipython().run_line_magic('run', '-p vector_sum.py 1000')
+*hist
+get_ipython().run_line_magic('hist', '')
+get_ipython().run_line_magic('ls', '')
+get_ipython().run_line_magic('clear', '')
+import numpy as np
+help np.arange
+help np.arange()
+help arange
+get_ipython().run_line_magic('pinfo', 'arange')
+get_ipython().run_line_magic('clear', '')
+quit()

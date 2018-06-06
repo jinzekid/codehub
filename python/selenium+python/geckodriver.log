@@ -1,0 +1,79 @@
+1525872937302	geckodriver	INFO	geckodriver 0.20.0
+1525872937366	geckodriver	INFO	Listening on 127.0.0.1:54391
+1525872937731	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/wg/l3yrgy9j0l3gwnpv5ypdydpm0000gn/T/rust_mozprofile.xbDgmdM2MZwI"
+1525872938142	Marionette	INFO	Enabled via --marionette
+2018-05-09 21:35:38.828 plugin-container[11164:2797115] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb32f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:35:38.939 plugin-container[11164:2797115] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x1b2b, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1525872939172	Marionette	INFO	Listening on port 54400
+1525872939370	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-05-09 21:35:39.747 plugin-container[11165:2797221] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xab2f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:35:39.865 plugin-container[11165:2797221] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x1c1b, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=se&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=2&pwd=s&cb=jQuery110209752336939957744_1525872939870&_=1525872939873, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=s&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=1&cb=jQuery110209752336939957744_1525872939870&_=1525872939872, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sel&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=3&pwd=se&cb=jQuery110209752336939957744_1525872939870&_=1525872939874, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sele&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=4&pwd=sel&cb=jQuery110209752336939957744_1525872939870&_=1525872939875, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selen&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=5&pwd=sele&cb=jQuery110209752336939957744_1525872939870&_=1525872939876, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleniu&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=7&pwd=seleni&cb=jQuery110209752336939957744_1525872939870&_=1525872939878, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleni&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=6&pwd=selen&cb=jQuery110209752336939957744_1525872939870&_=1525872939877, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=8&pwd=seleniu&cb=jQuery110209752336939957744_1525872939870&_=1525872939879, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium2&json=1&p=3&sid=1437_25810_21111_26350_22157&csor=9&pwd=selenium&cb=jQuery110209752336939957744_1525872939870&_=1525872939880, line 1: TypeError: jQuery110209752336939957744_1525872939870 is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1525872940781	geckodriver::marionette	ERROR	Failed to stop browser process
+1525873045316	geckodriver	INFO	geckodriver 0.20.0
+1525873045384	geckodriver	INFO	Listening on 127.0.0.1:54713
+1525873045750	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/wg/l3yrgy9j0l3gwnpv5ypdydpm0000gn/T/rust_mozprofile.kxyCprAmOU3w"
+1525873046190	Marionette	INFO	Enabled via --marionette
+2018-05-09 21:37:26.844 plugin-container[11300:2798711] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb53b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:37:26.955 plugin-container[11300:2798711] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x1b27, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1525873047146	Marionette	INFO	Listening on port 54723
+1525873047164	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+2018-05-09 21:37:27.762 plugin-container[11301:2798797] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad33, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:37:27.876 plugin-container[11301:2798797] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x191f, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=se&json=1&p=3&sid=1446_21115_22157&csor=2&pwd=s&cb=jQuery1102021114628796922574_1525873047628&_=1525873047631, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=s&json=1&p=3&sid=1446_21115_22157&csor=1&cb=jQuery1102021114628796922574_1525873047628&_=1525873047630, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sel&json=1&p=3&sid=1446_21115_22157&csor=3&pwd=se&cb=jQuery1102021114628796922574_1525873047628&_=1525873047632, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleniu&json=1&p=3&sid=1446_21115_22157&csor=7&pwd=seleni&cb=jQuery1102021114628796922574_1525873047628&_=1525873047636, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sele&json=1&p=3&sid=1446_21115_22157&csor=4&pwd=sel&cb=jQuery1102021114628796922574_1525873047628&_=1525873047633, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selen&json=1&p=3&sid=1446_21115_22157&csor=5&pwd=sele&cb=jQuery1102021114628796922574_1525873047628&_=1525873047634, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium&json=1&p=3&sid=1446_21115_22157&csor=8&pwd=seleniu&cb=jQuery1102021114628796922574_1525873047628&_=1525873047637, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleni&json=1&p=3&sid=1446_21115_22157&csor=6&pwd=selen&cb=jQuery1102021114628796922574_1525873047628&_=1525873047635, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium2&json=1&p=3&sid=1446_21115_22157&csor=9&pwd=selenium&cb=jQuery1102021114628796922574_1525873047628&_=1525873047638, line 1: TypeError: jQuery1102021114628796922574_1525873047628 is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1525873048559	geckodriver::marionette	ERROR	Failed to stop browser process
+1525873109759	geckodriver	INFO	geckodriver 0.20.0
+1525873109815	geckodriver	INFO	Listening on 127.0.0.1:54922
+1525873110194	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/wg/l3yrgy9j0l3gwnpv5ypdydpm0000gn/T/rust_mozprofile.CuJtsRAvWJsH"
+1525873110538	Marionette	INFO	Enabled via --marionette
+2018-05-09 21:38:31.167 plugin-container[11348:2799603] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb33f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:38:31.280 plugin-container[11348:2799603] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x1c2b, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1525873111466	Marionette	INFO	Listening on port 54931
+1525873111602	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+2018-05-09 21:38:32.091 plugin-container[11350:2799695] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-05-09 21:38:32.203 plugin-container[11350:2799695] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x191b, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=se&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=2&pwd=s&cb=jQuery110204886740740140171_1525873111996&_=1525873111999, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sel&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=3&pwd=se&cb=jQuery110204886740740140171_1525873111996&_=1525873112000, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=s&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=1&cb=jQuery110204886740740140171_1525873111996&_=1525873111998, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selen&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=5&pwd=sele&cb=jQuery110204886740740140171_1525873111996&_=1525873112002, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=sele&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=4&pwd=sel&cb=jQuery110204886740740140171_1525873111996&_=1525873112001, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleniu&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=7&pwd=seleni&cb=jQuery110204886740740140171_1525873111996&_=1525873112004, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium2&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=9&pwd=selenium&cb=jQuery110204886740740140171_1525873111996&_=1525873112006, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=seleni&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=6&pwd=selen&cb=jQuery110204886740740140171_1525873111996&_=1525873112003, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=selenium&json=1&p=3&sid=1444_25809_21119_26350_20928&csor=8&pwd=seleniu&cb=jQuery110204886740740140171_1525873111996&_=1525873112005, line 1: TypeError: jQuery110204886740740140171_1525873111996 is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
