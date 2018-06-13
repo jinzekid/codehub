@@ -3,6 +3,28 @@ from timeit import timeit as tt
 t2 = tt('x=range(100)')
 print(t2)
 
+# 函数运行装饰器
+def decorate_func_time(func):
+    from datetime import datetime as dt 
+    def inner(*args, **kwargs):
+        start = dt.now()
+        ret = func(*args, **kwargs)
+        delta = dt.now() - start 
+        print(func.__name__ + ' elapsed time:' + str(delta.microseconds))
+        return ret 
+    return inner 
+
+@decorate_func_time
+def func1(num):
+    a = [[0] * num] * num
+    print(a)
+
+@decorate_func_time
+def func2(num):
+    a = [[0 for x in range(num)] for x in range(num)]
+    print(a)
+
+
 from random import randrange
 L = [randrange(10000) for i in range(100000)]
 S = set(L)

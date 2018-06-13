@@ -2,6 +2,7 @@
 import os 
 LIB_INFO = 'lib_info.dat'
 
+#----------------------------工具类---------------------------------#
 def is_quit(s):
     if s in ['q', 'Q']:
         return True

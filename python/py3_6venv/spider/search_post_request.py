@@ -17,9 +17,6 @@ fhandle.write(data)
 fhandle.close()
 
 
-# 124.133.97.17	8118
-
-
 
 
 
