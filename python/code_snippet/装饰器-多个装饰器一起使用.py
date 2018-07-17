@@ -1,4 +1,9 @@
 #! /Users/jasonlu/.virtualenvs/pyven3_6/bin/python 
+import sys 
+sys.path.append('/Users/jasonlu/Desktop/Dev/GitHub/codehub/python/code_snippet/test')
+
+   
+func1()
 
 def func_before(*args, **kwargs):
     print('func_before...')
@@ -24,6 +29,7 @@ def func_filter(before_func, after_func):
         return wrapper
     return outer 
 
+@time_calcuate
 @func_filter(func_before, func_after)
 def index(*args, **kwargs):
     print(args)

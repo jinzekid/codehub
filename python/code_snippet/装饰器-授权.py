@@ -1,5 +1,7 @@
 # 授权装饰器
 from functools import wraps
+
+
 def requires_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -9,5 +11,3 @@ def requires_auth(f):
         return f(*args, **kwargs)
 
     return decorated
-
-

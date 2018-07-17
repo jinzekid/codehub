@@ -1,4 +1,8 @@
-import tempfile, os, cProfile, pstats
+import tempfile
+import os
+import cProfile
+import pstats
+
 
 def profile(column='time', list=5):
     def _profile(function):

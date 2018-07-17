@@ -1,4 +1,5 @@
-# Author: Jason Lu
+#!/Users/jasonlu/.virtualenvs/pyven3_6/bin/python 
+
 import matplotlib as mpl
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt #导入图像库
