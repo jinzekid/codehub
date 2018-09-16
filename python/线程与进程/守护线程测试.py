@@ -33,7 +33,7 @@ def parent_run(n):
     # 创建5个守护子线程
     for i in range(5):
         t = threading.Thread(target=son_run, args=(i+1,))
-        # t.setDaemon(True)
+        #t.setDaemon(True)
         t.start()
 
     time.sleep(1)
