@@ -1,9 +1,21 @@
-//
-//  重编码.c
-//  c_basic
-//
-//  Created by 陆杨 on 2018/9/17.
-//  Copyright © 2018 陆杨. All rights reserved.
-//
-
+/*
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+// ================= 代码实现开始 =================
+typedef long long ll;
+
+
+// ================= 代码实现结束 =================
+
+
+int main(int argc, const char * argv[]) {
+
+int ret = 0;
+
+return ret;
+}
+*/
+
