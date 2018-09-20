@@ -1,8 +1,8 @@
 #include <string.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <io.h>
 
 #define TRUE    1
 #define FALSE   0
@@ -12,4 +12,5 @@
 
 typedef int Status;
 typedef int Boolean;
+
 
