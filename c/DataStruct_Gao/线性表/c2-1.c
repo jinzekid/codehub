@@ -251,7 +251,100 @@ Status list_union(SQList *la, SQList *lb) {
     }
 
     return OK;
-} 
+}
+
+void quick_sort(SQList *list, int low, int high) {
+    
+    if (low > high) {
+        return;
+    }
+
+    int i, j;
+    ElemType tmp_e, c_e;
+    ElemType *tmp = list->data;
+    c_e = *(tmp+low);
+    i = low;
+    j = high;
+
+    while(i != j) {
+
+        while(*(tmp+j) >= c_e && i < j) {
+            j--;
+        }
+
+        while(*(tmp+i) <= c_e && i < j) {
+            i++;
+        }
+
+        if (i < j) {
+            tmp_e = *(tmp+i);
+            *(tmp+i) = *(tmp+j);
+            *(tmp+j) = tmp_e;
+        }
+    }
+
+    *(tmp+low) = *(tmp+i);
+    *(tmp+i) = c_e;
+
+    quick_sort(list, low, i-1);
+    quick_sort(list, i+1, high);
+
+}
+
+void merge_list(SQList *la, SQList *lb, SQList *lc) {
+
+    if (la == NULL || lb == NULL) {
+        printf(">>:func merge_list err:la == NULL || lb == NULL");
+        return;
+    }
+
+    int i, j, k;
+    int len_a, len_b;
+    ElemType *la_e;
+    ElemType *lb_e;
+    ElemType *lc_e;
+
+    la_e = la->data;
+    lb_e = lb->data;
+
+    len_a = get_list_length(la);
+    len_b = get_list_length(lb);
+
+    init_list(lc, len_a+len_b);
+    printf("list c length=%d\n", (lc->list_size));
+    // sort la 
+    quick_sort(la, 0, len_a-1);
+    quick_sort(lb, 0, len_b-1);
+
+    // 非递增的合并方式
+    k = 0;
+    i = 0;
+    j = 0;
+    while(i < len_a && j < len_b) {
+
+        if (*(la_e+i) > *(lb_e+j)) {
+            insert_list(lc,*(lb_e+j));
+            j++;
+        }
+        else {
+            insert_list(lc, *(la_e+i));
+            i++;
+        }
+    }
+
+    while (i < len_a) {
+        insert_list(lc, *(la_e+i));
+        i++;
+    }
+
+    while (j < len_b) {
+        insert_list(lc, *(lb_e+j));
+        j++;
+    }
+
+}
+
+
 
 void db(ElemType *e) {
     *e = 2 * (*e);
@@ -274,6 +367,8 @@ void print_menu() {
     printf("8.列表数据3倍\n");
     printf("9.查找前驱元素\n");
     printf("10.合并列表\n");
+    printf("11.合并列表以非递减方式排列\n");
+    printf("12.列表进行递增排序\n");
     printf("\n======================================\n");
 }
 
@@ -283,8 +378,10 @@ int main(){
     int pos;
     ElemType e, pre_e;
     SQList list;
-    SQList aList, bList;
+    SQList aList, bList, cList;
     bool is_loop;
+    Status ret;
+
 
     while(1){
         print_menu();
@@ -400,12 +497,43 @@ int main(){
                     insert_list(&bList, e);
                 }
 
-                Status ret = list_union(&aList, &bList);
+                ret = list_union(&aList, &bList);
                 if (ret == OK) {
                     list = aList;
                     printf(">>:合并列表成功\n");
                 }
                 break;
+            case 11: 
+                printf(">>:请初始化列表1的长度(q/Q:退出):\n");
+                scanf("%d", &n);
+                init_list(&aList, n);
+                printf(">>:请输入列表元素\n");
+                for(i = 0; i < n; i++) {
+                    scanf("%d", &e);
+                    insert_list(&aList, e);
+                }
+
+                
+                printf(">>:请初始化列表2的长度(q/Q:退出):\n");
+                scanf("%d", &n);
+                init_list(&bList, n);
+                printf(">>:请输入列表元素\n");
+                for(i = 0; i < n; i++) {
+                    scanf("%d", &e);
+                    insert_list(&bList, e);
+                }
+
+                merge_list(&aList, &bList, &cList);
+                printf(">>:排序完成\n");
+                show_list(&cList);
+
+                break;
+            case 12:
+                quick_sort(&list, 0, list.length-1);
+                printf(">>:排序完成\n");
+                show_list(&list);
+                break;
+
 
         }
 
