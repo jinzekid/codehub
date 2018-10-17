@@ -1,10 +1,8 @@
 #include "commonHeader.h"
 
-typedef datatype int;
-
 // 单向链表
 typedef struct Node{
-    datatype        data;
+    int             data;
     struct Node*    next;
 }Node, *singly_list, *pNode;
 
@@ -17,7 +15,7 @@ bool is_empyt(singly_list list){
 }
 
 // 创建新节点
-pNode create_node(datatype data) {
+pNode create_node(data) {
     
     pNode new_node = (pNode)malloc(sizeof(Node));
     if (new_node == NULL) {
@@ -271,6 +269,7 @@ int move_node_pre(singly_list mylist, pNode p, pNode anchor) {
     return 0;
 }
 
+/*
 int main(int argc, const char *argv[]){
 
     singly_list mylist = NULL;
@@ -309,7 +308,7 @@ int main(int argc, const char *argv[]){
     move_node_pre(mylist, create_node(100), create_node(1));
     print_list(mylist);
 
-
     system("Pause");
     return 0;
 }
+*/

@@ -53,20 +53,59 @@ void printArr(int a[], int n) {
 // ================= 代码实现结束 =================
 
 
-int main(int argc, const char * argv[]) {
+//int main(int argc, const char * argv[]) {
+//
+//    int ret = 0;
+//    int i, num;
+//
+//    scanf("%d", &n);
+//    for (i = 0 ; i < n; i++) {
+//        scanf("%d", &num);
+//        a[i] = num;
+//    }
+//
+//    quicksort(0, n-1);
+//    printArr(a, n);
+//
+//    return ret;
+//}
 
-    int ret = 0;
-    int i, num;
+#include <stdio.h>
+
+int main(){
     
-    scanf("%d", &n);
-    for (i = 0 ; i < n; i++) {
-        scanf("%d", &num);
-        a[i] = num;
+    int i, j = 0;
+    int code, last_num, sum = 0;
+    char last_c;
+    char buf[14] = {0};
+    int num[9] = {0};
+    scanf("%s", buf);
+    
+    last_c = buf[12];
+    for(i = 0; i < strlen(buf); i++) {
+        if (buf[i] != '-') {
+            num[j++] = buf[i]-'0';
+        }
     }
     
-    quicksort(0, n-1);
-    printArr(a, n);
-
-    return ret;
+    for(i = 0; i < 9; i++) {
+        sum += (num[i]*(i+1));
+    }
+    
+    code = sum%11;
+    
+    if (last_c < '0' || last_c > '9') {
+        //输入
+        buf[12] = code + '0';
+        printf("%s\n", buf);
+    }
+    else{
+        last_num = last_c - '0';
+        if (code == last_num) {
+            printf("Right\n");
+        }
+    }
+    
+    return 0;
 }
 

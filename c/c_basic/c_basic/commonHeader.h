@@ -9,6 +9,11 @@
 #ifndef commonHeader_h
 #define commonHeader_h
 
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+
 // 普通操作
 #include <stdio.h>
 #include <stdlib.h>
