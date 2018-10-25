@@ -18,11 +18,12 @@ void quick_sort(int a[], int low, int high) {
 	int i;
 	int left, right;
 	int tmp;
-	
+
+	if (low >= high) return;
+
 	tmp = a[low];
 	left = low+1;
 	right = high;
-	if (low >= high) return;
 	
 	while (left < right) {
 		
