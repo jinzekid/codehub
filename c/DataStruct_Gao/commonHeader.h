@@ -9,10 +9,14 @@
 #ifndef commonHeader_h
 #define commonHeader_h
 
-#define TRUE 1
-#define FALSE 0
-#define OK 1
-#define ERROR 0
+typedef int status;
+typedef int boolean;
+
+#define TRUE    1
+#define FALSE   0
+#define OK      1
+#define ERROR   0
+#define INFEASIBLE -1
 
 // 普通操作
 #include <stdio.h>
@@ -23,6 +27,8 @@
 #include <strings.h>
 #include <time.h>
 #include <errno.h>
+#include <ctype.h>
+#include <math.h>
 
 // 文件与目录操作
 #include <sys/stat.h>
