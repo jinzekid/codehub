@@ -185,12 +185,60 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7b97;&#x6cd5;&#x8bad;&#x7ec3;&#x8425;/&#x6392;&#x5e8f;.c"
-            timestampString = "559633136.529124"
+            filePath = "c_basic/c_basic/test.c"
+            timestampString = "562819166.726747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "main_test"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "c_basic/c_basic/test.c"
+            timestampString = "562819166.726799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "main_test"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "c_basic/c_basic/test.c"
+            timestampString = "562819166.726836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "main_test"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "c_basic/c_basic/test3.c"
+            timestampString = "562819166.726874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
             landmarkName = "main"
             landmarkType = "9">
          </BreakpointContent>
@@ -201,13 +249,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x7b97;&#x6cd5;&#x8bad;&#x7ec3;&#x8425;/&#x6392;&#x5e8f;.c"
-            timestampString = "559633136.529417"
+            filePath = "c_basic/c_basic/test3.c"
+            timestampString = "562819166.727113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "main"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
+            landmarkName = "EvaluateExpression"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
