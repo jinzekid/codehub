@@ -9,6 +9,7 @@
 import os
 import sys
 import time
+import shutil
 
 from PyQt5.QtCore import QTimer
 from PyQt5.QtCore import QDate, QTime, QDateTime, Qt
@@ -16,6 +17,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAbstractItemView, QDialog
 from PyQt5.QtWidgets import QFileDialog
 
+from MyTask import *
 from SetTaskDetail import *
 import LYUtils as utils
 
@@ -31,10 +33,19 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
 
+        # 任务列表
+        self.queOfTasks = utils.PQueue()
+
+        self.selectedItems = []
         self.sourceOfFiles = []
+        self.destOfFiles = []
         self.ui_set_task_detail = childWindow()
         self.dt = 0
         self.timer = QTimer()
+        self.source_directory = ''
+        self.dest_directory = ''
+        self.source_path = ''
+        self.dest_path = ''
 
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -152,9 +163,11 @@ class Ui_MainWindow(object):
         self.actionOpen.setText(_translate("MainWindow", "Open..."))
 
     def initUIAction(self):
-        self.btnChooseFromPath.clicked.connect(self.do_choose_directory)
-        self.btnSetTask.clicked.connect(self.show_task_detail)
-        self.btnFinishSet.clicked.connect(self.do_finish_set_task)
+        self.btnChooseFromPath.clicked.connect(self.do_choose_sour_directory)
+        self.btnChooseToPath.clicked.connect(self.do_choose_dest_directory)
+        self.btnSetTask.clicked.connect(self.show_set_new_task_detail)
+        self.btnFinishSet.clicked.connect(self.start_task)
+        self.BtnAddFiles.clicked.connect(self.do_add_files_to_dest)
 
         # 设置日期编辑器格式
         self.dateObj.setDateTime(QDateTime.currentDateTime())
@@ -168,7 +181,25 @@ class Ui_MainWindow(object):
         # 设置list的选项动作
         self.ListOfSourceFiles.itemClicked.connect(self.do_source_item_clicked)
 
-    def do_finish_set_task(self):
+    def show_set_new_task_detail(self):
+        self.create_new_task()
+        pass
+
+    def create_new_task(self):
+        oneTask = MyTask().init_task('11','22')
+        status = self.queOfTasks.enqueue(oneTask)
+        if not status:
+            print(">>:add task failed")
+
+        self.queOfTasks.traverse_tasks()
+        pass
+
+
+    def complete_func(self):
+        self.do_add_files_to_dest()
+
+    def start_task(self):
+
         print(self.dateObj.text())
         print(self.dateObj.dateTime())
         taskQDateTime = int(self.dateObj.dateTime().toTime_t())
@@ -176,12 +207,18 @@ class Ui_MainWindow(object):
         curTime = int(time.time()) #获取时间戳
         print("cur time:" + str(curTime))
 
-        self.dt = taskQDateTime - curTime
+        tmp_dt = taskQDateTime - curTime - 1 # -1是为了有大概秒的误差
         print("dt:" + (utils.format_time(self.dt)))
 
         # 开始倒计时
         self.init_count_down_timer(self.timer)
-        self.refresh_count_down()
+        # self.refresh_count_down(self.complete_func)
+
+        # 初始化任务信息
+        newTask = MyCpyTask().init_task(self.source_path, self.dest_path,
+                                     self.selectedItems, tmp_dt)
+        newTask.start_task()
+        self.queOfTasks.enqueue(newTask)
 
     def init_count_down_timer(self, timer):
         timer.setInterval(1000)
@@ -197,6 +234,8 @@ class Ui_MainWindow(object):
             self.labCntTime.setText('00:00:00')
             self.dt = 0
             self.timer.stop()
+
+            self.complete_func()
         pass
 
     def show_task_detail(self):
@@ -208,18 +247,26 @@ class Ui_MainWindow(object):
         indexs = self.ListOfSourceFiles.selectedIndexes()
         items = self.ListOfSourceFiles.selectedItems()
         print(indexs)
+
+        self.selectedItems.clear()
         for item in items:
             print(item.text())
+            self.selectedItems.append(item.text())
 
-    def do_choose_directory(self):
-        directory1 = QFileDialog.getExistingDirectory(self.centralwidget,
+    def do_choose_dest_directory(self):
+        self.dest_directory = QFileDialog.getExistingDirectory(self.centralwidget,
                                                       "选取文件夹",
                                                       "./")  # 起始路径
-        print(directory1)
+        self.dest_path = self.dest_directory
+        self.update_directory_files(self.ListOfDestinationFiles, self.dest_directory)
 
-        self.labFromPath.setText(directory1)
-
-        self.update_directory_files(directory1)
+    def do_choose_sour_directory(self):
+        self.source_directory = QFileDialog.getExistingDirectory(self.centralwidget,
+                                                      "选取文件夹",
+                                                      "./")  # 起始路径
+        self.source_path = self.source_directory
+        self.labFromPath.setText(self.source_directory)
+        self.update_directory_files(self.ListOfSourceFiles, self.source_directory)
 
         """
         files, ok1 = QFileDialog.getOpenFileNames(self.centralwidget,
@@ -230,23 +277,42 @@ class Ui_MainWindow(object):
         self.ListOfSourceFiles.addItems(self.sourceOfFiles)
         """
 
-    def update_directory_files(self, directory):
-        rootdir = directory
-        list = os.listdir(rootdir)  # 列出文件夹下所有的目录与文件
+    def do_add_files_to_dest(self):
+        print("source path:" + self.source_path)
+        print("dest path:" + self.dest_path)
 
-        self.ListOfSourceFiles.addItems(list)
+        if self.dest_path == '':
+            print(">>:destination path is empty")
+            return
+
+        if self.source_path == '':
+            print(">>:source path is empty")
+            return
+
+        items = self.ListOfSourceFiles.selectedItems()
+        for item in items:
+            utils.cpy_file(self.source_path, self.dest_path, item.text())
+
+        self.update_directory_files(self.ListOfDestinationFiles, self.dest_path)
+
+    def update_directory_files(self, vlistOfFiles, directory):
+        vlistOfFiles.clear() # 清空list视窗的内容
+        list = os.listdir(directory)  # 列出文件夹下所有的目录与文件
+        vlistOfFiles.addItems(list)
         """
         for i in range(0, len(list)):
             #path = os.path.join(rootdir, list[i])
             print("file name" , type(list[i]))
-            self.ListOfSourceFiles.addItems(list[i]))
+            # self.ListOfSourceFiles.addItems(list[i])
         """
+
 
     # 删除指定文件
     def do_del_file(self, idx):
         if len(self.listOfSourceFiles) > 0 and idx >= 0:
             delFileName = self.listOfSourceFiles.pop(idx)
             print('>>:del file name:' + delFileName)
+
 
 
 if __name__ == '__main__':
