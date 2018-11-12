@@ -1,8 +1,3 @@
-# 读取n个数
-n = int(input())
-# 输入列表
-L = list(map(int, input().split()))
-
 # 快速排序
 def swap(L, a, b):
     tmp = L[a]
@@ -15,25 +10,31 @@ def quick_sort(L, low, high):
         return
     
     tmp = L[low];
-    left = low + 1
+    left = low
     right = high
     
     while left < right:
-        if right > left and L[right] > tmp:
+        while right > left and L[right] >= tmp:
             right -= 1
-        if left < right and L[left] < tmp:
+        while left < right and L[left] <= tmp:
             left += 1
         
         if left != right:
             swap(L, left, right)
-            
-    swap(L, left, low)
+         
+    if low != left:
+        swap(L, left, low)
             
     quick_sort(L, low, left-1)
     quick_sort(L, left+1, high)
     
 
 if __name__ == "__main__":
+    # 读取n个数
+    n = int(input())
+    # 输入列表
+    L = list(map(int, input().split()))
+    
     print("排序前:")
     print(L)
     print("\n")
@@ -41,5 +42,3 @@ if __name__ == "__main__":
     print("排序后:")
     print(L)
     print("\n")
-
-        
