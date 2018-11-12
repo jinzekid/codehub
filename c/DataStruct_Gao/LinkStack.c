@@ -35,7 +35,7 @@ status create_stack(sLinkStack **pLinkStack) {
 	return ERROR;
     }
 
-    *pLinkStack = p;
+    *pLinkStack = p;+
     return OK;
 }
 

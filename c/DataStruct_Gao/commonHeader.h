@@ -54,3 +54,28 @@ typedef int boolean;
 #include <sys/socket.h>
 
 #endif /* commonHeader_h */
+
+// 常用宏定义
+#define MAX(x, y) (((x) > (y)) ? (x):(y))
+#define MIN(x, y) (((x) < (y)) ? (x):(y))
+
+#define DECCHK(c) ((c) >= '0' && (c) <= '9')
+#define UPCASE(x) (((c) >= 'a' && (c) <= 'z') ? ((c) - 0x20) : (c))
+#define LOWCASE(x) (((c) >= 'A' && (c) <= 'Z') ? ((c)|0x20) : (c))
+
+#define ARR_SIZE(x) (sizeof((a))/sizeof((a[0])))
+
+// 定义是否需要输出打印信息
+#ifdef DEBUG
+#define OneArgument(a); printf(a);printf("%d%d",__LINE__,__FILE__); 
+#define TwoArguments(a, b); printf(a, b);printf("%d%d",__LINE__,__FILE__);
+#else
+#define OneArgument(a) ;
+#define TwoArguments(a, b) ;
+#endif
+ 
+#define GetMacro(_1, _2, NAME, ...) NAME
+#define PRINT(...) GetMacro(__VA_ARGS__, TwoArguments, OneArgument, ...)(__VA_ARGS__)
+
+
+
