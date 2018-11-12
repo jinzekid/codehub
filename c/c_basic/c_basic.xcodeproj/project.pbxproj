@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		854EA6D1212BAC4F00067FF6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 854EA6D0212BAC4F00067FF6 /* main.c */; };
+		8559232E218AF0F100BE3CA8 /* test3.c in Sources */ = {isa = PBXBuildFile; fileRef = 8559232D218AF0F100BE3CA8 /* test3.c */; };
 		8585A8C9214A3C1300A35D64 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8C5214A3C1300A35D64 /* stack.c */; };
 		8585A8CA214A3C1300A35D64 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8C6214A3C1300A35D64 /* queue.c */; };
 		8585A8CB214A3C1300A35D64 /* tmplate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8C7214A3C1300A35D64 /* tmplate.c */; };
@@ -19,6 +20,8 @@
 		8585A8D72152170C00A35D64 /* 排序.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8D62152170C00A35D64 /* 排序.c */; };
 		8585A8D92152406E00A35D64 /* 顺序栈.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8D82152406E00A35D64 /* 顺序栈.c */; };
 		8585A8DB2152407C00A35D64 /* 单向链表.c in Sources */ = {isa = PBXBuildFile; fileRef = 8585A8DA2152407C00A35D64 /* 单向链表.c */; };
+		85E81BC821819CB8009A6FDC /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 85E81BC721819CB8009A6FDC /* test.c */; };
+		85E81BCC2181C653009A6FDC /* test2.c in Sources */ = {isa = PBXBuildFile; fileRef = 85E81BCB2181C653009A6FDC /* test2.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,18 +39,21 @@
 /* Begin PBXFileReference section */
 		854EA6CD212BAC4F00067FF6 /* c_basic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_basic; sourceTree = BUILT_PRODUCTS_DIR; };
 		854EA6D0212BAC4F00067FF6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8559232D218AF0F100BE3CA8 /* test3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test3.c; sourceTree = "<group>"; };
 		8585A8C5214A3C1300A35D64 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		8585A8C6214A3C1300A35D64 /* queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
 		8585A8C7214A3C1300A35D64 /* tmplate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tmplate.c; sourceTree = "<group>"; };
 		8585A8C8214A3C1300A35D64 /* tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tree.c; sourceTree = "<group>"; };
 		8585A8CD214A3CA300A35D64 /* box.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = box.c; sourceTree = "<group>"; };
-		8585A8CF214E2D0F00A35D64 /* commonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commonHeader.h; sourceTree = "<group>"; };
 		8585A8D0214F498A00A35D64 /* 重编码.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "重编码.c"; sourceTree = "<group>"; };
 		8585A8D2214F4FBE00A35D64 /* 成绩排序.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "成绩排序.c"; sourceTree = "<group>"; };
 		8585A8D4214F773200A35D64 /* 等式.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "等式.c"; sourceTree = "<group>"; };
 		8585A8D62152170C00A35D64 /* 排序.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "排序.c"; sourceTree = "<group>"; };
 		8585A8D82152406E00A35D64 /* 顺序栈.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "顺序栈.c"; sourceTree = "<group>"; };
 		8585A8DA2152407C00A35D64 /* 单向链表.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "单向链表.c"; sourceTree = "<group>"; };
+		85E81BC721819CB8009A6FDC /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		85E81BCA21819F2D009A6FDC /* txt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = txt.txt; sourceTree = "<group>"; };
+		85E81BCB2181C653009A6FDC /* test2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test2.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,11 @@
 			children = (
 				8585A8DA2152407C00A35D64 /* 单向链表.c */,
 				854EA6D0212BAC4F00067FF6 /* main.c */,
-				8585A8CF214E2D0F00A35D64 /* commonHeader.h */,
 				8585A8D82152406E00A35D64 /* 顺序栈.c */,
+				85E81BC721819CB8009A6FDC /* test.c */,
+				85E81BCB2181C653009A6FDC /* test2.c */,
+				85E81BCA21819F2D009A6FDC /* txt.txt */,
+				8559232D218AF0F100BE3CA8 /* test3.c */,
 			);
 			path = c_basic;
 			sourceTree = "<group>";
@@ -162,13 +171,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E81BC821819CB8009A6FDC /* test.c in Sources */,
 				8585A8D92152406E00A35D64 /* 顺序栈.c in Sources */,
 				8585A8CC214A3C1300A35D64 /* tree.c in Sources */,
 				8585A8D5214F773200A35D64 /* 等式.c in Sources */,
 				8585A8D3214F4FBE00A35D64 /* 成绩排序.c in Sources */,
 				8585A8CA214A3C1300A35D64 /* queue.c in Sources */,
+				8559232E218AF0F100BE3CA8 /* test3.c in Sources */,
 				8585A8CB214A3C1300A35D64 /* tmplate.c in Sources */,
 				8585A8D1214F498A00A35D64 /* 重编码.c in Sources */,
+				85E81BCC2181C653009A6FDC /* test2.c in Sources */,
 				8585A8CE214A3CA300A35D64 /* box.c in Sources */,
 				8585A8C9214A3C1300A35D64 /* stack.c in Sources */,
 				8585A8D72152170C00A35D64 /* 排序.c in Sources */,
@@ -293,6 +305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
