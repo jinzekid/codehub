@@ -19,7 +19,7 @@ def quick_sort(L, low, high):
         while left < right and L[left] <= tmp:
             left += 1
         
-        if left != right:
+        if left < right:
             swap(L, left, right)
          
     if low != left:
