@@ -65,6 +65,7 @@ function ClsHeapSort() {
 			// 注意取整问题：parseInt(i/2)
 			var parent_idx = parseInt(i/2)
 			console.log("parent_idx==="+parent_idx);
+			// 判断是否比自己的父亲节点大，如果大就需要交换
 			if (L[i] > L[parent_idx]) {
 				swap(L, i, parent_idx);
 				i = parent_idx;
