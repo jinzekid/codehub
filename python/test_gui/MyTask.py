@@ -1,6 +1,18 @@
 # Author: Jason Lu
+# enum.Enum 枚举类型
+from collections import namedtuple
+from enum import Enum
+
+class TaskStatus(Enum):
+    none  = 0
+    ready = 1
+    start = 2
+    doing = 3
+
+
 import _thread as thread, time
 import threading
+import hashlib
 
 class MyCpyTask(object):
     def __init__(self):
@@ -10,10 +22,10 @@ class MyCpyTask(object):
         self.src_path = ''   # 源路径
         self.dest_path = ''   # 目标路径
         self.t = None
-        self.nameOfTask = self.src_path + '->' + self.dest_path
+        self.nameOfTask = '' #self.src_path + '->' + self.dest_path
+        self.status = TaskStatus.none
 
-
-    def init_task(self, src_path, dest_path, srcOfFiles, dt):
+    def init_task(self, name, src_path, dest_path, srcOfFiles, dt):
         """
         初始化任务
         :param src_path:
@@ -27,11 +39,31 @@ class MyCpyTask(object):
         self.srcOfFiles = srcOfFiles
         self.dt = dt
 
-        print('>>:task info:', self.src_path, self.dest_path, self.srcOfFiles,
+        self.status = TaskStatus.ready
+
+
+        tmp = ''
+        for name in self.srcOfFiles:
+            tmp += ' ' + name
+        tmp += self.src_path
+        tmp += self.dest_path
+
+        if name == '' or name == None:
+            self.nameOfTask = hashlib.md5(tmp)
+        else:
+            self.nameOfTask = name
+
+        print('>>:task info:',
+              self.nameOfTask,
+              self.src_path,
+              self.dest_path,
+              self.srcOfFiles,
               self.dt)
         return self
 
     def start_task(self):
+        if self.status == TaskStatus.ready:
+            self.status = TaskStatus.doing
         """
         print(self.dateObj.text())
         print(self.dateObj.dateTime())
@@ -45,7 +77,7 @@ class MyCpyTask(object):
         # 开始倒计时
         self.init_count_down_timer(self.timer)
         """
-        thread.start_new_thread(self.do_task, ())
+        #thread.start_new_thread(self.do_task, ())
         pass
 
     def do_task(self):
