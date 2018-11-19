@@ -17,8 +17,9 @@
 #define STACK_INIT_SIZE 10
 #define STACK_INCREMENT_SIZE 5
 
-typedef int SElemType;
+//typedef int SElemType;
 
+// 这里使用链表形式，也可以使用数组
 typedef struct SeqStack {
     SElemType *top;
     SElemType *base;
