@@ -27,6 +27,7 @@ class CpyTask(object):
         self.t = None
         self.name = '' #self.src_path + '->' + self.dest_path
         self.status = TaskStatus.none
+        self.leftTime = 0
 
     def init_task(self, name, src_path, dest_path, srcOfFiles, dt):
         """
@@ -41,9 +42,11 @@ class CpyTask(object):
         self.destPath = dest_path
         self.srcOfFiles = srcOfFiles
         self.dt = dt
+        self.name = name
 
         self.status = TaskStatus.ready
 
+        """
         tmp = ''
         for name in self.srcOfFiles:
             tmp += ' ' + name
@@ -54,6 +57,7 @@ class CpyTask(object):
             self.name = hashlib.md5(tmp)
         else:
             self.name = name
+        """
 
         print('>>:task info:',
               self.name,
@@ -62,6 +66,16 @@ class CpyTask(object):
               self.srcOfFiles,
               self.dt)
         return self
+
+
+    def update_task_info(self, curTime):
+        self.leftTime = self.dt - curTime
+
+    def is_start(self, curTime):
+        self.update_task_info(curTime)
+        if curTime == self.dt:
+            return True
+        return False
 
     def do_task(self):
         print("task " + self.name + ", doing...")

@@ -59,7 +59,7 @@
      <item>
       <layout class="QGridLayout" name="gridLayout">
        <item row="2" column="0" rowspan="2">
-        <widget class="QListWidget" name="ListOfSourceFiles"/>
+        <widget class="QListWidget" name="ListOfTask"/>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">

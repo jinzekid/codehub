@@ -26,7 +26,6 @@ class Ui_QDSetTaskDetail(object):
 
         self.dialog = QDSetTaskDetail
 
-
         QDSetTaskDetail.setObjectName("QDSetTaskDetail")
         QDSetTaskDetail.resize(716, 560)
         self.horizontalLayoutWidget = QtWidgets.QWidget(QDSetTaskDetail)
@@ -116,14 +115,14 @@ class Ui_QDSetTaskDetail(object):
         self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_2.setObjectName("label_2")
         self.verticalLayout_3.addWidget(self.label_2)
-        self.teTaskOfName = QtWidgets.QTextEdit(self.horizontalLayoutWidget_2)
+        self.TaskOfName = QtWidgets.QTextEdit(self.horizontalLayoutWidget_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.teTaskOfName.sizePolicy().hasHeightForWidth())
-        self.teTaskOfName.setSizePolicy(sizePolicy)
-        self.teTaskOfName.setObjectName("teTaskOfName")
-        self.verticalLayout_3.addWidget(self.teTaskOfName)
+        sizePolicy.setHeightForWidth(self.TaskOfName.sizePolicy().hasHeightForWidth())
+        self.TaskOfName.setSizePolicy(sizePolicy)
+        self.TaskOfName.setObjectName("TaskOfName")
+        self.verticalLayout_3.addWidget(self.TaskOfName)
         self.horizontalLayout_2.addLayout(self.verticalLayout_3)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -152,7 +151,6 @@ class Ui_QDSetTaskDetail(object):
         self.taskManager = TaskManager()
         self.__init_properties()
 
-
     def retranslateUi(self, QDSetTaskDetail):
         _translate = QtCore.QCoreApplication.translate
         QDSetTaskDetail.setWindowTitle(_translate("QDSetTaskDetail", "Dialog"))
@@ -174,16 +172,18 @@ class Ui_QDSetTaskDetail(object):
         self.sourceOfFiles = []
         self.destOfFiles = []
         self.__finishToSet = False
+        self.func_after_add_task = None
 
-        self.teTaskOfName.setPlaceholderText("任务名称")
+        self.TaskOfName.setPlaceholderText("任务名称")
 
 
-    #def set_finish_add_task_cbFunc(self, finishFunc):
-    #    self.cbFinishFunc = finishFunc
+        # def set_finish_add_task_cbFunc(self, finishFunc):
+        #    self.cbFinishFunc = finishFunc
 
-    def init_task_detail_info(self):
+    def init_task_detail_info(self, func_refresh_tasks):
         self.__finish_to_set = False
         self.__init_properties()
+        self.func_after_add_task = func_refresh_tasks
         pass
 
     def initUIAction(self):
@@ -219,7 +219,7 @@ class Ui_QDSetTaskDetail(object):
         """
 
         print("-----task info-----")
-        print("task name:" + self.teTaskOfName.toPlainText())
+        print("task name:" + self.TaskOfName.toPlainText())
         print("src dir:" + self.srcDir)
         print("dest dir:" + self.destDir)
         print("selected items:")
@@ -235,13 +235,14 @@ class Ui_QDSetTaskDetail(object):
         self.__finishToSet = True
 
         newTask = CpyTask().init_task(
-            self.teTaskOfName.toPlainText(),
+            self.TaskOfName.toPlainText(),
             self.srcPath,
             self.destPath,
             listOfSelectedItemsName,
             taskQDateTime)
         self.taskManager.enqueue(newTask)
 
+        self.func_after_add_task(newTask)
         self.dialog.close()
 
     def finish_set(self):
@@ -306,47 +307,8 @@ class Ui_QDSetTaskDetail(object):
             delFileName = self.listOfSourceFiles.pop(idx)
             print('>>:del file name:' + delFileName)
 
-    # 如果任务已经开始就需要计时刷新
+            # 如果任务已经开始就需要计时刷新
+
     def update_task_info(self):
         pass
 
-    """
-    def start_task(self):
-        print(self.dateObj.text())
-        print(self.dateObj.dateTime())
-        taskQDateTime = int(self.dateObj.dateTime().toTime_t())
-        print("task time:" + str(taskQDateTime))
-        curTime = int(time.time()) #获取时间戳
-        print("cur time:" + str(curTime))
-
-        tmp_dt = taskQDateTime - curTime - 1 # -1是为了有大概秒的误差
-        print("dt:" + (utils.format_time(self.dt)))
-
-        # 开始倒计时
-        self.init_count_down_timer(self.timer)
-        # self.refresh_count_down(self.complete_func)
-
-        # 初始化任务信息
-        newTask = MyCpyTask().init_task(self.source_path, self.dest_path,
-                                     self.selectedItems, tmp_dt)
-        self.taskManager.enqueue(newTask)
-
-
-    def init_count_down_timer(self, timer):
-        timer.setInterval(1000)
-        timer.timeout.connect(self.refresh_count_down)
-        timer.start()
-        return timer
-
-    def refresh_count_down(self):
-        if self.dt > 0:
-            self.labCntTime.setText((utils.format_time(self.dt)))
-            self.dt -= 1
-        else:
-            self.labCntTime.setText('00:00:00')
-            self.dt = 0
-            self.timer.stop()
-
-            self.complete_func()
-        pass
-    """

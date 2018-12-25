@@ -51,7 +51,8 @@ class TaskManager(object):
             for task in self.listOfTasks:
                 if task.is_ready():
                     print("task id:" + str(id(task)))
-                    if task.dt == curTime:
+
+                    if task.is_start(curTime):
                         task.do_task()
 
 

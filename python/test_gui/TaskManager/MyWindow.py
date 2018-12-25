@@ -80,9 +80,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.line_2)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.ListOfSourceFiles = QtWidgets.QListWidget(self.horizontalLayoutWidget)
-        self.ListOfSourceFiles.setObjectName("ListOfSourceFiles")
-        self.gridLayout.addWidget(self.ListOfSourceFiles, 2, 0, 2, 1)
+        self.ListOfTask = QtWidgets.QListWidget(self.horizontalLayoutWidget)
+        self.ListOfTask.setObjectName("ListOfTask")
+        self.gridLayout.addWidget(self.ListOfTask, 2, 0, 2, 1)
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -134,9 +134,6 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.ui_set_task_detail = childWindow()
-        #self.ui_set_task_detail.child.set_finish_add_task_cbFunc(
-        #    self.add_to_task_manager)
-
         #  初始化全局任务管理器
         TaskManager().init_taskManager()
 
@@ -152,17 +149,21 @@ class Ui_MainWindow(object):
     def initUIAction(self):
         self.btnAddNewTask.clicked.connect(self.show_set_new_task_detail)
 
-    #def add_to_task_manager(self, newTask):
-    #    self.taskManager.enqueue(newTask)
-
     def show_set_new_task_detail(self):
         '''
         显示任务详情界面
         :return:
         '''
-        self.ui_set_task_detail.child.init_task_detail_info()
+        self.ui_set_task_detail.child.init_task_detail_info(self.refresh_list_of_tasks)
         self.ui_set_task_detail.setModal(True)
         self.ui_set_task_detail.show()
+
+    def refresh_list_of_tasks(self, newTask):
+        print("task name: " + newTask.name)
+
+        item = QtWidgets.QListWidgetItem(QIcon("img/icon-prompt.png"), newTask.name)
+        self.ListOfTask.addItem(item)
+        pass
 
 
 if __name__ == '__main__':
@@ -173,3 +174,4 @@ if __name__ == '__main__':
     ui.initUIAction()
     MainWindow.show()
     sys.exit(app.exec_())
+
