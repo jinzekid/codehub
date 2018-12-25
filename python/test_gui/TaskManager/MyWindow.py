@@ -134,9 +134,11 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.ui_set_task_detail = childWindow()
-        self.ui_set_task_detail.child.set_finish_add_task_cbFunc(
-            self.add_to_task_manager)
-        self.taskManager = TaskManager()
+        #self.ui_set_task_detail.child.set_finish_add_task_cbFunc(
+        #    self.add_to_task_manager)
+
+        #  初始化全局任务管理器
+        TaskManager().init_taskManager()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -150,8 +152,8 @@ class Ui_MainWindow(object):
     def initUIAction(self):
         self.btnAddNewTask.clicked.connect(self.show_set_new_task_detail)
 
-    def add_to_task_manager(self, newTask):
-        self.taskManager.enqueue(newTask)
+    #def add_to_task_manager(self, newTask):
+    #    self.taskManager.enqueue(newTask)
 
     def show_set_new_task_detail(self):
         '''

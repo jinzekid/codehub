@@ -2,27 +2,30 @@
 # enum.Enum 枚举类型
 from collections import namedtuple
 from enum import Enum
+import LYUtils as utils
 
+# 枚举：任务状态
 class TaskStatus(Enum):
     none  = 0
     ready = 1
     start = 2
     doing = 3
+    done  = 4
 
 
 import _thread as thread, time
 import threading
 import hashlib
 
-class MyCpyTask(object):
+class CpyTask(object):
     def __init__(self):
         self.srcOfFiles = [] # 需要上传的文件列表
         self.desofFiles = []
         self.dt = 0
-        self.src_path = ''   # 源路径
-        self.dest_path = ''   # 目标路径
+        self.srcPath = ''   # 源路径
+        self.destPath = ''   # 目标路径
         self.t = None
-        self.nameOfTask = '' #self.src_path + '->' + self.dest_path
+        self.name = '' #self.src_path + '->' + self.dest_path
         self.status = TaskStatus.none
 
     def init_task(self, name, src_path, dest_path, srcOfFiles, dt):
@@ -34,60 +37,58 @@ class MyCpyTask(object):
         :param dt:
         :return:
         """
-        self.src_path = src_path
-        self.dest_path = dest_path
+        self.srcPath = src_path
+        self.destPath = dest_path
         self.srcOfFiles = srcOfFiles
         self.dt = dt
 
         self.status = TaskStatus.ready
 
-
         tmp = ''
         for name in self.srcOfFiles:
             tmp += ' ' + name
-        tmp += self.src_path
-        tmp += self.dest_path
+        tmp += self.srcPath
+        tmp += self.destPath
 
         if name == '' or name == None:
-            self.nameOfTask = hashlib.md5(tmp)
+            self.name = hashlib.md5(tmp)
         else:
-            self.nameOfTask = name
+            self.name = name
 
         print('>>:task info:',
-              self.nameOfTask,
-              self.src_path,
-              self.dest_path,
+              self.name,
+              self.srcPath,
+              self.destPath,
               self.srcOfFiles,
               self.dt)
         return self
 
-    def start_task(self):
-        if self.status == TaskStatus.ready:
-            self.status = TaskStatus.doing
-        """
-        print(self.dateObj.text())
-        print(self.dateObj.dateTime())
-        taskQDateTime = int(self.dateObj.dateTime().toTime_t())
-        print("task time:" + str(taskQDateTime))
-        curTime = int(time.time()) #获取时间戳
-        print("cur time:" + str(curTime))
-
-        self.dt = taskQDateTime - curTime - 1 # -1是为了有大概秒的误差
-        print("dt:" + (utils.format_time(self.dt)))
-        # 开始倒计时
-        self.init_count_down_timer(self.timer)
-        """
-        #thread.start_new_thread(self.do_task, ())
-        pass
-
     def do_task(self):
+        print("task " + self.name + ", doing...")
+        print("source path:" + self.srcPath)
+        print("dest path:" + self.destPath)
 
-        while self.dt > 0:
-            time.sleep(1)
-            print(self.nameOfTask , " >>left time:" , str(self.dt))
-            self.dt -= 1
+        if self.destPath == '':
+            print(">>:destination path is empty")
+            return
 
+        if self.srcPath == '':
+            print(">>:source path is empty")
+            return
+
+        for file in self.srcOfFiles:
+            utils.cpy_file(self.srcPath, self.destPath, file)
+
+        #self.update_dir_files(self.listWidgetOfDest, self.destPath)
         print(">>:task finish...")
+
+        self.status = TaskStatus.done
+
+    def is_ready(self):
+        return self.status == TaskStatus.ready
+
+    def is_done(self):
+        return self.status == TaskStatus.done
 
 """
 # 继承方法

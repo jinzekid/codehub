@@ -19,6 +19,7 @@ from PyQt5.QtWidgets import QFileDialog
 
 import LYUtils as utils
 from MyTask import *
+from TaskManager import *
 
 class Ui_QDSetTaskDetail(object):
     def setupUi(self, QDSetTaskDetail):
@@ -148,6 +149,7 @@ class Ui_QDSetTaskDetail(object):
         self.retranslateUi(QDSetTaskDetail)
         QtCore.QMetaObject.connectSlotsByName(QDSetTaskDetail)
 
+        self.taskManager = TaskManager()
         self.__init_properties()
 
 
@@ -175,8 +177,9 @@ class Ui_QDSetTaskDetail(object):
 
         self.teTaskOfName.setPlaceholderText("任务名称")
 
-    def set_finish_add_task_cbFunc(self, finishFunc):
-        self.cbFinishFunc = finishFunc
+
+    #def set_finish_add_task_cbFunc(self, finishFunc):
+    #    self.cbFinishFunc = finishFunc
 
     def init_task_detail_info(self):
         self.__finish_to_set = False
@@ -227,21 +230,18 @@ class Ui_QDSetTaskDetail(object):
             print("item name:" + item.text())
 
         taskQDateTime = int(self.objDateTimeEdit.dateTime().toTime_t())
-        curTime = int(time.time())  # 获取时间戳
-        tmp_dt = taskQDateTime - curTime - 1  # -1是为了有大概秒的误差
-        print("dt:" + (utils.format_time(tmp_dt)))
-
         print("-------------------")
 
         self.__finishToSet = True
 
-        newTask = MyCpyTask().init_task(
+        newTask = CpyTask().init_task(
             self.teTaskOfName.toPlainText(),
             self.srcPath,
             self.destPath,
             listOfSelectedItemsName,
             taskQDateTime)
-        self.cbFinishFunc(newTask)
+        self.taskManager.enqueue(newTask)
+
         self.dialog.close()
 
     def finish_set(self):
