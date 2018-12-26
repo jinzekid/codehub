@@ -32,7 +32,7 @@
       <x>0</x>
       <y>60</y>
       <width>801</width>
-      <height>20</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="orientation">
@@ -58,59 +58,35 @@
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="0">
-        <widget class="QLabel" name="labFromPath">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
+       <item row="2" column="0" rowspan="2">
+        <widget class="QListWidget" name="ListOfTask"/>
        </item>
-       <item row="3" column="0">
-        <widget class="QListWidget" name="ListOfSourceFiles"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="btnChooseFromPath">
-         <property name="text">
-          <string>源目录</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QPushButton" name="BtnAddFiles">
-         <property name="text">
-          <string>添加</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
-        <widget class="QPushButton" name="btnChooseToPath">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>目标目录</string>
+          <string>任务列表：</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="labToPath">
-         <property name="text">
-          <string/>
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QListWidget" name="ListOfDestinationFiles"/>
-       </item>
       </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2"/>
      </item>
      <item>
       <widget class="Line" name="line_3">
@@ -132,44 +108,17 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QPushButton" name="btnSetTask">
+      <widget class="QPushButton" name="btnAddNewTask">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>设置任务</string>
+        <string>新增任务</string>
        </property>
       </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btnFinishSet">
-       <property name="text">
-        <string>完成设置</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDateTimeEdit" name="dateObj"/>
-     </item>
-     <item>
-      <widget class="QLabel" name="labCntTime">
-       <property name="text">
-        <string>00:00:00</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </widget>
