@@ -1,6 +1,7 @@
 # Author: Jason Lu
 import _thread as thread, time
 import threading
+from MyWindow import Ui_MainWindow as MainWindow
 # 单例模式
 # 使用__new__方法
 class Singleton(object):
@@ -24,10 +25,12 @@ class TaskManager(object):
 
     listOfTasks = []
     timer       = None
+    mainWindow  = None
 
-    def init_taskManager(self):
+    def init_taskManager(self, func_refresh_del_task):
         self.timer = None
         self.listOfTasks = []
+        self.refresh_del_task  = func_refresh_del_task
 
         # 开启新线程
         thread.start_new_thread(self.do_task, ())
@@ -40,6 +43,9 @@ class TaskManager(object):
 
     def dequeue(self, task):
         pass
+
+    def get_list_of_tasks(self):
+        return self.listOfTasks
 
     def do_task(self):
         while True:
@@ -62,6 +68,7 @@ class TaskManager(object):
                 if task.is_done():
                     # 销毁任务
                     print("del task: " + str(id(task)))
+                    self.refresh_del_task(task)
                     del self.listOfTasks[i]
 
 

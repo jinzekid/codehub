@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 import sys
-
+    
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import *
 
@@ -28,7 +28,7 @@ class childWindow(QDialog):
         :param event: close()触发的事件
         :return: None
         """
-
+    
         if self.child.finish_set():
             event.accept()
         else:
@@ -134,8 +134,9 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.ui_set_task_detail = childWindow()
+        self.selectedTasks = []
         #  初始化全局任务管理器
-        TaskManager().init_taskManager()
+        TaskManager().init_taskManager(self.refresh_del_task)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -148,21 +149,44 @@ class Ui_MainWindow(object):
 
     def initUIAction(self):
         self.btnAddNewTask.clicked.connect(self.show_set_new_task_detail)
+        # 设置list的选择模式为多选
+        self.ListOfTask.setSelectionMode(
+                QAbstractItemView.ExtendedSelection)
+        # 设置list的选项动作
+        self.ListOfTask.itemClicked.connect(self.clicked_items)
+
+    def clicked_items(self):
+        print(self.ListOfTask.currentItem())
+        indexs = self.ListOfTask.selectedIndexes()
+        items = self.ListOfTask.selectedItems()
+        
+        self.selectedTasks.clear()
+        for item in items:
+            print("task name:" + item.text())
+            self.selectedTasks.append(item.text())
 
     def show_set_new_task_detail(self):
         '''
         显示任务详情界面
         :return:
         '''
-        self.ui_set_task_detail.child.init_task_detail_info(self.refresh_list_of_tasks)
+        self.ui_set_task_detail.child.init_task_detail_info(self.refresh_new_task)
         self.ui_set_task_detail.setModal(True)
         self.ui_set_task_detail.show()
 
-    def refresh_list_of_tasks(self, newTask):
+    def refresh_new_task(self, newTask):
         print("task name: " + newTask.name)
 
         item = QtWidgets.QListWidgetItem(QIcon("img/icon-prompt.png"), newTask.name)
         self.ListOfTask.addItem(item)
+        pass
+
+    def refresh_del_task(self, delTask):
+        tasks = TaskManager().get_list_of_tasks()
+        for i in range(len(tasks)):
+            task = tasks[i]
+            if task.name == delTask.name:
+                self.ListOfTask.takeItem(i)
         pass
 
 

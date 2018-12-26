@@ -172,7 +172,7 @@ class Ui_QDSetTaskDetail(object):
         self.sourceOfFiles = []
         self.destOfFiles = []
         self.__finishToSet = False
-        self.func_after_add_task = None
+        self.after_add_task = None
 
         self.TaskOfName.setPlaceholderText("任务名称")
 
@@ -183,7 +183,7 @@ class Ui_QDSetTaskDetail(object):
     def init_task_detail_info(self, func_refresh_tasks):
         self.__finish_to_set = False
         self.__init_properties()
-        self.func_after_add_task = func_refresh_tasks
+        self.after_add_task = func_refresh_tasks
         pass
 
     def initUIAction(self):
@@ -242,7 +242,7 @@ class Ui_QDSetTaskDetail(object):
             taskQDateTime)
         self.taskManager.enqueue(newTask)
 
-        self.func_after_add_task(newTask)
+        self.after_add_task(newTask)
         self.dialog.close()
 
     def finish_set(self):
