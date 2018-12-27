@@ -42,11 +42,25 @@ def cpy_file(fromDir, toDir, fileName):
     :return: 是否复制成功
     '''
     import shutil
+    import os
     if not fileName or not fromDir or not toDir:
         return
 
+    print(fromDir +" -- " + toDir + " -- " + fileName)
     src_file_name = fromDir + '/' + fileName
-    shutil.copy(src_file_name, toDir)
+    if os.path.isdir(src_file_name): # 文件夹类型
+        print(src_file_name +" to " + toDir)
+        # 判断文件是否存在
+        # 如果存在先删除
+        destDir = toDir + '/' + fileName + '/'
+        if os.path.exists(destDir):
+            shutil.rmtree(destDir)
+        # 复制文件夹内容
+        srcDir = src_file_name + '/'
+        shutil.copytree(srcDir, destDir)
+
+    else:
+        shutil.copy(src_file_name, toDir)
 
 # 队列类
 class PQueue(object):
