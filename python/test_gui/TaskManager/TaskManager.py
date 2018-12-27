@@ -30,6 +30,7 @@ class TaskManager(object):
     def init_taskManager(self, func_refresh_del_task):
         self.timer = None
         self.listOfTasks = []
+        self.removeTasks= []
         self.refresh_del_task  = func_refresh_del_task
 
         # 开启新线程
@@ -54,25 +55,15 @@ class TaskManager(object):
                 self.listOfTasks)))
             time.sleep(1)
 
-            for task in self.listOfTasks:
+            # 倒序循环删除
+            for i in range(len(self.listOfTasks)-1, -1, -1):
+                task = self.listOfTasks[i]
                 if task.is_ready():
-                    print("task id:" + str(id(task)))
-
                     if task.is_start(curTime):
                         task.do_task()
-
-
-            # 更新任务列表数量
-            for i in range(len(self.listOfTasks)):
-                task = self.listOfTasks[i]
-                if task.is_done():
-                    # 销毁任务
-                    print("del task: " + str(id(task)))
+                elif task.is_done():
                     self.refresh_del_task(task)
-                    del self.listOfTasks[i]
-
-
-
+                    self.listOfTasks.pop(i)
 
 
 
