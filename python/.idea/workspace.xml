@@ -204,8 +204,8 @@
       <file leaf-file-name="TaskManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_gui/TaskManager/TaskManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            <state relative-caret-position="833">
+              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding>
                 <element signature="e#19#49#0" expanded="true" />
               </folding>
@@ -232,6 +232,21 @@
               <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding>
                 <element signature="e#202#211#0" expanded="true" />
+                <marker date="1545815646149" expanded="true" signature="568:14016" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="9259:9526" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="11837:11888" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="11915:11949" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="11980:12269" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="12301:12627" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="12666:12992" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="12910:12992" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13026:13532" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13148:13217" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13249:13313" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13590:13725" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13771:13970" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="13828:13970" ph="..." />
+                <marker date="1545815646149" expanded="true" signature="14003:14016" ph="..." />
               </folding>
             </state>
           </provider>
@@ -240,11 +255,9 @@
       <file leaf-file-name="MyWindow.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_gui/TaskManager/MyWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-              <folding>
-                <element signature="e#197#207#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="765">
+              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -801,7 +814,7 @@
     <frame x="1819" y="108" width="982" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26489362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27021277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18385093" sideWeight="0.5090703" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1312,6 +1325,21 @@
           <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
             <element signature="e#202#211#0" expanded="true" />
+            <marker date="1545815646149" expanded="true" signature="568:14016" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="9259:9526" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="11837:11888" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="11915:11949" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="11980:12269" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="12301:12627" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="12666:12992" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="12910:12992" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13026:13532" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13148:13217" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13249:13313" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13590:13725" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13771:13970" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="13828:13970" ph="..." />
+            <marker date="1545815646149" expanded="true" signature="14003:14016" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1328,8 +1356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_gui/TaskManager/TaskManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        <state relative-caret-position="833">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding>
             <element signature="e#19#49#0" expanded="true" />
           </folding>
@@ -1338,11 +1366,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_gui/TaskManager/MyWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-          <folding>
-            <element signature="e#197#207#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

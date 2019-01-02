@@ -32,7 +32,7 @@ def format_time(ttime):
 
     return str_time
 
-# 文件复制
+# 文件或文件夹复制
 def cpy_file(fromDir, toDir, fileName):
     '''
     复制文件
@@ -58,7 +58,6 @@ def cpy_file(fromDir, toDir, fileName):
         # 复制文件夹内容
         srcDir = src_file_name + '/'
         shutil.copytree(srcDir, destDir)
-
     else:
         shutil.copy(src_file_name, toDir)
 

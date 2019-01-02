@@ -1,3 +1,5 @@
+
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'MyWindow.ui'
@@ -45,7 +47,6 @@ class childWindow(QDialog):
     def close_dialog(self):
         self.close()
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -80,9 +81,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.line_2)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.ListOfTask = QtWidgets.QListWidget(self.horizontalLayoutWidget)
-        self.ListOfTask.setObjectName("ListOfTask")
-        self.gridLayout.addWidget(self.ListOfTask, 2, 0, 2, 1)
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -98,7 +96,32 @@ class Ui_MainWindow(object):
         self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_4.setObjectName("line_4")
-        self.gridLayout.addWidget(self.line_4, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.line_4, 2, 0, 1, 1)
+        self.tabOfTasks = QtWidgets.QTableWidget(self.horizontalLayoutWidget)
+        self.tabOfTasks.setObjectName("tabOfTasks")
+        self.tabOfTasks.setColumnCount(2)
+        self.tabOfTasks.setHorizontalHeaderLabels(['Task Name', 'Options'])
+        self.tabOfTasks.setRowCount(0)
+
+        
+        # 添加多选框
+        '''
+        comb = QtWidgets.QComboBox()
+        comb.addItem('Famle')
+        comb.addItem('Male')
+        comb.setCurrentIndex(0)
+        self.tabOfTasks.setCellWidget(rowCnt, 1, comb)
+        '''
+        # 添加勾选按钮
+        '''
+        checkBox = QtWidgets.QTableWidgetItem()
+        checkBox.setCheckState(Qt.Unchecked)
+        checkBox.setText('勾选启用')
+        self.tabOfTasks.setItem(rowCnt, 0 , item)
+        self.tabOfTasks.setItem(rowCnt, 1, checkBox)
+        '''
+
+        self.gridLayout.addWidget(self.tabOfTasks, 3, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout)
         self.line_3 = QtWidgets.QFrame(self.horizontalLayoutWidget)
         self.line_3.setFrameShape(QtWidgets.QFrame.VLine)
@@ -132,7 +155,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        
         self.ui_set_task_detail = childWindow()
         self.selectedTasks = []
         #  初始化全局任务管理器
@@ -150,20 +173,24 @@ class Ui_MainWindow(object):
     def initUIAction(self):
         self.btnAddNewTask.clicked.connect(self.show_set_new_task_detail)
         # 设置list的选择模式为多选
-        self.ListOfTask.setSelectionMode(
+        self.tabOfTasks.setSelectionMode(
                 QAbstractItemView.ExtendedSelection)
         # 设置list的选项动作
-        self.ListOfTask.itemClicked.connect(self.clicked_items)
+        self.tabOfTasks.itemClicked.connect(self.clicked_items)
 
     def clicked_items(self):
-        print(self.ListOfTask.currentItem())
-        indexs = self.ListOfTask.selectedIndexes()
-        items = self.ListOfTask.selectedItems()
-        
+        print(self.tabOfTasks.currentItem())
+        indexs = self.tabOfTasks.selectedIndexes()
+        items = self.tabOfTasks.selectedItems()
+
         self.selectedTasks.clear()
+        self.show_set_new_task_detail()
+        '''
         for item in items:
             print("task name:" + item.text())
             self.selectedTasks.append(item.text())
+            break
+        '''
 
     def show_set_new_task_detail(self):
         '''
@@ -177,16 +204,82 @@ class Ui_MainWindow(object):
     def refresh_new_task(self, newTask):
         print("task name: " + newTask.name)
 
-        item = QtWidgets.QListWidgetItem(QIcon("img/icon-prompt.png"), newTask.name)
-        self.ListOfTask.addItem(item)
+        #rowCnt = self.tabOfTasks.rowCount()
+        #item = QtWidgets.QTableWidgetItem(newTask.name)
+        #self.tabOfTasks.setItem(rowCnt, 0, item)
+        #self.tabOfTasks.setRowCount(rowCnt+1)
+        
+        #cbox  = QtWidgets.QCheckBox()
+        #cbox.setText(newTask.name)
+        #self.tabOfTasks.addItem(item)
+        #btn = QtWidgets.QPushButton()
+        #btn.setText('删除')
+        #self.tabOfTasks.setItemWidget(item, btn)
+
+        rowCnt = self.tabOfTasks.rowCount()
+        self.tabOfTasks.setRowCount(rowCnt + 1)
+        item = QtWidgets.QTableWidgetItem(newTask.name)
+        self.tabOfTasks.setItem(rowCnt, 0 , item)
+        # 添加多个按钮
+        checkBtn = QtWidgets.QPushButton('查看')
+        delBtn  = QtWidgets.QPushButton('删除')
+        widget = QtWidgets.QWidget()
+        hLayout = QtWidgets.QHBoxLayout()
+        hLayout.addWidget(checkBtn)
+        hLayout.addWidget(delBtn)
+        widget.setLayout(hLayout)
+        self.tabOfTasks.setCellWidget(rowCnt, 1, widget)
         pass
+
+    def mutil_box_selected(self):
+        nCount = self.tabOfTasks
+
+    # 列表内添加按钮
+    def buttonForRow(self,id):
+        widget=QtWidgets()
+        # 修改
+        updateBtn = QPushButton('修改')
+        updateBtn.setStyleSheet(''' text-align : center;
+                                          background-color : NavajoWhite;
+                                          height : 30px;
+                                          border-style: outset;
+                                          font : 13px  ''')
+
+        #updateBtn.clicked.connect(lambda:self.updateTable(id))
+
+        # 查看
+        viewBtn = QPushButton('查看')
+        viewBtn.setStyleSheet(''' text-align : center;
+                                  background-color : DarkSeaGreen;
+                                  height : 30px;
+                                  border-style: outset;
+                                  font : 13px; ''')
+
+        #viewBtn.clicked.connect(lambda: self.viewTable(id))
+
+        # 删除
+        deleteBtn = QPushButton('删除')
+        deleteBtn.setStyleSheet(''' text-align : center;
+                                    background-color : LightCoral;
+                                    height : 30px;
+                                    border-style: outset;
+                                    font : 13px; ''')
+
+
+        hLayout = QHBoxLayout()
+        hLayout.addWidget(updateBtn)
+        hLayout.addWidget(viewBtn)
+        hLayout.addWidget(deleteBtn)
+        hLayout.setContentsMargins(5,2,5,2)
+        widget.setLayout(hLayout)
+        return widget
 
     def refresh_del_task(self, delTask):
         tasks = TaskManager().get_list_of_tasks()
         for i in range(len(tasks)):
             task = tasks[i]
             if task.name == delTask.name:
-                self.ListOfTask.takeItem(i)
+                self.tabOfTasks.takeItem(i)
         pass
 
 
@@ -198,4 +291,3 @@ if __name__ == '__main__':
     ui.initUIAction()
     MainWindow.show()
     sys.exit(app.exec_())
-
