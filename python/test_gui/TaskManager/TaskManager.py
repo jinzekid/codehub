@@ -48,6 +48,15 @@ class TaskManager(object):
     def get_list_of_tasks(self):
         return self.listOfTasks
 
+    def destory_task(self, taskToken):
+        # 倒序循环删除
+        for i in range(len(self.listOfTasks)-1, -1, -1):
+            task = self.listOfTasks[i]
+            if task.taskToken == taskToken:
+                self.refresh_del_task(task)
+                self.listOfTasks.pop(i)
+
+
     def do_task(self):
         while True:
             curTime = int(time.time())  # 获取时间戳

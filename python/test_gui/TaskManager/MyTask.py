@@ -1,5 +1,6 @@
 # Author: Jason Lu
 # enum.Enum 枚举类型
+import os
 from collections import namedtuple
 from enum import Enum
 import LYUtils as utils
@@ -11,6 +12,7 @@ class TaskStatus(Enum):
     start = 2
     doing = 3
     done  = 4
+
 
 
 import _thread as thread, time
@@ -28,6 +30,7 @@ class CpyTask(object):
         self.name = '' #self.src_path + '->' + self.dest_path
         self.status = TaskStatus.none
         self.leftTime = 0
+        self.taskToken = '' 
 
     def init_task(self, name, src_path, dest_path, srcOfFiles, dt):
         """
@@ -43,6 +46,11 @@ class CpyTask(object):
         self.srcOfFiles = srcOfFiles
         self.dt = dt
         self.name = name
+        m1 = hashlib.md5()
+        info = self.srcPath + '-' + self.destPath + '-' + str(self.srcOfFiles) + '-' + self.name
+        m1.update(info.encode('utf-8'))
+        self.taskToken = m1.hexdigest()
+
 
         self.status = TaskStatus.ready
 
@@ -64,7 +72,8 @@ class CpyTask(object):
               self.srcPath,
               self.destPath,
               self.srcOfFiles,
-              self.dt)
+              self.dt,
+              self.taskToken)
         return self
 
 

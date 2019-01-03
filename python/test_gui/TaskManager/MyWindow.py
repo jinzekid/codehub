@@ -222,7 +222,10 @@ class Ui_MainWindow(object):
         self.tabOfTasks.setItem(rowCnt, 0 , item)
         # 添加多个按钮
         checkBtn = QtWidgets.QPushButton('查看')
+        checkBtn.clicked.connect(lambda:self.check_task(newTask.taskToken))
         delBtn  = QtWidgets.QPushButton('删除')
+        delBtn.clicked.connect(lambda:self.delete_task(newTask.taskToken))
+
         widget = QtWidgets.QWidget()
         hLayout = QtWidgets.QHBoxLayout()
         hLayout.addWidget(checkBtn)
@@ -230,6 +233,14 @@ class Ui_MainWindow(object):
         widget.setLayout(hLayout)
         self.tabOfTasks.setCellWidget(rowCnt, 1, widget)
         pass
+
+    def delete_task(self, taskToken):
+        print('del task token:' + taskToken)
+        tm = TaskManager()
+        tm.destory_task(taskToken)
+
+    def check_task(self, taskToken):
+        print('check task token:' + taskToken)
 
     def mutil_box_selected(self):
         nCount = self.tabOfTasks
@@ -278,8 +289,8 @@ class Ui_MainWindow(object):
         tasks = TaskManager().get_list_of_tasks()
         for i in range(len(tasks)):
             task = tasks[i]
-            if task.name == delTask.name:
-                self.tabOfTasks.takeItem(i)
+            if task.taskToken == delTask.taskToken:
+                self.tabOfTasks.removeRow(i)
         pass
 
 
