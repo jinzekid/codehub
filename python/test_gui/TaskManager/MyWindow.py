@@ -9,12 +9,23 @@
 # WARNING! All changes made in this file will be lost!
 
 import sys
-    
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import *
+from PyQt5.QtCore import QThread, pyqtSignal, QObject, QDateTime
+
 
 from SetTaskDetail import *
 from TaskManager import *
+
+class BackendThread(QObject):
+    update_date = pyqtSignal(str)
+
+    def run(self):
+        while True:
+            data = QDateTime.currentDateTime()
+            currTime = data.toString('yyyy-MM-dd hh:mm:ss')
+            self.update_date.emit(str(currTime))
+            time.sleep(1)
 
 class childWindow(QDialog):
     def __init__(self):
@@ -99,8 +110,8 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.line_4, 2, 0, 1, 1)
         self.tabOfTasks = QtWidgets.QTableWidget(self.horizontalLayoutWidget)
         self.tabOfTasks.setObjectName("tabOfTasks")
-        self.tabOfTasks.setColumnCount(2)
-        self.tabOfTasks.setHorizontalHeaderLabels(['Task Name', 'Options'])
+        self.tabOfTasks.setColumnCount(3)
+        self.tabOfTasks.setHorizontalHeaderLabels(['Task Name', 'Left Time', 'Options'])
         self.tabOfTasks.setRowCount(0)
 
         
@@ -175,8 +186,18 @@ class Ui_MainWindow(object):
         # 设置list的选择模式为多选
         self.tabOfTasks.setSelectionMode(
                 QAbstractItemView.ExtendedSelection)
+
+        taskManager = TaskManager()
+        # 连接信号槽
+        taskManager.update_date.connect(self.refresh_status_task)
+        self.thread = QThread()
+        taskManager.moveToThread(self.thread)
+        # 开始线程
+        self.thread.started.connect(taskManager.run)
+        self.thread.start()
+
         # 设置list的选项动作
-        self.tabOfTasks.itemClicked.connect(self.clicked_items)
+        #self.tabOfTasks.itemClicked.connect(self.clicked_items)
 
     def clicked_items(self):
         print(self.tabOfTasks.currentItem())
@@ -193,11 +214,11 @@ class Ui_MainWindow(object):
         '''
 
     def show_set_new_task_detail(self):
-        '''
-        显示任务详情界面
-        :return:
-        '''
         self.ui_set_task_detail.child.init_task_detail_info(self.refresh_new_task)
+        self.ui_set_task_detail.setModal(True)
+        self.ui_set_task_detail.show()
+
+    def show_task_detail(self, task):
         self.ui_set_task_detail.setModal(True)
         self.ui_set_task_detail.show()
 
@@ -218,11 +239,37 @@ class Ui_MainWindow(object):
 
         rowCnt = self.tabOfTasks.rowCount()
         self.tabOfTasks.setRowCount(rowCnt + 1)
+
+        # 设置任务名称
         item = QtWidgets.QTableWidgetItem(newTask.name)
         self.tabOfTasks.setItem(rowCnt, 0 , item)
-        # 添加多个按钮
+        
+        # 设置任务倒计时.
+        item = QtWidgets.QTableWidgetItem(utils.format_time(newTask.leftTime))
+        self.tabOfTasks.setItem(rowCnt, 1, item)
+        print('init item address:' + str(id(item)))
+
+        """
+        # 连接信号槽
+        newTask.update_date.connect(self.refresh_status_task)
+        self.thread = QThread()
+        newTask.moveToThread(self.thread)
+        # 开始线程
+        self.thread.started.connect(newTask.run)
+        self.thread.start()
+        """
+        """
+        self.backend = BackendThread()
+        self.backend.update_date.connect(self.refresh_status_task)
+        self.thread = QThread()
+        self.backend.moveToThread(self.thread)
+        self.thread.started.connect(self.backend.run)
+        self.thread.start()
+        """
+
+        # 设置任务操作 添加多个按钮
         checkBtn = QtWidgets.QPushButton('查看')
-        checkBtn.clicked.connect(lambda:self.check_task(newTask.taskToken))
+        checkBtn.clicked.connect(lambda:self.check_task(newTask, newTask.taskToken))
         delBtn  = QtWidgets.QPushButton('删除')
         delBtn.clicked.connect(lambda:self.delete_task(newTask.taskToken))
 
@@ -231,7 +278,7 @@ class Ui_MainWindow(object):
         hLayout.addWidget(checkBtn)
         hLayout.addWidget(delBtn)
         widget.setLayout(hLayout)
-        self.tabOfTasks.setCellWidget(rowCnt, 1, widget)
+        self.tabOfTasks.setCellWidget(rowCnt, 2, widget)
         pass
 
     def delete_task(self, taskToken):
@@ -239,8 +286,9 @@ class Ui_MainWindow(object):
         tm = TaskManager()
         tm.destory_task(taskToken)
 
-    def check_task(self, taskToken):
+    def check_task(self, task,  taskToken):
         print('check task token:' + taskToken)
+        self.show_task_detail(task)
 
     def mutil_box_selected(self):
         nCount = self.tabOfTasks
@@ -285,13 +333,23 @@ class Ui_MainWindow(object):
         widget.setLayout(hLayout)
         return widget
 
-    def refresh_del_task(self, delTask):
-        tasks = TaskManager().get_list_of_tasks()
-        for i in range(len(tasks)):
-            task = tasks[i]
-            if task.taskToken == delTask.taskToken:
-                self.tabOfTasks.removeRow(i)
+    # 删除列表中已经结束的任务
+    def refresh_del_task(self, index, delTask):
+        self.tabOfTasks.removeRow(index)
         pass
+
+    # 刷新任务的倒计时时间
+    def refresh_status_task(self, index, leftTime):
+        item = self.tabOfTasks.item(index, 1)
+        item.setText(leftTime)
+        #item.setText(utils.format_time(refTask.leftTime))
+        #print('refresh item address:' + str(id(item))+ ',text=' + str(item.text()))
+        #print('left time:' + utils.format_time(refTask.leftTime))
+        #print('MainThread:' + MainThread)
+        #item = QtWidgets.QTableWidgetItem(utils.format_time(refTask.leftTime))
+        #self.tabOfTasks.setItem(index, 1, item)
+        pass
+
 
 
 if __name__ == '__main__':

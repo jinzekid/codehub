@@ -2,6 +2,10 @@
 import _thread as thread, time
 import threading
 from MyWindow import Ui_MainWindow as MainWindow
+from PyQt5.QtCore import QThread, pyqtSignal, QObject, QDateTime
+
+import LYUtils as utils
+
 # 单例模式
 # 使用__new__方法
 class Singleton(object):
@@ -21,11 +25,12 @@ def singleton(cls, *args, **kwargs):
     return getinstance
 
 @singleton
-class TaskManager(object):
+class TaskManager(QObject):
 
     listOfTasks = []
     timer       = None
     mainWindow  = None
+    update_date = pyqtSignal(int, str)
 
     def init_taskManager(self, func_refresh_del_task):
         self.timer = None
@@ -34,7 +39,7 @@ class TaskManager(object):
         self.refresh_del_task  = func_refresh_del_task
 
         # 开启新线程
-        thread.start_new_thread(self.do_task, ())
+        #thread.start_new_thread(self.do_task, ())
         pass
 
     def enqueue(self, task):
@@ -53,11 +58,11 @@ class TaskManager(object):
         for i in range(len(self.listOfTasks)-1, -1, -1):
             task = self.listOfTasks[i]
             if task.taskToken == taskToken:
-                self.refresh_del_task(task)
+                self.refresh_del_task(i, task)
                 self.listOfTasks.pop(i)
 
 
-    def do_task(self):
+    def run(self):
         while True:
             curTime = int(time.time())  # 获取时间戳
             print("cur time:" + str(curTime) + ", 任务数量: " + str(len(
@@ -67,11 +72,20 @@ class TaskManager(object):
             # 倒序循环删除
             for i in range(len(self.listOfTasks)-1, -1, -1):
                 task = self.listOfTasks[i]
+                print('task token:' + task.taskToken + 
+                        ', left time:' + str(utils.format_time(task.leftTime)))
+                # 循环更新任务剩余时间
+                task.update_task_info(curTime)
+
                 if task.is_ready():
                     if task.is_start(curTime):
                         task.do_task()
+                    else:
+                        self.update_date.emit(i, 
+                                str(utils.format_time(task.leftTime)))
+
                 elif task.is_done():
-                    self.refresh_del_task(task)
+                    self.refresh_del_task(i, task)
                     self.listOfTasks.pop(i)
 
 

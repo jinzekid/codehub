@@ -1,6 +1,7 @@
 # Author: Jason Lu
 # enum.Enum 枚举类型
 import os
+from PyQt5.QtCore import QThread, pyqtSignal, QObject, QDateTime
 from collections import namedtuple
 from enum import Enum
 import LYUtils as utils
@@ -20,27 +21,23 @@ import threading
 import hashlib
 
 class CpyTask(object):
-    def __init__(self):
-        self.srcOfFiles = [] # 需要上传的文件列表
-        self.desofFiles = []
-        self.dt = 0
-        self.srcPath = ''   # 源路径
-        self.destPath = ''   # 目标路径
-        self.t = None
-        self.name = '' #self.src_path + '->' + self.dest_path
-        self.status = TaskStatus.none
-        self.leftTime = 0
-        self.taskToken = '' 
+
+    """
+    # 通过类成员对象定义信号
+    update_date = pyqtSignal(str)
+
+    # 处理业务逻辑
+    def run(self):
+        while True:
+            data = QDateTime.currentDateTime()
+            currTime = data.toString("yyyy-MM-dd hh:mm:ss")
+            self.update_date.emit(str(currTime))
+            time.sleep(1)
+    """
 
     def init_task(self, name, src_path, dest_path, srcOfFiles, dt):
-        """
-        初始化任务
-        :param src_path:
-        :param dest_path:
-        :param srcOfFiles:
-        :param dt:
-        :return:
-        """
+        self.status = TaskStatus.none
+        self.desofFiles = []
         self.srcPath = src_path
         self.destPath = dest_path
         self.srcOfFiles = srcOfFiles
@@ -50,7 +47,9 @@ class CpyTask(object):
         info = self.srcPath + '-' + self.destPath + '-' + str(self.srcOfFiles) + '-' + self.name
         m1.update(info.encode('utf-8'))
         self.taskToken = m1.hexdigest()
-
+        
+        curTime = int(time.time())  # 获取时间戳
+        self.leftTime = self.dt - curTime
 
         self.status = TaskStatus.ready
 
@@ -81,7 +80,6 @@ class CpyTask(object):
         self.leftTime = self.dt - curTime
 
     def is_start(self, curTime):
-        self.update_task_info(curTime)
         if curTime == self.dt:
             return True
         return False
