@@ -30,6 +30,8 @@ class TaskManager(QObject):
     listOfTasks = []
     timer       = None
     mainWindow  = None
+
+    # 通过类成员对象定义信号
     update_date = pyqtSignal(int, str)
 
     def init_taskManager(self, func_refresh_del_task):
@@ -65,15 +67,20 @@ class TaskManager(QObject):
     def run(self):
         while True:
             curTime = int(time.time())  # 获取时间戳
+            """
             print("cur time:" + str(curTime) + ", 任务数量: " + str(len(
                 self.listOfTasks)))
+            """
             time.sleep(1)
 
             # 倒序循环删除
             for i in range(len(self.listOfTasks)-1, -1, -1):
                 task = self.listOfTasks[i]
+                """
                 print('task token:' + task.taskToken + 
                         ', left time:' + str(utils.format_time(task.leftTime)))
+                """
+
                 # 循环更新任务剩余时间
                 task.update_task_info(curTime)
 

@@ -176,15 +176,40 @@ class Ui_QDSetTaskDetail(object):
 
         self.TaskOfName.setPlaceholderText("任务名称")
 
-
         # def set_finish_add_task_cbFunc(self, finishFunc):
         #    self.cbFinishFunc = finishFunc
 
-    def init_task_detail_info(self, func_refresh_tasks):
+    def new_task_detail(self, refresh_task):
         self.__finish_to_set = False
         self.__init_properties()
-        self.after_add_task = func_refresh_tasks
+        self.after_add_task = refresh_task
+
+    def init_task_detail_info(self, task):
+        print('init task detail info:' + task.name)
+        self.__finish_to_set = False
+        self.__init_properties()
+        #self.after_add_task = func_refresh_tasks
+
+        # 设置任务名称
+        self.TaskOfName.setText(task.name)
+        self.__init_src_dir(task.srcPath)
+        self.__init_dest_dir(task.destPath)
+
+        # 设置任务的中被选中的文件
+        listOfFiles = []
+        for selectedFile in task.srcOfFiles:
+            listOfFiles.append(selectedFile)
+
+        count = self.listWidgetOfSrc.count()
+        for row in range(count):
+            item = self.listWidgetOfSrc.item(row)
+            for i in range(len(listOfFiles)-1, -1, -1):
+                selectedFile = listOfFiles[i]
+                if item.text() == selectedFile:
+                    item.setSelected(True)
+                    listOfFiles.pop(i)
         pass
+
 
     def initUIAction(self):
         self.btnChooseFromPath.clicked.connect(self.choose_src_dir)
@@ -253,19 +278,35 @@ class Ui_QDSetTaskDetail(object):
             self.horizontalLayoutWidget,
             "选取文件夹",
             "./")  # 起始路径
+        self.__init_src_dir(self.srcDir)
+        """
         self.srcPath = self.srcDir
         self.labSrcPath.setText(self.srcDir)
         self.update_dir_files(self.listWidgetOfSrc, self.srcDir)
+        """
+
+    def __init_src_dir(self, path):
+        self.srcPath = path
+        self.labSrcPath.setText(path)
+        self.update_dir_files(self.listWidgetOfSrc, path)
 
     def choose_dest_dir(self):
         self.destDir = QFileDialog.getExistingDirectory(
             self.horizontalLayoutWidget,
             "选取文件夹",
             "./")  # 起始路径
+        self.__init_dest_dir(self.destDir)
+        """
         self.destPath = self.destDir
         self.labDestPath.setText(self.destDir)
         self.update_dir_files(self.listWidgetOfDest,
                               self.destDir)
+        """
+
+    def __init_dest_dir(self, path):
+        self.destPath = path
+        self.labDestPath.setText(path)
+        self.update_dir_files(self.listWidgetOfDest, path)
 
     def clicked_items_from_src(self):
         print(self.listWidgetOfSrc.currentItem())

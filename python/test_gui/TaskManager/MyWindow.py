@@ -182,10 +182,13 @@ class Ui_MainWindow(object):
         self.actionOpen.setText(_translate("MainWindow", "Open..."))
 
     def initUIAction(self):
-        self.btnAddNewTask.clicked.connect(self.show_set_new_task_detail)
+        # 关联新增任务按钮事件
+        self.btnAddNewTask.clicked.connect(self.add_new_task_detail)
         # 设置list的选择模式为多选
         self.tabOfTasks.setSelectionMode(
                 QAbstractItemView.ExtendedSelection)
+        # 设置list的选项动作
+        #self.tabOfTasks.itemClicked.connect(self.clicked_items)
 
         taskManager = TaskManager()
         # 连接信号槽
@@ -196,16 +199,13 @@ class Ui_MainWindow(object):
         self.thread.started.connect(taskManager.run)
         self.thread.start()
 
-        # 设置list的选项动作
-        #self.tabOfTasks.itemClicked.connect(self.clicked_items)
-
     def clicked_items(self):
         print(self.tabOfTasks.currentItem())
         indexs = self.tabOfTasks.selectedIndexes()
         items = self.tabOfTasks.selectedItems()
 
         self.selectedTasks.clear()
-        self.show_set_new_task_detail()
+        #self.show_set_new_task_detail()
         '''
         for item in items:
             print("task name:" + item.text())
@@ -213,18 +213,22 @@ class Ui_MainWindow(object):
             break
         '''
 
-    def show_set_new_task_detail(self):
-        self.ui_set_task_detail.child.init_task_detail_info(self.refresh_new_task)
+    # 新增任务
+    def add_new_task_detail(self):
+        self.ui_set_task_detail.child.new_task_detail(self.refresh_new_task)
         self.ui_set_task_detail.setModal(True)
         self.ui_set_task_detail.show()
 
+    # 显示任务详情，用于修改任务内容
     def show_task_detail(self, task):
+        print('task name:' + task.name)
+        self.ui_set_task_detail.child.init_task_detail_info(task)
         self.ui_set_task_detail.setModal(True)
         self.ui_set_task_detail.show()
 
+    # 在主界面刷洗新增的任务到列表中
     def refresh_new_task(self, newTask):
         print("task name: " + newTask.name)
-
         #rowCnt = self.tabOfTasks.rowCount()
         #item = QtWidgets.QTableWidgetItem(newTask.name)
         #self.tabOfTasks.setItem(rowCnt, 0, item)
