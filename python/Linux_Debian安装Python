@@ -1,0 +1,58 @@
+Linux Debian系统安装python：
+
+获取python源代码：
+$wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+
+解压文件：
+$tar xvJf  ***.tar.xz
+
+进入对应python版本文件
+$cd pythonxxx
+
+进行编译和安装
+>./configure --prefix=/usr/local/python3 --enable-optimizations
+>make
+>make install
+安装完毕，/usr/local/目录下就会有python3了
+
+/********************************************************/
+报错：（如下情况）
+报错1：zlib
+$ sudo apt-get install zlib1g
+$ sudo apt-get install zlib1g.dev
+直接输入上述命令后还是不能安装。这就要求我们先装ruby.
+在ubuntu里，zlib叫zlib1g，相应的zlib-devel叫zlib1g.dev。默认的安装源里没有
+zlib1g.dev。要在packages.ubuntu.com上找。
+$sudo apt-get install ruby
+然后再装zlib1g-dev就可以了
+$sudo apt-get install zlib1g-dev
+
+报错2：如_ctypes?
+$sudo apt-get install libffi-dev
+/********************************************************/
+
+编译完成后就可以，安装python虚拟环境：
+
+安装虚拟环境：
+$sudo apt-get install virtualenv
+$sudo apt-get install virtualenvwrapper
+
+这个时候需要写~/.bashrc
+export WORKON_HOME=~/.virtualenvs
+或者（exportWORKON_HOME=$HOME/.virtualenvs，virtualenvs是目录名字）
+source /usr/local/bin/virtualenvwrapper.sh
+
+（注意：如果bin里面没有virtualenvwrapper.sh , 可以查找命令：find / -name virtualenvwrapper.sh, 
+找到后可以使用cp命令对其进行复制,cp virtualenvwrapper* /usr/local/bin/)
+
+接下来就可以创建虚拟环境：（指定python 版本解释器）
+$mkvirtualenv --python=/usr/local/pythonxxx/bin/python penvxxx
+
+切换虚拟环境：
+$workon penvxxx(tab键)
+
+离开虚拟环境:
+$deactivate
+
+删除虚拟环境：
+$rmvirtualenv penvxxx
