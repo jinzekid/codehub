@@ -7,7 +7,7 @@ def format_time(ttime):
     '''
     hours = int(ttime / (60*60))
     left_m = ttime-hours*3600
-    minutes = int(left_m / 60)
+    minutes = int(left_m / 60)6
     left_s = left_m - minutes*60
     seconds = int(left_s % 60)
 
