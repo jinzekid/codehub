@@ -1,0 +1,58 @@
+排序算法
+  1.桶排序   （时间复杂度O(m+n)）
+    
+  2.快速排序  (平均时间复杂度O(nlogn)，最坏时间复杂度O(n^2))
+    基于“二分”思想
+    
+    C版本：
+      /**************我是代码分隔符/**************/
+      void itoj(int a[], int i, int j) {
+        int tmp = a[i]
+        a[i] = a[j]
+        a[j] = tmp
+      }
+      
+      void quick_sort(int a[], int low, int high) {
+        if (low > high) return a;
+        
+        int pi = a[low]
+        int i = low;
+        int j = high;
+        
+        while (i < j) {
+          while (a[j] >= pi && i < j) j--;
+          while (a[i] <= pi && i < j) i++;
+
+          if (j > i) {
+            itoj(a, i, j)
+          }
+       }
+       
+       itoj(a, low, i);
+       quick_sort(a, low, i-1);
+       quick_sort(a, i+1, high);
+      }
+      /*******************************************/
+
+    
+    Python版本：
+      /**************我是代码分隔符/**************/
+      def parition(seq):
+        pi, seq = seq[0], seq[1:]
+        lo = [x for x in seq if x <= pi]
+        hi = [x for x in seq if x > pi]
+        return lo, pi, hi
+      
+      def quick_sort(seq):
+        if len(seq) <= 1: return seq
+        lo, pi, hi = partition(seq)
+        return quick_sort(lo) + pi + quick_sort(hi)
+      /*******************************************/
+
+  3.堆排序   （时间复杂度O()）
+    
+  4.冒泡排序（不推荐，太慢，时间复杂度O(n^2)）
+
+
+
+
