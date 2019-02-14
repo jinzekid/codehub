@@ -1,3 +1,9 @@
+/*
+两个方法：
+1.loadJs：加载js文件使用，顺序加载
+2.页面缩放代码
+*/
+
 function loadJs(url,callback){
   var script=document.createElement('script');
   script.type="text/javascript";
