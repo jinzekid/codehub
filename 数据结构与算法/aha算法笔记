@@ -7,15 +7,15 @@
     C版本：
       /**************我是代码分隔符/**************/
       void itoj(int a[], int i, int j) {
-        int tmp = a[i]
-        a[i] = a[j]
-        a[j] = tmp
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
       }
       
       void quick_sort(int a[], int low, int high) {
         if (low > high) return a;
         
-        int pi = a[low]
+        int pi = a[low];
         int i = low;
         int j = high;
         
@@ -24,7 +24,7 @@
           while (a[i] <= pi && i < j) i++;
 
           if (j > i) {
-            itoj(a, i, j)
+            itoj(a, i, j);
           }
        }
        
