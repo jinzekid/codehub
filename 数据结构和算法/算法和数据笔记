@@ -49,7 +49,7 @@
         return quick_sort(lo) + pi + quick_sort(hi)
       /*******************************************/
 
-  3.堆排序   （时间复杂度O()）
+  3.堆排序   （时间复杂度O(nlogn)）
     
   4.冒泡排序（不推荐，太慢，时间复杂度O(n^2)）
   
@@ -67,11 +67,28 @@
             链式队列
             
     C版本：
-      typdef int ElemType; // 定义类型别名
-      struct queue {
-        ElemType data[100];
+      // 简单定义
+      struc queue {
+        int data[100];
         int head;
         int tail;
+      }
+      
+      // 顺序队列
+      typdef int QElemType; // 定义类型别名
+      struct seqQueue {
+        QElemType *base;  // 初始化动态分配空间
+        int head;         // 头指针
+        int tail;         // 尾指针
+        int queueSize;    // 当前分配的存储容量
+      }
+      
+      // 循环队列
+      typdef int QElemType; // 定义类型别名
+      struct linkQueue {
+        QElemType *base;  // 初始化动态分配空间
+        int head;         // 头指针
+        int tail;         // 尾指针
       }
             
   3.栈
@@ -79,10 +96,38 @@
     存储结构：顺序栈
             链式栈
             
+    C版本：
+      // 顺序栈
+      typdef int SElemType; // 定义类型别名
+      struct stack {
+        SElemType data[100];
+        int top;
+      }
+      
+      // 链式栈
+      typdef int SElemType; // 定义类型别名
+      struct seqStack {
+        SElemType *base;
+        SElemType *top;
+        int stackSize;
+      };
+      
+            
   4.链表
     特点：存储空间根据指针相连（空间利用率高）
          插入和删除速度快
          读取速度慢
+         
+    存储结构：线性表
+            循环链表
+            双向链表
+    
+    C版本：//静态单链表
+      #define MAX_SIZE 100
+      typedef struct {
+        ElemType data;
+        int cur;
+      }SLinkList[MAX_SIZE];
     
 
 
