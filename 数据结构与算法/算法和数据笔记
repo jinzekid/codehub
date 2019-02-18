@@ -97,6 +97,12 @@
             链式栈
             
     C版本：
+      // 简单定义
+      struct stack {
+        int data[100];
+        int top;
+      }
+      
       // 顺序栈
       typdef int SElemType; // 定义类型别名
       struct stack {
