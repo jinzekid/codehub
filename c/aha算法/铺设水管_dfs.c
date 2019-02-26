@@ -9,11 +9,26 @@ int a[51][51];
 int book[51][51];
 int n, m, flag = 0;
 
+struct node {
+    int x;
+    int y;
+    int s;
+};
+struct node stack[101];
+int top = 1;
+
 void dfs(int x, int y, int front){
 
     int i;
+
+    if (flag == 1) return;
+
     if (x == n && y == m+1){
         flag = 1;
+        for (i = 1; i < top; i++) {
+            printf("(%d,%d)", stack[i].x, stack[i].y);
+        }
+        printf("\n");
         return;
     }
 
@@ -26,6 +41,9 @@ void dfs(int x, int y, int front){
     }
     book[x][y] = 1;
 
+    stack[top].x = x;
+    stack[top].y = y;
+    top++;
 
     if (a[x][y] >= 5 && a[x][y] <= 6) {
         if (front == 1){
@@ -62,6 +80,7 @@ void dfs(int x, int y, int front){
     }
 
     book[x][y] = 0;
+    top--;
     return;
 }
 
@@ -81,9 +100,10 @@ int main(){
     if (flag == 0) {
         printf("impossible\n");
     }
+    /*
     else {
         printf("success\n");
     }
-
+    */
     return 0;
 }

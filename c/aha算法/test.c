@@ -1,73 +1,63 @@
 #include <stdio.h>
 
-struct node {
-    int x;
-    int y;
-};
-struct node que[10001];
-int head, tail;
-int n, m;
-int a[101][101] = {0};
-int book[101][101] = {0};
-int sum = 0;
+char a[51][51];
 
-int next[4][2] = {
-    {1, 0},
-    {-1, 0},
-    {0, 1},
-    {0, -1}
-};
+int main() {
+    int n, m, i, j;
+    int x, y;
+    int p, q;
+    int sum = 0;
+    int max = 0;
+    scanf("%d %d", &n, &m);
 
-void bfs(int x, int y) {
+    for (i = 0; i < n; i++) {
+        scanf("%s", a[i]);
+    }
 
-    int tx, ty;
-    int i;
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            if (a[i][j] == '.') {
+                sum = 0;
+                
+                x = i; y = j;
+                // search up
+                while(a[x][y] != '#') {
+                    if (a[x][y] == 'G') sum++;
+                    x--;
+                }
 
-    head = 1;
-    tail = 1;
+                // search down 
+                x = i; y = j;
+                while(a[x][y] != '#') {
+                    if (a[x][y] == 'G') sum++;
+                    x++;
+                }
 
-    que[tail].x = x;
-    que[tail].y = y;
-    tail++;
+                // search left 
+                x = i; y = j;
+                while (a[x][y] != '#'){
+                    if (a[x][y] == 'G') sum++;
+                    y--;
+                }
 
-    while (head < tail) {
+                // search right 
+                x = i; y = j;
+                while(a[x][y] != '#'){
+                    if (a[x][y] == 'G') sum++;
+                    y++;
+                }
 
-        for (i = 0; i < 4; i++) {
-            tx = que[head].x + next[i][0];
-            ty = que[head].y + next[i][1];
-
-            if (tx < 1 || tx > n || ty < 1 || ty > m) {
-                continue;
+                if (sum > max) {
+                    max = sum;
+                    p = i;
+                    q = j;
+                }
             }
-
-            if (a[tx][ty] > 0 && book[tx][ty] == 0) {
-                book[tx][ty] = 1;
-                sum++;
-
-                que[tail].x = tx;
-                que[tail].y = ty;
-                tail++;
-            }
-        }
-        head++;
-    } 
-
-}
-
-int main(){
-    
-    int i, j;
-    int startx, starty;
-    scanf("%d %d %d %d", &n, &m, &startx, &starty);
-
-    for (i = 1; i <= n; i++) {
-        for(j = 1; j <= m; j++) {
-            scanf("%d", &a[i][j]);
         }
     }
 
-    bfs(startx, starty);
+    printf("x:%d, y:%d\n", p, q);
+    printf("%d\n", max);
 
-    printf("%d\n", sum);
     return 0;
 }
