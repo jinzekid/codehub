@@ -7,6 +7,10 @@
 
   <ItemGroup>
     <Folder Include="简单工厂模式\" />
+    <Folder Include="ch1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="简单工厂模式.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Program.cs">
