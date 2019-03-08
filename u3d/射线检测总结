@@ -1,0 +1,51 @@
+通过Physics类中静态方法Raycast进行2d和3d的碰撞检测。
+
+
+================================================================
+2D射线检测
+  
+    string IsCollider() {
+      Vector2 position = transform.position;//new Vector2(Screen.width/2, Screen.height/2);
+      Vector2 direction = Vector2.down;
+      float distance = 10.0f;
+      //	Debug.DrawRay(position, direction, Color.green); 
+      RaycastHit2D hit = Physics2D.Raycast (position, direction, distance);
+      //	RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
+      if (hit.collider != null) {
+        do_checkColliderWithObj (hit.collider.name);
+        return hit.collider.name;
+      }
+      return "";
+    }
+
+================================================================
+3D射线检测
+
+    // Update is called once per frame
+    void Update () 
+    {
+      if(Input.GetMouseButton(0))
+      {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);//从摄像机发出到点击坐标的射线
+        // Ray ray = new Ray(transform.position, Vector3.forward); // 也可以从物体发生射线
+        
+        RaycastHit hitInfo; // 碰撞物体的信息引用
+        if(Physics.Raycast(ray,out hitInfo))
+        {
+          Debug.DrawLine(ray.origin,hitInfo.point);//划出射线，只有在scene视图中才能看到
+          GameObject gameObj = hitInfo.collider.gameObject;
+          Debug.Log("click object name is " + gameObj.name); // 输出碰到到物体的名字
+          if(gameObj.tag == "boot")//当射线碰撞目标为boot类型的物品 ，执行拾取操作
+          {
+            Debug.Log("do something...");
+          }
+        }
+      }
+    }
+
+    // 在Scene视图中画一条射线, 用于调试使用
+    void OnDrawGizmosSelected() {
+      Gizmos.color = Color.red; // 颜色设置为红色
+      Vector3 direction = transform.TransformDirection(Vector3.forward) * 10; // 向前发射10米的一条射线
+      Gizmos.DrawRay(transform.position, direction);
+    }
