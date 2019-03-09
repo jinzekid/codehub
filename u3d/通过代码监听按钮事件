@@ -1,0 +1,31 @@
+通过AddListener方法给button添加事件方法
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Universal : MonoBehaviour
+{
+    public Button btn; // 自定义按钮
+    public GameObject sliderBtn; // 自定义slider物体
+    public Text scoreText; // 分数标签
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        // 给按钮添加点击事件的一种方法
+        btn.onClick.AddListener(() => PrintSomething());
+        sliderBtn.GetCompoonent<Slider>().onValueChanged.AddListener(this.OnSliderChanged);
+    }
+
+    public void OnSliderChanged(float value) {
+      print("value==" + value);
+    }
+  
+    public void PrintSomething()
+    {
+        Debug.Log("Button is pressed");
+        scoreText.text = "" + Random.Range(100, 1000);
+    }
+}
