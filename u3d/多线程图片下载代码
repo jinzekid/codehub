@@ -1,0 +1,163 @@
+/*
+多线程下载图片代码
+*/
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Threading;
+using UnityEngine;
+
+/*
+测试代码
+*/
+public class MutilDownloadImages : MonoBehaviour
+{
+    public DownloadManager dm = new DownloadManager();
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            string url = "http://brand.fugumobile.cn/heineken/thesub_discover/img/TheSub/thesub_a" + (i + 1).ToString() + ".jpg";
+            string path = Application.dataPath + "/Resources/" + (i + 1).ToString() + ".jpg";
+            dm.add_download_img(url, path);
+        }
+        dm.start_download(dm);
+    }
+}
+
+
+/******************************************************************************/
+/***********************************下载管理器***********************************/
+/******************************************************************************/
+
+public class DownloadManager
+{
+    // 声明两个list
+    // mUrls：用于下载的url地址
+    private List<string> mUrls = new List<string>();
+    // mLocalPath：用于保存本地地址
+    private List<string> mLocalPath = new List<string>();
+    // 记录需要下载的图片数量
+    private int totalCnt = 0;
+    // 当前已经下载完成的数量
+    public int currntDownloadCnt = 0;
+    // 记录是否已经全部下载完成
+    public bool isFinished = false;
+
+    public void add_download_img(string url, string localPath)
+    {
+        mUrls.Add(url);
+        mLocalPath.Add(localPath);
+    }
+
+    public void start_download(DownloadManager dm)
+    {
+        totalCnt = mUrls.Count;
+        for (int i = 0; i < totalCnt; i++) {
+            ThreadDownload td = new ThreadDownload(mUrls[i], mLocalPath[i]);
+            Thread thread = new Thread(new ThreadStart(td.download_images_auto));
+            thread.Start();
+
+            td.TeacherCome += new ThreadDownload.EventHandler(this.finish_download);
+        }
+    }
+
+    // 每一个图片下载后委托调用的方法
+    // 检查当前图片数组的下载进度
+    public void finish_download(string url)
+    {
+        currntDownloadCnt += 1;
+        Debug.Log("finish download url:" + url);
+        Debug.Log("currntDownloadCnt:" + currntDownloadCnt);
+
+        if (currntDownloadCnt == totalCnt)
+        {
+            Debug.Log("download all finished...");
+        }
+    }
+}
+
+/*
+ *自定义下载线程类
+ *并且有个委托方法
+ */
+public class ThreadDownload
+{
+    public string m_url;
+    public string m_filePath;
+
+    public delegate void EventHandler(string a);    //声明一个委托EventHandler
+    public event EventHandler TeacherCome;          //声明事件名称，事件类型为EventHandler
+    //public void Come()                              //老师的行为
+    //{
+    //    TeacherCome(m_url);
+    //}
+
+    public ThreadDownload(string url, string filePath)
+    {
+        m_url = url;
+        m_filePath = filePath;
+    }
+
+    //下载文件两种方法
+    /***************************************************************************/
+    //使用自动方式下载
+    public void download_images_auto()
+    {
+        if (File.Exists(m_filePath))
+        {
+            Debug.Log("m_filePath is existed:" + m_url);
+            return;
+        }
+
+        WebClient web = new WebClient();
+        web.DownloadFile(m_url, m_filePath);
+
+        TeacherCome(m_url);
+    }
+
+    //使用stream方式下载
+    public void download_images_stream()
+    {
+        if(File.Exists(m_filePath))
+        {
+            Debug.Log("m_filePath is existed:" + m_url);
+            return;
+        }
+
+        WebClient client = new WebClient();
+
+        Stream str = client.OpenRead(m_url);
+        StreamReader reader = new StreamReader(str);
+        byte[] mbyte = new byte[1000000];
+        int allmybyte = (int)mbyte.Length;
+        int startmbyte = 0;
+
+        while (allmybyte > 0)
+        {
+
+            int m = str.Read(mbyte, startmbyte, allmybyte);
+            if (m == 0)
+                break;
+
+            startmbyte += m;
+            allmybyte -= m;
+        }
+
+        reader.Dispose();
+        str.Dispose();
+
+        string path = m_filePath;
+        FileStream fstr = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+        fstr.Write(mbyte, 0, startmbyte);
+        fstr.Flush();
+        fstr.Close();
+
+        TeacherCome(m_url);
+    }
+    /***************************************************************************/
+
+}
