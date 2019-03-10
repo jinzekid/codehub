@@ -1,0 +1,37 @@
+基本思路是：
+1.两个向量的夹角
+2.两向量的选装方向
+通过以上两个参数，获取旋转方向和角度
+
+工具类Utils中：
+// 获取两个向量的夹角
+// 通过向量叉乘先判断两向量的夹角的旋转方向
+// 进而得出旋转角度的范围
+public static float get_rotate_angle01(Vector3 from, Vector3 to)
+{
+    // 通过向量叉乘先判断两向量的夹角的旋转方向
+    Vector3 targetDir = Vector3.Cross(from, to).normalized;
+    // 获取两向量的夹角
+    float angle = Vector3.Angle(from,to);
+
+    // 判断是否是负角度
+    if (targetDir.y > 0)
+    {
+        angle = -angle;
+    }
+    return angle;
+}
+
+private void Update()
+{
+    Vector3 temp = new Vector3(point.x * 10, 0, point.z * 10);
+    Debug.DrawLine(new Vector3(0, 1, 0), new Vector3(point.x * 10, 0, point.z * 10));
+    Debug.DrawLine(Vector3.zero, Vector3.right);
+
+    //if (Input.GetMouseButtonDown(0)) //可以使用按键进行旋转
+    {
+        angle = Utils.get_rotate_angle01(temp, Vector3.right);
+    }
+    float angle2 = Mathf.MoveTowardsAngle(transform.eulerAngles.y, angle, rotatSpeed * Time.deltaTime);
+    transform.eulerAngles = new Vector3(0, angle2, 0);
+}
