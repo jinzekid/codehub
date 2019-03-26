@@ -23,15 +23,30 @@ public static float get_rotate_angle01(Vector3 from, Vector3 to)
 }
 
 private void Update()
-{
-    Vector3 temp = new Vector3(point.x * 10, 0, point.z * 10);
-    Debug.DrawLine(new Vector3(0, 1, 0), new Vector3(point.x * 10, 0, point.z * 10));
-    Debug.DrawLine(Vector3.zero, Vector3.right);
-
-    //if (Input.GetMouseButtonDown(0)) //可以使用按键进行旋转
     {
-        angle = Utils.get_rotate_angle01(temp, Vector3.right);
+
+        // 方法一
+        Vector3 temp = new Vector3(point.x * 10, 0, point.z * 10);
+        Debug.DrawLine(new Vector3(0, 1, 0), new Vector3(point.x * 10, 1, point.z * 10));
+        Debug.DrawLine(Vector3.zero, Vector3.right);
+
+        //if (Input.GetMouseButtonDown(0)) //可以使用按键进行旋转
+        {
+            angle = Utils.get_rotate_angle01(temp, Vector3.right);
+        }
+        float angle2 = Mathf.MoveTowardsAngle(transform.eulerAngles.y, angle, rotatSpeed * Time.deltaTime);
+        transform.eulerAngles = new Vector3(0, angle2, 0);
+
+
+        //方法二
+        // 计算方向
+        Vector3 temp = new Vector3(point.x * 10, 0, point.z * 10);
+        // 通过向量叉乘先判断两向量的夹角的旋转方向
+        Vector3 targetDir = Vector3.Cross(temp, transform.position).normalized;
+        // 使用Quaternion静态方法，计算朝向角度
+        Quaternion lookRotation = Quaternion.LookRotation(targetDir);
+        Vector3 rotation = lookRotation.eulerAngles;
+        // 锁定目标
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, rotation.y, 0f), rotatSpeed * Time.deltaTime);
+
     }
-    float angle2 = Mathf.MoveTowardsAngle(transform.eulerAngles.y, angle, rotatSpeed * Time.deltaTime);
-    transform.eulerAngles = new Vector3(0, angle2, 0);
-}
